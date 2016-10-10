@@ -37,7 +37,7 @@ class Overview extends Component {
 
     return (
       <div className="Overview-container">
-        <Map center={position} zoom={10} onChildClick={onMarkerClick}>
+        <Map center={position} zoom={11} onChildClick={onMarkerClick}>
           {MapMarkers}
           {otherUsersMarkers}
           {user.location ? (<UserMapMarker lat={user.location.lat} lng={user.location.lng} />) : null}
