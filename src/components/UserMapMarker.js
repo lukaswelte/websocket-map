@@ -7,7 +7,7 @@ export default class UserMapMarker extends PureComponent {
     const backgroundColor = color || 'blue';
 
     return (
-      <div className="Event-dot"/>
+      <div className="User-dot"/>
     );
   }
 }
