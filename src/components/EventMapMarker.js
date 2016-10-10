@@ -14,9 +14,7 @@ export default class EventMapMarker extends PureComponent {
     }
 
     return (
-      <div>
-        M
-      </div>
+      <div className="Event-dot" />
     );
   }
 }
