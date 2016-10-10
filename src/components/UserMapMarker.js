@@ -1,4 +1,5 @@
 import React, { PureComponent } from 'react';
+import './UserMapMarker.css';
 
 export default class UserMapMarker extends PureComponent {
   render() {
@@ -7,7 +8,7 @@ export default class UserMapMarker extends PureComponent {
     const backgroundColor = color || 'blue';
 
     return (
-      <div className="Event-dot"/>
+      <div className="User-dot"/>
     );
   }
 }
