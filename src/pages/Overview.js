@@ -7,7 +7,7 @@ import EventMapMarker from '../components/EventMapMarker';
 import UserMapMarker from '../components/UserMapMarker';
 import './Overview.css';
 
-const position = [48.122674,11.6097915];
+const position = [48.1429561,11.5800083];
 class Overview extends Component {
   constructor(props) {
     super(props);
@@ -37,7 +37,7 @@ class Overview extends Component {
 
     return (
       <div className="Overview-container">
-        <Map center={position} zoom={13} onChildClick={onMarkerClick}>
+        <Map center={position} zoom={10} onChildClick={onMarkerClick}>
           {MapMarkers}
           {otherUsersMarkers}
           {user.location ? (<UserMapMarker lat={user.location.lat} lng={user.location.lng} />) : null}
