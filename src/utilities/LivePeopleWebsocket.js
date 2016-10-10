@@ -1,6 +1,6 @@
 export default class LivePeopleWebsocket {
   constructor(url, dispatcher) {
-    this.websocket = new WebSocket(`ws://${url}`);
+    this.websocket = new WebSocket(`wss://${url}`);
     this.dispatcher = dispatcher
     this.websocket.onmessage = function (event) {
       dispatcher(event.data)
