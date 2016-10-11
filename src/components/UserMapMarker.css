@@ -1,7 +1,5 @@
-.Event-dot {
-  width: '15px';
-  height: '15px';
-  background-color: #fc6888;
-  borderRadius: '10px';
-  box-shadow: 8px 8px rgba(255, 255, 255, 0.4)
+.UserMapMarker-dot {
+  width: 17px;
+  height: 50px;
+  background: url(../img/monogramBlack.png) no-repeat center center;
 }

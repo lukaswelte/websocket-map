@@ -1,4 +1,5 @@
 import React, { PureComponent } from 'react';
+import './EventMapMarker.css';
 
 export default class EventMapMarker extends PureComponent {
   render() {
@@ -14,9 +15,7 @@ export default class EventMapMarker extends PureComponent {
     }
 
     return (
-      <div>
-        M
-      </div>
+      <div className="EventMapMarker-dot"/>
     );
   }
 }
