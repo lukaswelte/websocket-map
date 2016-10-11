@@ -18,7 +18,7 @@ class Overview extends Component {
   }
 
   render() {
-    const { events, user, updateUserLocation, usersLocations } = this.props;
+    const { events, user, updateUserLocation, usersLocations, children } = this.props;
 
     if (navigator.geolocation) {
       navigator.geolocation.getCurrentPosition((position) => {
@@ -37,6 +37,7 @@ class Overview extends Component {
 
     return (
       <div className="Overview-container">
+        {children}
         <Map center={position} zoom={15} onChildClick={onMarkerClick}>
           {MapMarkers}
           {otherUsersMarkers}
