@@ -7,3 +7,23 @@
   cursor: pointer;
   background-clip: padding-box;
 }
+
+.EventMapMarker-tap {
+  width: 14px;
+  height: 14px;
+  background-color: rgba(255, 255, 255, 0.7);
+  border-radius: 15px;
+  border: 6px solid  #f243a5;
+  cursor: pointer;
+}
+
+.EventMapMarker-card {
+  position: absolute;
+  margin:0 auto;
+  z-index:900;
+  text-align: center;
+  width:90vw;
+  height:95vh;
+  margin:5vh 10vw;
+  background-color: rgba(255, 255, 255, 0.9);
+}

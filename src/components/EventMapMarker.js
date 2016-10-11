@@ -7,9 +7,10 @@ export default class EventMapMarker extends PureComponent {
 
     if (showDetails) {
       return (
-        <div>
-          <h1>{title}</h1>
-          <div>{subtitle}</div>
+        <div className="EventMapMarker-card">
+          <div className="EventMapMarker-tap"/>
+            <h1>{title}</h1>
+            <h2>{subtitle}</h2>
         </div>
       )
     }
