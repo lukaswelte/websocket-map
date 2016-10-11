@@ -1,11 +1,19 @@
 .EventMapMarker-dot {
-  width: 12px;
-  height: 12px;
-  background-color: #f243a5;
-  border-radius: 15px;
-  border: 4px solid rgba(255, 255, 255, 0.7);
+  width: 13px;
+  height: 13px;
+  border-radius: 30px;
   cursor: pointer;
+  background: radial-gradient( farthest-side ellipse at 65% 35%, #fcb2c2, #ff0090);
   background-clip: padding-box;
+  -webkit-box-shadow:
+    0 1px 5px rgba(252,104,136,0.6),
+    inset 3px -3px 2px 0px rgba(255,255,255,0.3);
+  -moz-box-shadow:
+    0 1px 5px rgba(252,104,136,0.6),
+    inset 3px -3px 2px 0px rgba(255,255,255,0.3);
+  box-shadow:
+    0 1px 5px rgba(252,104,136,0.6),
+    inset 3px -3px 2px 0px rgba(255,255,255,0.3);
 }
 
 .EventMapMarker-tap {
@@ -19,11 +27,21 @@
 
 .EventMapMarker-card {
   position: absolute;
-  margin:0 auto;
   z-index:900;
   text-align: center;
-  width:90vw;
-  height:95vh;
-  margin:5vh 10vw;
+  width:100vw;
+  height:100vh;
   background-color: rgba(255, 255, 255, 0.9);
+  box-shadow: 0px 1em 2em  rgba(0, 0, 0, 0.3);
+  background: url(../img/picture.jpeg) no-repeat center center;
+  background-size: cover;
+}
+
+.EventMapMarker-content {
+  position: absolute;
+  margin-bottom: 15vh;
+  bottom: 0;
+  width:96vw;
+  padding: 2vh 2vw;
+  background-color: rgba(0, 0, 0, 0.5);
 }
