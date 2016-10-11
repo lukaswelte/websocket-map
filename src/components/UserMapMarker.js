@@ -8,7 +8,7 @@ export default class UserMapMarker extends PureComponent {
     const backgroundColor = color || 'blue';
 
     return (
-      <div className="User-dot"/>
+      <div className="UserMapMarker-dot"/>
     );
   }
 }
