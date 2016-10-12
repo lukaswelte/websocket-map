@@ -7,9 +7,14 @@ export default class EventMapMarker extends PureComponent {
 
     if (showDetails) {
       return (
-        <div>
-          <h1>{title}</h1>
-          <div>{subtitle}</div>
+        <div className="EventMapMarker-card">
+            <div className="EventMapMarker-header">
+            </div>
+            <div className="EventMapMarker-content">
+              <h1>{title}</h1>
+              <h2>{subtitle}</h2>
+              <h3 style={{color:"#ff285c",}}>2.5Km from you</h3>
+            </div>
         </div>
       )
     }

@@ -1,5 +1,25 @@
 body {
   margin: 0;
   padding: 0;
-  font-family: sans-serif;
+  font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue",
+  Helvetica, Arial, "Lucida Grande", sans-serif;
+}
+
+h1 {
+  font-weight: 200;
+  font-size: 2.2em;
+  color:#FFFFFF;
+}
+
+h2 {
+  margin-top: -10px;
+  font-weight: 300;
+  font-size: 1.5em;
+  color:rgba(255,255,255,.3);
+}
+
+h3 {
+  font-weight: 300;
+  font-size: 1em;
+  color:rgba(255,255,255,.3);
 }
