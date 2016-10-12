@@ -22,7 +22,6 @@ class Overview extends Component {
 
     if (navigator.geolocation) {
       navigator.geolocation.getCurrentPosition((position) => {
-        console.log('position', position.coords);
         updateUserLocation(position.coords);
       });
     }
