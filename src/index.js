@@ -3,7 +3,9 @@ import ReactDOM from 'react-dom';
 import App from './App';
 import Overview from './pages/Overview';
 import NotFound from './pages/NotFound';
-import { Router, Route, IndexRoute, browserHistory } from 'react-router';
+import Login from './pages/Login';
+import Introduction from './pages/Introduction';
+import { Router, Route, Redirect, IndexRoute, browserHistory } from 'react-router';
 import { syncHistoryWithStore, routerMiddleware } from 'react-router-redux';
 import { createStore, applyMiddleware, compose } from 'redux';
 import { Provider } from 'react-redux';
@@ -20,10 +22,12 @@ ReactDOM.render(
   (
     <Provider store={store}>
       <Router history={history}>
-        <Route path="/" component={App}>
-          <IndexRoute component={Overview}/>
-          <Route path="event" component={Overview} />
-          <Route path="*" component={NotFound}/>
+        <Route path="/" component={App} >
+          <IndexRoute component={Login}/>
+          <Route path="introduction/:id" component={Introduction} />
+          <Redirect from="introduction" to="/introduction/1" />
+          <Route path="map" component={Overview} />
+          <Route path="*" component={NotFound} />
         </Route>
       </Router>
     </Provider>
