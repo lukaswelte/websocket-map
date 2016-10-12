@@ -2,7 +2,6 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import App from './App';
 import Overview from './pages/Overview';
-import EventDetail from './pages/EventDetail';
 import NotFound from './pages/NotFound';
 import { Router, Route, IndexRoute, browserHistory } from 'react-router';
 import { syncHistoryWithStore, routerMiddleware } from 'react-router-redux';
@@ -23,9 +22,7 @@ ReactDOM.render(
       <Router history={history}>
         <Route path="/" component={App}>
           <IndexRoute component={Overview}/>
-          <Route path="event" component={Overview}>
-            <IndexRoute component={EventDetail} />
-          </Route>
+          <Route path="event" component={Overview} />
           <Route path="*" component={NotFound}/>
         </Route>
       </Router>

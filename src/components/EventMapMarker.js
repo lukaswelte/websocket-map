@@ -3,7 +3,7 @@ import './EventMapMarker.css';
 
 export default class EventMapMarker extends PureComponent {
   render() {
-    const { title, subtitle, showDetails } = this.props;
+    const { title, subtitle, categoryColor, showDetails } = this.props;
 
     if (showDetails) {
       return (
@@ -13,7 +13,7 @@ export default class EventMapMarker extends PureComponent {
             <div className="EventMapMarker-content">
               <h1>{title}</h1>
               <h2>{subtitle}</h2>
-              <h3 style={{color:"#ff285c",}}>2.5Km from you</h3>
+              <h3 style={{color: categoryColor}}>2.5 km from you</h3>
             </div>
         </div>
       )

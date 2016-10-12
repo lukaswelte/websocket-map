@@ -31,15 +31,22 @@ class Overview extends Component {
       this.setState({activeMarker: this.state.activeMarker === key ? null : key});
     }
 
-    const otherUsersMarkers = usersLocations.map((user, index) => <UserMapMarker key={index} lat={user.location.lat} lng={user.location.lng} color="orange" />);
+    const resetMarker = () => {
+      this.setState({activeMarker: null});
+    }
 
-    const MapMarkers = events.map((event) => <EventMapMarker key={event.title} lat={event.lat} lng={event.lon} title={event.title} subtitle={event.baseline} showDetails={event.title === this.state.activeMarker} />);
+    const otherUsersMarkers = usersLocations.map((user, index) => <UserMapMarker key={index} lat={user.location.lat} lng={user.location.lng} />);
+
+    const mapMarkers = events.map((event) => <EventMapMarker key={event.title} lat={event.lat} lng={event.lon} title={event.title} subtitle={event.baseline} categoryColor={event.color} showDetails={event.title === this.state.activeMarker} />);
+
+    const activeMarker = events.filter((event) => event.title === this.state.activeMarker).map((event) => <EventMapMarker key={event.title} lat={event.lat} lng={event.lon} title={event.title} categoryColor={event.color} subtitle={event.baseline} showDetails={true} />);
 
     return (
       <div className="Overview-container">
         {children}
-        <Map center={position} zoom={15} onChildClick={onMarkerClick}>
-          {MapMarkers}
+        {activeMarker}
+        <Map center={position} zoom={15} onChildClick={onMarkerClick} onChildMouseLeave={resetMarker}>
+          {mapMarkers}
           {otherUsersMarkers}
           {user.location ? (<UserMapMarker lat={user.location.lat} lng={user.location.lng} />) : null}
         </Map>

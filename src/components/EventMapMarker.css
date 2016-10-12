@@ -20,7 +20,7 @@
 }
 
 .EventMapMarker-card {
-  position: absolute;
+  position: fixed;
   z-index:900;
   text-align: center;
   width:100vw;
