@@ -10,13 +10,17 @@
     inset 3px -3px 2px 0px rgba(255,255,255,0.3);
 }
 
-.EventMapMarker-tap {
-  width: 14px;
-  height: 14px;
-  background-color: rgba(255, 255, 255, 0.7);
-  border-radius: 15px;
-  border: 6px solid  #f243a5;
+.EventMapMarker-close {
+  width: 44px;
+  height: 44px;
+  background-color: rgba(255, 255, 255, 0.5);
+  border-radius: 22px;
   cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  float: right;
+  margin: 20px 20px 0 0;
 }
 
 .EventMapMarker-card {
@@ -27,7 +31,7 @@
   height:100vh;
   background-color: rgba(255, 255, 255, 0.9);
   box-shadow: 0px 1em 2em  rgba(0, 0, 0, 0.3);
-  background: url(../img/picture.jpeg) no-repeat center center;
+  background: url(../img/eventExample.jpg) no-repeat center center;
   background-size: cover;
 }
 

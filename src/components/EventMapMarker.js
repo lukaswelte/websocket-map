@@ -3,12 +3,13 @@ import './EventMapMarker.css';
 
 export default class EventMapMarker extends PureComponent {
   render() {
-    const { title, subtitle, categoryColor, showDetails } = this.props;
+    const { title, subtitle, categoryColor, showDetails, onClose } = this.props;
 
     if (showDetails) {
       return (
         <div className="EventMapMarker-card">
-            <div className="EventMapMarker-header">
+            <div onClick={onClose} className="EventMapMarker-close">
+              <div>X</div>
             </div>
             <div className="EventMapMarker-content">
               <h1>{title}</h1>
