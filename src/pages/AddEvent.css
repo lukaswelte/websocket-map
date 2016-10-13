@@ -1,0 +1,31 @@
+.AddEvent-close {
+  width: 44px;
+  height: 44px;
+  background-color: rgba(255, 255, 255, 0.5);
+  border-radius: 22px;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  float: right;
+  margin: 20px 20px 0 0;
+}
+
+.AddEvent-card {
+  position: fixed;
+  z-index:900;
+  text-align: center;
+  width:100vw;
+  height:100vh;
+  background-color: rgba(255, 255, 255, 0.8);
+  box-shadow: 0px 1em 2em  rgba(0, 0, 0, 0.3);
+}
+
+.AddEvent-content {
+  position: absolute;
+  margin-bottom: 15vh;
+  bottom: 0;
+  width:96vw;
+  padding: 2vh 2vw;
+  background-color: rgba(0, 0, 0, 0.5);
+}
