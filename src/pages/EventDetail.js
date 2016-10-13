@@ -1,24 +1,33 @@
-import React, { Component } from 'react';
+import React, { PureComponent } from 'react';
 import { connect } from 'react-redux';
+import { goBack } from 'react-router-redux';
 import './EventDetail.css';
 
-class EventDetail extends Component {
+class EventDetail extends PureComponent {
   render() {
-    const { event } = this.props;
+    const { event, onClose } = this.props;
 
     return (
-      <div className="EventDetail-container">
-        test
-        {event.title}
+      <div className="EventDetail-card">
+          <div onClick={onClose} className="EventDetail-close">
+            <div>X</div>
+          </div>
+          <div className="EventDetail-content">
+            <h1>{event.title}</h1>
+            <h2>{event.subtitle}</h2>
+            <h3 style={{color: event.categoryColor}}>2.5 km from you</h3>
+          </div>
       </div>
     );
   }
 }
 
 const EventDetailContainer = connect(
-  (state) => ({
-    event: state.events[2],
-    user: state.user
+  (state, ownProps) => ({
+    event: state.events[ownProps.params.id],
+  }),
+  (dispatch) => ({
+    onClose: () => dispatch(goBack())
   })
 )(EventDetail);
 

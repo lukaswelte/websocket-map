@@ -9,33 +9,3 @@
     0 1px 5px rgba(252,104,136,0.6),
     inset 3px -3px 2px 0px rgba(255,255,255,0.3);
 }
-
-.EventMapMarker-tap {
-  width: 14px;
-  height: 14px;
-  background-color: rgba(255, 255, 255, 0.7);
-  border-radius: 15px;
-  border: 6px solid  #f243a5;
-  cursor: pointer;
-}
-
-.EventMapMarker-card {
-  position: absolute;
-  z-index:900;
-  text-align: center;
-  width:100vw;
-  height:100vh;
-  background-color: rgba(255, 255, 255, 0.9);
-  box-shadow: 0px 1em 2em  rgba(0, 0, 0, 0.3);
-  background: url(../img/picture.jpeg) no-repeat center center;
-  background-size: cover;
-}
-
-.EventMapMarker-content {
-  position: absolute;
-  margin-bottom: 15vh;
-  bottom: 0;
-  width:96vw;
-  padding: 2vh 2vw;
-  background-color: rgba(0, 0, 0, 0.5);
-}

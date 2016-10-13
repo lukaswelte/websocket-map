@@ -2,9 +2,12 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import App from './App';
 import Overview from './pages/Overview';
-import EventDetail from './pages/EventDetail';
 import NotFound from './pages/NotFound';
-import { Router, Route, IndexRoute, browserHistory } from 'react-router';
+import Login from './pages/Login';
+import Introduction from './pages/Introduction';
+import EventDetail from './pages/EventDetail';
+import AddEvent from './pages/AddEvent';
+import { Router, Route, Redirect, IndexRedirect, IndexRoute, browserHistory } from 'react-router';
 import { syncHistoryWithStore, routerMiddleware } from 'react-router-redux';
 import { createStore, applyMiddleware, compose } from 'redux';
 import { Provider } from 'react-redux';
@@ -21,12 +24,20 @@ ReactDOM.render(
   (
     <Provider store={store}>
       <Router history={history}>
-        <Route path="/" component={App}>
-          <IndexRoute component={Overview}/>
-          <Route path="event" component={Overview}>
+        <Route path="/" component={App} >
+          <IndexRedirect to="/introduction/1" />
+          <Route path="introduction/:id" component={Introduction} />
+          <Redirect from="introduction" to="/introduction/1" />
+          <Route path="login/:step" component={Login} />
+          <Redirect from="login" to="/login/1" />
+          <Route path="map" component={Overview} />
+          <Route path="event/:id" component={Overview} >
             <IndexRoute component={EventDetail} />
           </Route>
-          <Route path="*" component={NotFound}/>
+          <Route path="add-event" component={Overview} >
+            <IndexRoute component={AddEvent} />
+          </Route>
+          <Route path="*" component={NotFound} />
         </Route>
       </Router>
     </Provider>
