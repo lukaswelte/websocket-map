@@ -1,9 +1,12 @@
 import React, { Component } from 'react';
+import { bindActionCreators } from 'redux';
+import { connect } from 'react-redux';
+import { goToIntroduction, goToMap } from '../actions/routing';
 import './Introduction.css';
 
-export default class Introduction extends Component {
+class Introduction extends Component {
   render() {
-    const { params } = this.props;
+    const { params, goToStep, goToMap } = this.props;
 
     switch (params.id) {
       case "1":
@@ -12,7 +15,7 @@ export default class Introduction extends Component {
             <div className="Intro-content">
               <div className="monogramBlack"/>
               <h1>This is you<br />& your<br />localisation</h1>
-              <div className="Intro-check"/>
+              <div onClick={() => goToStep(2)} className="Intro-check"/>
             </div>
           </div>
         );
@@ -24,7 +27,7 @@ export default class Introduction extends Component {
             <div className="Intro-content">
               <div className="monogramBlack"/>
               <h1>We will<br />inspire you<br />with little things</h1>
-              <a href="" className="Intro-check"/>
+              <div onClick={() => goToStep(3)} className="Intro-check"/>
             </div>
             </div>
           </div>
@@ -38,7 +41,7 @@ export default class Introduction extends Component {
                 <div className="Intro-content">
                   <div className="monogramBlack"/>
                   <h1>Maintain<br />pressed to see<br />details</h1>
-                  <a href="" className="Intro-check"/>
+                  <div onClick={() => goToStep(4)} className="Intro-check"/>
                 </div>
               </div>
             </div>
@@ -47,7 +50,7 @@ export default class Introduction extends Component {
 
         case "4":
           return (
-            <div className="Intro-event-card">
+            <div onClick={goToMap} className="Intro-event-card">
                 <div className="Intro-event-close">
                   <div>X</div>
                 </div>
@@ -65,3 +68,14 @@ export default class Introduction extends Component {
     }
   }
 }
+
+const IntroductionContainer = connect(
+  (state) => ({
+  }),
+  (dispatch) => ({
+    goToStep: bindActionCreators(goToIntroduction, dispatch),
+    goToMap: bindActionCreators(goToMap, dispatch)
+  })
+)(Introduction);
+
+export default IntroductionContainer;

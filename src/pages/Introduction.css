@@ -48,6 +48,7 @@
   background: url(../img/btn-check-dark.png) no-repeat center center;
   position: absolute;
   bottom: 8vh;
+  cursor: pointer;
 }
 
 
