@@ -1,20 +1,28 @@
 import React, { Component } from 'react';
+import { bindActionCreators } from 'redux';
+import { connect } from 'react-redux';
+import { goToLogin, goToMap, goBack as back } from '../actions/routing';
 import './Login.css';
 
-export default class Login extends Component {
+class Login extends Component {
   render() {
 
-    const { params } = this.props;
+    const { params, goToStep, showMap, goBack } = this.props;
+
+    const showStep = (e, step) => {
+      e.preventDefault();
+      goToStep(step);
+    }
 
     switch (params.step) {
       case "1":
         return (
           <div className="Login-background">
-            <a href="" className="login-shift">Maybe later</a>
+            <div onClick={goBack} className="login-shift">Maybe later</div>
             <div className="Login-content">
               <div className="monogramWhite"/>
               <div className="Login-baseline">Experience, Save & Share<br />Munich s Life</div>
-              <form className="Login-form">
+              <form onSubmit={(e) => showStep(e, 2)} className="Login-form">
                 <input type="text" className="Login-input" placeholder="I'm Dark Vador?" />
                 <input type="submit" className="Login-valid" defaultValue=""/>
               </form>
@@ -28,7 +36,7 @@ export default class Login extends Component {
             <div className="Login-content">
               <div className="monogramWhite"/>
               <div className="Login-baseline">Experience, Save & Share<br />Munich s Life</div>
-              <form className="Login-form">
+              <form onSubmit={(e) => showStep(e, 3)} className="Login-form">
                 <input type="text" className="Login-input" placeholder="We need your @" />
                 <input type="submit" className="Login-valid" defaultValue=""/>
               </form>
@@ -42,7 +50,7 @@ export default class Login extends Component {
             <div className="Login-content">
               <div className="monogramWhite"/>
               <div className="Login-baseline">Experience, Save & Share<br />Munich s Life</div>
-              <form className="Login-form">
+              <form onSubmit={showMap} className="Login-form">
                 <input type="text" className="Login-input" placeholder="Received a code?" />
                 <input type="submit" className="Login-valid" defaultValue=""/>
               </form>
@@ -57,3 +65,16 @@ export default class Login extends Component {
     }
   }
 }
+
+const LoginContainer = connect(
+  (state, ownProps) => ({
+
+  }),
+  (dispatch) => ({
+    goToStep: bindActionCreators(goToLogin, dispatch),
+    goBack: bindActionCreators(back, dispatch),
+    showMap: bindActionCreators(goToMap, dispatch)
+  })
+)(Login);
+
+export default LoginContainer;

@@ -1,6 +1,7 @@
 import React, { PureComponent } from 'react';
+import { bindActionCreators } from 'redux';
 import { connect } from 'react-redux';
-import { goBack } from 'react-router-redux';
+import { goBack } from '../actions/routing';
 import './AddEvent.css';
 
 class AddEvent extends PureComponent {
@@ -13,7 +14,7 @@ class AddEvent extends PureComponent {
             <div>X</div>
           </div>
           <div className="AddEvent-target"/>
-          <form className="AddEvent-form">
+          <form onSubmit={onClose} className="AddEvent-form">
             <div className="AddEvent-content">
                 <textarea type="text" className="AddEvent-input" rows="5" placeholder="What's happen here?" />
               </div>
@@ -29,7 +30,7 @@ const AddEventContainer = connect(
 
   }),
   (dispatch) => ({
-    onClose: () => dispatch(goBack())
+    onClose: bindActionCreators(goBack, dispatch),
   })
 )(AddEvent);
 
