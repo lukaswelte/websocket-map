@@ -6,6 +6,7 @@ import { push } from 'react-router-redux';
 import { updateLocation } from '../actions/user';
 import EventMapMarker from '../components/EventMapMarker';
 import UserMapMarker from '../components/UserMapMarker';
+import AddEventButton from '../components/AddEventButton';
 import './Overview.css';
 
 const position = [48.1429561,11.5800083];
@@ -35,6 +36,7 @@ class Overview extends Component {
           {otherUsersMarkers}
           {user.location ? (<UserMapMarker lat={user.location.lat} lng={user.location.lng} />) : null}
         </Map>
+        <div className="AddEventButton-btn">+</div>
       </div>
     );
   }

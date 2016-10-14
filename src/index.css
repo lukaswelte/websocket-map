@@ -1,17 +1,19 @@
 body {
   margin: 0;
   padding: 0;
-  font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue",
+  font-family: 'Lato', "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue",
   Helvetica, Arial, "Lucida Grande", sans-serif;
 }
 
 h1 {
-  font-weight: 200;
+  text-align: center;
+  font-weight: 300;
   font-size: 2.2em;
-  color:#FFFFFF;
+  color:#252525;
 }
 
 h2 {
+  text-align: center;
   margin-top: -10px;
   font-weight: 300;
   font-size: 1.5em;
@@ -21,5 +23,4 @@ h2 {
 h3 {
   font-weight: 300;
   font-size: 1em;
-  color:rgba(255,255,255,.3);
 }
