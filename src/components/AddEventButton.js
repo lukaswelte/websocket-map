@@ -6,7 +6,7 @@ export default class AddEventButton extends PureComponent {
     const { onClick } = this.props;
 
     return (
-      <div onClick={onClick} className="AddEventButton-btn">+</div>
+      <div onClick={onClick} className="AddEventButton-btn"/>
     );
   }
 }
