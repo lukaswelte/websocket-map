@@ -1,4 +1,10 @@
 .Overview-container {
   height: 100vh;
   width: 100vw;
+  display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: flex-end;
+    align-content: center;
+    align-items: center;
 }

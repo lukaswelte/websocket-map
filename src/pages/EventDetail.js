@@ -8,8 +8,8 @@ class EventDetail extends PureComponent {
     const { event, onClose } = this.props;
 
     return (
-      <div className="EventDetail-card">
-          <div onClick={onClose} className="EventDetail-close">
+      <div onClick={onClose} className="EventDetail-card">
+          <div className="EventDetail-close">
             <div>X</div>
           </div>
           <div className="EventDetail-content">
