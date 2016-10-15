@@ -14,7 +14,7 @@ class EventDetail extends PureComponent {
           </div>
           <div className="EventDetail-content">
             <h1>{event.title}</h1>
-            <h2>{event.subtitle}</h2>
+            <h2>Cafe Rosario, first floor</h2>
             <h3 style={{color: event.categoryColor}}>2.5 km from you</h3>
           </div>
       </div>

@@ -19,7 +19,7 @@ textarea:focus, input:focus{
   top:25vh;
   border-radius: 12px;
   position: absolute;
-  background-color: red;
+  background: url(../img/map-star-added.svg) no-repeat center center,
 }
 
 .AddEvent-content {
