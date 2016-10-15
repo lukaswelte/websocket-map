@@ -1,0 +1,12 @@
+.LoginMapButton-btn {
+  width:48px;
+  height: 48px;
+  border-radius: 30px;
+  position: absolute;
+  top: 18px;
+  right: 18px;
+  cursor: pointer;
+  background: url(../img/monogramWhite.svg)no-repeat center 15px, linear-gradient( 45deg, rgba(254, 86, 174, 1),#f6ab2f);
+  background-size: 80px 60px;
+  opacity: 0.8;
+}
