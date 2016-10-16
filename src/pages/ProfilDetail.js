@@ -27,9 +27,7 @@ class ProfilDetail extends PureComponent {
 }
 
 const ProfilDetailContainer = connect(
-  (state, ownProps) => ({
-    event: state.events[ownProps.params.id],
-  }),
+  (state, ownProps) => ({}),
   (dispatch) => ({
     onClose: () => dispatch(goBack())
   })
