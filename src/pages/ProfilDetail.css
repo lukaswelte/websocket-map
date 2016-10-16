@@ -7,16 +7,17 @@
 }
 
 .ProfilDetail-close {
-  width: 44px;
-  height: 44px;
-  border-radius: 22px;
+  width: 24px;
+  height: 24px;
   cursor: pointer;
   display: flex;
   color: #FFFFFF;
   justify-content: center;
   align-items: center;
   float: right;
-  margin: 20px 20px 0 0;
+  margin: 30px 30px 0 0;
+  background: url(../img/btn-crossWhite.svg) no-repeat center center;
+  opacity: .5;
 }
 
 .ProfilDetail-monogram{
