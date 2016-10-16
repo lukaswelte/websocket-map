@@ -33,3 +33,9 @@
   font-size:1em;
   font-weight: 200;
 }
+
+.ProfilDetail-qrcode{
+  height:150px;
+  background: url(../img/qrcode.svg) no-repeat center center;
+
+}

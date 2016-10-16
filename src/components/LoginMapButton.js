@@ -3,8 +3,10 @@ import './LoginMapButton.css';
 
 export default class LoginMapButton extends PureComponent {
   render() {
+    const { onClick } = this.props;
+
     return (
-      <div className="LoginMapButton-btn"/>
+      <div onClick={onClick} className="LoginMapButton-btn"/>
     );
   }
 }

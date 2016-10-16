@@ -17,6 +17,7 @@ class EventDetail extends PureComponent {
             <div className="ProfilDetail-name">Annette</div>
             <div className="ProfilDetail-title">You are an enjoyer!</div>
           </div>
+          <div className="ProfilDetail-qrcode"/>
       </div>
     );
   }
