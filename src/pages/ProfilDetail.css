@@ -38,5 +38,42 @@
 .ProfilDetail-qrcode{
   height:150px;
   background: url(../img/qrcode.svg) no-repeat center center;
+  margin-top: 70px;
+}
 
+.ProfilDetail-collect{
+  margin-top: 40px;
+  font-size:1em;
+  font-weight: 200;
+}
+
+.ProfilDetail-nbr{
+  font-size: 2em;
+  font-weight: 100;
+  width: 55vw;
+  float:left;
+  text-align: right;
+}
+
+.ProfilDetail-graph{
+  font-size: 2em;
+  font-weight: 100;
+  width: 40vw;
+  margin-left: 3vw;
+  margin-top:0.3em;
+  float:left;
+  text-align: left;
+}
+
+.ProfilDetail-rock {
+  width: 20px;
+  height: 20px;
+  border-radius: 30px;
+  cursor: pointer;
+  background: radial-gradient( farthest-side ellipse at 65% 35%, #fcb2c2, #ff0090);
+  background-clip: padding-box;
+  box-shadow:
+    0 1px 5px rgba(252,104,136,0.6),
+    inset 3px -3px 2px 0px rgba(255,255,255,0.3);
+  text-align: left;
 }
