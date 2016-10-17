@@ -59,7 +59,7 @@ class Introduction extends Component {
                   <li style={{backgroundColor:'#A5A5A5'}}/>
                   <li/>
                 </ul>
-                  <AddEventButton/>
+                  <div className="Intro-favorite-btn"/>
                   <div className="Intro-monogramNot"/>
                   <h1>Mark the favorite<br />spots you want<br />to remember</h1>
                   <h3>If we missed something<br />save it for yourself :)</h3>
