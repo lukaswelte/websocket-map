@@ -34,8 +34,34 @@ textarea:focus, input:focus{
   opacity: .5;
 }
 
+.AddEvent-msg-frame{
+  position:absolute;
+  width: 100vw;
+  z-index:800;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: center;
+  align-content: center;
+  align-items: center;
+}
+
+.AddEvent-msg {
+  flex: 0 1 auto;
+  align-self: center;
+  text-align: center;
+  padding: 6px 13px 8px 13px;
+  top:20vh;
+  border-radius: 40px;
+  position: absolute;
+  background-color: #252525;
+  color: white;
+  font-weight: 300;
+  font-size:1em;
+}
+
 .AddEvent-form textarea.AddEvent-input{
-  font-weight: 100;
+  font-weight: 200;
   font-size: 2.2em;
   width: 80vw;
   flex: 0 1 auto;
@@ -68,9 +94,6 @@ font-weight: 300;
 color:white;
 position: absolute;
 bottom: 8vh;
-order: 0;
-flex: 0 1 auto;
-align-self: center;
 background-color: rgba(254, 86, 174, 0.65);
 overflow: hidden;
 background: #f06;

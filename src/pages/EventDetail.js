@@ -19,7 +19,7 @@ class EventDetail extends PureComponent {
           <div className="EventDetail-close"/>
           <div className="EventDetail-content">
             <h1>{event.title}</h1>
-            <h2>{event.subtitle}</h2>
+            <h2>{event.localisation}</h2>
             {distanceToLocation ? <h3 style={{color: event.categoryColor}}>{distanceToLocation} km from you</h3> : null}
           </div>
       </div>
