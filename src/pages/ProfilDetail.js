@@ -21,6 +21,7 @@ class ProfilDetail extends PureComponent {
               <div className="ProfilDetail-graph"><div className="ProfilDetail-rock"/></div>
           </div>
           <div className="ProfilDetail-qrcode"/>
+          <div className="ProfilDetail-title" style={{color:"rgba(255, 255, 255, .6)"}}>Invit the squad!</div>
       </div>
     );
   }
