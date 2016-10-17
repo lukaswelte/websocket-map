@@ -3,10 +3,10 @@ import './AddEventButton.css';
 
 export default class AddEventButton extends PureComponent {
   render() {
-    const { onClick } = this.props;
+    const { onClick, style } = this.props;
 
     return (
-      <div onClick={onClick} className="AddEventButton-btn"/>
+      <div onClick={onClick} style={style} className="AddEventButton-btn"/>
     );
   }
 }
