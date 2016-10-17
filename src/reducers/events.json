@@ -1,9 +1,9 @@
   [
-    {"title":"Share a fantastic Gelato in this unique place","localisation":"just a test","color":"#45bfff","lat":"48.1377923","lon":"11.5441793"} ,
+    {"title":"Share a fantastic Gelato in this unique place","localisation":"Punto Gelato","color":"#45bfff","lat":"48.1377923","lon":"11.5441793"} ,
   {"title":"Cross this big lace when it's empty","localisation":"just a test","color":"#45bfff","lat":"48.1302937","lon":"11.5492058"} ,
   {"lat":"48.1306034","lon":"11.5459067","title":"Contemplate the beauty of Munich","localisation":"just a test","color":"#45bfff"} ,
   {"lat":"48.140572","lon":"11.5481329","title":"Watch a fantastic industrial sunset","localisation":"just a test","color":"#45bfff"} ,
-  {"lat":"48.1413381","lon":"11.5483958","title":"Jump on the structure and share a bier with a friend","localisation":"just a test","color":"#45bfff"} ,
+  {"lat":"48.1413381","lon":"11.5483958","title":"Jump on the structure and share a bier with a friend","localisation":"Hackerbrucke Bridge","color":"#45bfff"} ,
   {"lat":"48.15904","lon":"11.521638","title":"Having a long and relaxing walk","localisation":"just a test","color":"#45bfff"} ,
   {"lat":"48.1589398","lon":"11.5260315","title":"Running along the river","localisation":"just a test","color":"#45bfff"} ,
   {"lat":"48.1591724","lon":"11.529572","title":"Enjoy a evening picnic with a sublime sunset","localisation":"In front of the Monument","color":"#45bfff"} ,
@@ -59,7 +59,7 @@
   {"lat":"48.1036771","lon":"11.5521669","title":"Relax under the sun with your love","localisation":"just a test","color":"#45bfff"} ,
   {"lat":"48.1340745","lon":"11.5891278","title":"Chill and gossip on this out of the center beach","localisation":"just a test","color":"#45bfff"} ,
   {"lat":"48.1307045","lon":"11.5459362","title":"See through the eyes of the Bavaria statue","localisation":"just a test","color":"#45bfff"} ,
-  {"lat":"48.1366664","lon":"11.545389","title":"Friendly & design hairdresser salon","localisation":"just a test","color":"#45bfff"} ,
+  {"lat":"48.1366664","lon":"11.545389","title":"Friendly & design hairdresser salon","localisation":"Jasmin Kohlmayer, to be booked!","color":"#45bfff"} ,
   {"lat":"48.1266344","lon":"11.5775299","title":"Biker, start here and go to the south! Super smooth!","localisation":"Nobody, with a perfect way, a dream","color":"#45bfff"} ,
   {"lat":"48.1301218","lon":"11.5676701","title":"Watch Tatort on Sunday evening, take the Tatort burger!","localisation":"Think about reservation!","color":"#45bfff"} ,
   {"lat":"48.1523855","lon":"11.5343182","title":"Best Gelato! Try choco-special! It's very... special","localisation":"Sarcletti","color":"#45bfff"} ,
@@ -80,8 +80,8 @@
   {"lat":"48.1723375","lon":"11.5425646","title":"Clean tennis area, well deserved with cool people","localisation":"","color":"#45bfff"} ,
   {"lat":"48.1721532","lon":"11.5423903","title":"Absolutely cute open air bar with swing for seats","localisation":"In addition you can watch people making efforts...","color":"#45bfff"} ,
   {"lat":"48.1721568","lon":"11.5428919","title":"Barbecue area surrounding by tennis field","localisation":"Perfect for a birthday pre-party","color":"#45bfff"} ,
-  {"lat":"48.1383705","lon":"11.5446755","title":"Find some spray paint to stay creative!","localisation":"The guy is really cool","color":"#45bfff"} ,
+  {"lat":"48.1383705","lon":"11.5446755","title":"Find some spray paint to stay creative!","localisation":"Ghostyard Shop, the guy is really cool","color":"#45bfff"} ,
   {"lat":"48.1425051","lon":"11.5600526","title":"Cool tiny Berlin style bar for cosy discussion","localisation":"First floor, to the end, seat in front of the window!","color":"#45bfff"} ,
   {"lat":"48.1409506","lon":"11.5768003","title":"Unique small city cinema with auteur cinema","localisation":"Super tiny but really comfortable and old fashion","color":"#45bfff"} ,
   {"lat":"48.13794","lon":"11.54324","title":"Best home made fresh Dürum in town","localisation":"Mit alles!!!","color":"#45bfff"} ,
-  {"lat":"48.13775","lon":"11.54372","title":"Fantastic breakfast tea house, unique design","localisation":"Super cosy, perfect for a good moment","color":"#45bfff"} ]
+  {"lat":"48.13775","lon":"11.54372","title":"Fantastic breakfast tea house, unique design","localisation":"Marais","color":"#45bfff"} ]
