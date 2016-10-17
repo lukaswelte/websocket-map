@@ -21,6 +21,19 @@ textarea:focus, input:focus{
     display: table-cell;
 }
 
+.AddEvent-close {
+  width: 24px;
+  height: 24px;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  float: right;
+  margin: 30px 30px 0 0;
+  background: url(../img/btn-crossBlack.svg) no-repeat center center,radial-gradient(ellipse farthest-corner at center, rgba(255,255,255,0.88) 0%, rgba(255,255,255,0) 75%);
+  opacity: .5;
+}
+
 .AddEvent-form textarea.AddEvent-input{
   font-weight: 100;
   font-size: 2.2em;

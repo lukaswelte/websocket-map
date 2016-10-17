@@ -1,7 +1,5 @@
 .UserMapMarker-dot {
-  width: 64px;
-  height: 64px;
-  margin-left: -32px;
-  margin-top: -64px;
+  width: 17px;
+  height: 50px;
   background: url(../img/monogramBlack.svg) no-repeat center center;
 }

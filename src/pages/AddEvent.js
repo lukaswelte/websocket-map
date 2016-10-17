@@ -37,7 +37,7 @@ class AddEvent extends Component {
 
     return (
       <div className="AddEvent-card">
-          <div onClick={onClose} className="EventDetail-close"/>
+          <div onClick={onClose} className="AddEvent-close"/>
           <form onSubmit={handleSubmit} className="AddEvent-form">
             <div className="AddEvent-content">
                 <textarea type="text" onChange={handleDescriptionChange} className="AddEvent-input" rows="5" placeholder="What's happening here?" />
