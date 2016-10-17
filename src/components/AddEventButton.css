@@ -11,9 +11,7 @@
   position: absolute;
   left:50vw;
   margin-left:-40px;
-  order: 0;
-  flex: 0 1 auto;
-  align-self: center;
+  bottom: 8vh;
   overflow: hidden;
   background: #f06;
   background: url(../img/map-star.svg) no-repeat center center, linear-gradient( 45deg, #f6ab2f, rgba(254, 86, 174, 1));
