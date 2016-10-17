@@ -11,13 +11,10 @@ class AddEvent extends PureComponent {
     return (
       <div className="AddEvent-card">
           <div onClick={onClose} className="EventDetail-close"/>
-          <div className="AddEvent-target"/>
-          <form onSubmit={onClose} className="AddEvent-form">
-            <div className="AddEvent-content">
-                <textarea type="text" className="AddEvent-input" rows="5" placeholder="What's happen here?" />
-              </div>
-            <input type="submit" className="AddEvent-valid" defaultValue=""/>
-          </form>
+          <div className="AddEvent-msg-frame">
+            <div className="AddEvent-msg">Something happening here?</div>
+          </div>
+          <div className="AddEvent-valid"/>
       </div>
     );
   }

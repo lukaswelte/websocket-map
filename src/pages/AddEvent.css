@@ -11,15 +11,29 @@ textarea:focus, input:focus{
   box-shadow: 0px 1em 2em  rgba(0, 0, 0, 0.3);
 }
 
-.AddEvent-target {
-  width:24px;
-  height:24px;
-  left: 50vw;
-  margin-left: -12px;
-  top:25vh;
-  border-radius: 12px;
+.AddEvent-msg-frame{
+  position:absolute;
+  width: 100vw;
+  display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+}
+
+.AddEvent-msg {
+  flex: 0 1 auto;
+  align-self: center;
+  text-align: center;
+  padding: 6px 13px 8px 13px;
+  top:30vh;
+  border-radius: 40px;
   position: absolute;
-  background-color: red;
+  background-color: #252525;
+  color: white;
+  font-weight: 300;
+  font-size:1em;
 }
 
 .AddEvent-content {
@@ -32,28 +46,7 @@ textarea:focus, input:focus{
     display: table-cell;
 }
 
-.AddEvent-form textarea.AddEvent-input{
-  font-weight: 100;
-  font-size: 2.2em;
-  width: 80vw;
-  flex: 0 1 auto;
-  align-self: center;
-  text-align: center;
-  color: rgba(37, 37, 37, 1);
-  border: 0;
-  background-color: rgba(255, 255, 255, 0.1);
-  display: inline-block;
-  vertical-align: middle;
-  resize: none;
-}
-
-input[placeholder], [placeholder], *[placeholder] {
-   color: rgba(37, 37, 37, 0.88);
-   font-weight: 200;
-}
-
-
-.AddEvent-form input.AddEvent-valid {
+.AddEvent-valid {
 width: 80px;
 height: 80px;
 border-radius: 40px;
@@ -66,6 +59,8 @@ font-weight: 300;
 color:white;
 position: absolute;
 bottom: 8vh;
+left:50vw;
+margin-left:-40px;
 order: 0;
 flex: 0 1 auto;
 align-self: center;
