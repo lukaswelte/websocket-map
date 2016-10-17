@@ -3,12 +3,14 @@ import { routerReducer } from 'react-router-redux';
 import events from './events';
 import user from './user';
 import usersLocations from './usersLocations';
+import starredLocations from './starredLocations';
 import lastAction from './lastAction';
 
 const rootReducer = combineReducers({
   events,
   user,
   usersLocations,
+  starredLocations,
   lastAction,
   routing: routerReducer
 });
