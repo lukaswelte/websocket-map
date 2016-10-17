@@ -38,9 +38,7 @@ ReactDOM.render(
           <Route path="add-event" component={Overview} >
             <IndexRoute component={AddEvent} />
           </Route>
-          <Route path="profile" component={Overview} >
-            <IndexRoute component={Profile} />
-          </Route>
+          <Route path="profile" component={Profile} />
           <Route path="*" component={NotFound} />
         </Route>
       </Router>
