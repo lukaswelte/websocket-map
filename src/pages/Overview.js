@@ -72,7 +72,7 @@ class Overview extends Component {
           {otherUsersMarkers}
           {user.location ? (<UserMapMarker lat={user.location.lat} lng={user.location.lng} />) : null}
         </Map>
-        {children ? null: <AddEventButton onClick={showAddEvent} />}
+        {children ? null: <AddEventButton style={{Bottom:'30px'}} onClick={showAddEvent} />}
       </div>
     );
   }
