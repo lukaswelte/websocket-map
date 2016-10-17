@@ -3,9 +3,10 @@ import { bindActionCreators } from 'redux';
 import { connect } from 'react-redux';
 import Map from 'google-map-react';
 import { updateLocation } from '../actions/user';
-import { goToEvent, goToAddEvent } from '../actions/routing';
+import { goToEvent, goToAddEvent, goToProfile } from '../actions/routing';
 import EventMapMarker from '../components/EventMapMarker';
 import UserMapMarker from '../components/UserMapMarker';
+import LoginMapButton from '../components/LoginMapButton';
 import AddEventButton from '../components/AddEventButton';
 import './Overview.css';
 
@@ -37,7 +38,7 @@ class Overview extends Component {
   }
 
   render() {
-    const { events, user, updateUserLocation, usersLocations, children, showEventDetail, showAddEvent } = this.props;
+    const { events, user, updateUserLocation, usersLocations, children, showEventDetail, showAddEvent, showProfile } = this.props;
 
     const { mapCenter } = this.state;
 
@@ -72,7 +73,8 @@ class Overview extends Component {
           {otherUsersMarkers}
           {user.location ? (<UserMapMarker lat={user.location.lat} lng={user.location.lng} />) : null}
         </Map>
-        {children ? null: <AddEventButton style={{Bottom:'30px'}} onClick={showAddEvent} />}
+        {children ? null: <AddEventButton style={{bottom:'30px'}} onClick={showAddEvent} />}
+        {children ? null: <LoginMapButton onClick={showProfile} />}
       </div>
     );
   }
@@ -87,6 +89,7 @@ const OverviewContainer = connect(
   (dispatch) => ({
     updateUserLocation: bindActionCreators(updateLocation, dispatch),
     showAddEvent: bindActionCreators(goToAddEvent, dispatch),
+    showProfile: bindActionCreators(goToProfile, dispatch),
     showEventDetail: bindActionCreators(goToEvent, dispatch)
   })
 )(Overview);

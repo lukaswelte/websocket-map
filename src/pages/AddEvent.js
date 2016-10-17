@@ -10,9 +10,7 @@ class AddEvent extends PureComponent {
 
     return (
       <div className="AddEvent-card">
-          <div onClick={onClose} className="EventDetail-close">
-            <div>X</div>
-          </div>
+          <div onClick={onClose} className="EventDetail-close"/>
           <div className="AddEvent-target"/>
           <form onSubmit={onClose} className="AddEvent-form">
             <div className="AddEvent-content">

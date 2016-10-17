@@ -9,9 +9,7 @@ class EventDetail extends PureComponent {
 
     return (
       <div onClick={onClose} className="EventDetail-card">
-          <div className="EventDetail-close">
-            <div>X</div>
-          </div>
+          <div className="EventDetail-close"/> 
           <div className="EventDetail-content">
             <h1>{event.title}</h1>
             <h2>{event.subtitle}</h2>

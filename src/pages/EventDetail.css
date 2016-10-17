@@ -1,15 +1,14 @@
 .EventDetail-close {
-  width: 44px;
-  height: 44px;
-  background-image: radial-gradient(ellipse farthest-corner at center, rgba(255,255,255,0.88) 0%, rgba(255,255,255,0) 75%);
-  border-radius: 22px;
+  width: 24px;
+  height: 24px;
   cursor: pointer;
   display: flex;
-  color: #252525;
   justify-content: center;
   align-items: center;
   float: right;
-  margin: 20px 20px 0 0;
+  margin: 30px 30px 0 0;
+  background: url(../img/btn-crossBlack.svg) no-repeat center center,radial-gradient(ellipse farthest-corner at center, rgba(255,255,255,0.88) 0%, rgba(255,255,255,0) 75%);
+  opacity: .5;
 }
 
 .EventDetail-card {
