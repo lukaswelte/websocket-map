@@ -3,9 +3,11 @@
   height: 13px;
   border-radius: 30px;
   cursor: pointer;
-  background: radial-gradient( farthest-side ellipse at 65% 35%, #fcb2c2, #ff0090);
+
+  background: url(../img/dots.png) no-repeat center center;
+  /*background: radial-gradient( farthest-side ellipse at 65% 35%, #fcb2c2, #ff0090);
   background-clip: padding-box;
   box-shadow:
     0 1px 5px rgba(252,104,136,0.6),
-    inset 3px -3px 2px 0px rgba(255,255,255,0.3);
+    inset 3px -3px 2px 0px rgba(255,255,255,0.3);*/
 }
