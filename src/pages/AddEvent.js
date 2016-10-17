@@ -1,22 +1,48 @@
-import React, { PureComponent } from 'react';
+import React, { Component } from 'react';
 import { bindActionCreators } from 'redux';
 import { connect } from 'react-redux';
 import { goBack } from '../actions/routing';
+import { starLocation } from '../actions/starredLocations';
 import './AddEvent.css';
 
-class AddEvent extends PureComponent {
+class AddEvent extends Component {
+
+  constructor(props) {
+    super(props);
+    this.state = {
+      eventDescription: ""
+    };
+  }
+
   render() {
-    const { onClose } = this.props;
+    const { onClose, addStarredLocation, currentUserLocation } = this.props;
+
+    const { eventDescription } = this.state;
+
+    const enableSubmit = eventDescription !== "";
+
+    const handleSubmit = (event) => {
+      event.preventDefault();
+      if (enableSubmit) {
+        addStarredLocation(eventDescription, currentUserLocation);
+        onClose();
+      }
+    }
+
+    const handleDescriptionChange = (event) => {
+      this.setState({
+        eventDescription: event.target.value
+      });
+    }
 
     return (
       <div className="AddEvent-card">
           <div onClick={onClose} className="EventDetail-close"/>
-          <div className="AddEvent-target"/>
-          <form onSubmit={onClose} className="AddEvent-form">
+          <form onSubmit={handleSubmit} className="AddEvent-form">
             <div className="AddEvent-content">
-                <textarea type="text" className="AddEvent-input" rows="5" placeholder="What's happen here?" />
+                <textarea type="text" onChange={handleDescriptionChange} className="AddEvent-input" rows="5" placeholder="What's happening here?" />
               </div>
-            <input type="submit" className="AddEvent-valid" defaultValue=""/>
+            <button type="submit" className={enableSubmit ? "AddEvent-valid" : ""} />
           </form>
       </div>
     );
@@ -25,10 +51,11 @@ class AddEvent extends PureComponent {
 
 const AddEventContainer = connect(
   (state, ownProps) => ({
-
+    currentUserLocation: state.user.location
   }),
   (dispatch) => ({
     onClose: bindActionCreators(goBack, dispatch),
+    addStarredLocation: bindActionCreators(starLocation, dispatch),
   })
 )(AddEvent);
 

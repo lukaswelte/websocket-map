@@ -8,6 +8,7 @@ import EventMapMarker from '../components/EventMapMarker';
 import UserMapMarker from '../components/UserMapMarker';
 import LoginMapButton from '../components/LoginMapButton';
 import AddEventButton from '../components/AddEventButton';
+import StarredLocationMarker from '../components/StarredLocationMarker';
 import './Overview.css';
 
 const defaultPosition = {lat: 48.1429561, lng: 11.5800083};
@@ -38,7 +39,17 @@ class Overview extends Component {
   }
 
   render() {
-    const { events, user, updateUserLocation, usersLocations, children, showEventDetail, showAddEvent, showProfile } = this.props;
+    const {
+      events,
+      user,
+      updateUserLocation,
+      usersLocations,
+      children,
+      showEventDetail,
+      showAddEvent,
+      showProfile,
+      starredLocations
+    } = this.props;
 
     const { mapCenter } = this.state;
 
@@ -48,13 +59,17 @@ class Overview extends Component {
       });
     }
 
-    const onMarkerClick = (key, props) => {
-      showEventDetail(key);
+    const onMarkerClick = (key) => {
+      if (key.startsWith('EventMapMarker')) {
+        showEventDetail(key.replace('EventMapMarker', ''));
+      }
     }
 
-    const otherUsersMarkers = usersLocations.map((user, index) => <UserMapMarker key={index} lat={user.location.lat} lng={user.location.lng} />);
+    const otherUsersMarkers = usersLocations.map((user, index) => <UserMapMarker key={'UserMapMarker'+index} lat={user.location.lat} lng={user.location.lng} />);
 
-    const mapMarkers = events.map((event, index) => <EventMapMarker key={index} lat={event.lat} lng={event.lon} />);
+    const mapMarkers = events.map((event, index) => <EventMapMarker key={'EventMapMarker'+index} lat={event.lat} lng={event.lon} />);
+
+    const starredLocationMarkers = starredLocations.map((location, index) => <StarredLocationMarker key={'StarredLocationMarker'+index} location={location} lat={location.location.lat} lng={location.location.lng} />);
 
     const mapChanged = (obj) => {
       const center = obj.center;
@@ -69,6 +84,7 @@ class Overview extends Component {
       <div className="Overview-container">
         {children}
         <Map center={mapCenter} zoom={15} onChange={mapChanged} onChildClick={onMarkerClick} >
+          {starredLocationMarkers}
           {mapMarkers}
           {otherUsersMarkers}
           {user.location ? (<UserMapMarker lat={user.location.lat} lng={user.location.lng} />) : null}
@@ -84,6 +100,7 @@ const OverviewContainer = connect(
   (state) => ({
     events: state.events,
     user: state.user,
+    starredLocations: state.starredLocations,
     usersLocations: state.usersLocations.filter(n => n!==null)
   }),
   (dispatch) => ({
