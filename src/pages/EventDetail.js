@@ -13,6 +13,19 @@ class EventDetail extends PureComponent {
       distanceToLocation = distanceFromLocationToLocationInKm(userLocation.lat, userLocation.lng, event.lat, event.lon).toFixed(2);
     }
 
+    const directionsToLocation = () => {
+      const googleMapURL = `https://www.google.com/maps/dir/Current+Location/${event.lat},${event.lon}`;
+      const appleMapsURL = `http://maps.apple.com/?daddr=${event.lat},${event.lon}`;
+
+      const userAgent = navigator.userAgent;
+      if (userAgent.indexOf("Chrome") === -1 && userAgent.indexOf("Safari") != -1) {
+        // it is a safari browser so open Apple maps
+        window.open(appleMapsURL, '_blank');
+      } else {
+        window.open(googleMapURL, '_blank');
+      }
+    }
+
 
     return (
       <div onClick={onClose} className="EventDetail-card">
@@ -20,6 +33,7 @@ class EventDetail extends PureComponent {
           <div className="EventDetail-content">
             <h1>{event.title}</h1>
             <h2>{event.localisation}</h2>
+            <div onClick={directionsToLocation}>Take me there</div>
             {distanceToLocation ? <h3 style={{color: event.categoryColor}}>{distanceToLocation} km from you</h3> : null}
           </div>
       </div>
