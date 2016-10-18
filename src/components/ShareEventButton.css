@@ -9,13 +9,14 @@
   font-weight: 300;
   color:white;
   position: absolute;
-  left:40px;
+  margin-left: -120px;
+  left:50vw;
   bottom: 40px;
   order: 0;
   flex: 0 1 auto;
   align-self: center;
   overflow: hidden;
   background: #f06;
-  background: url(../img/btn-Share.svg) no-repeat center center, linear-gradient( 45deg, rgba(254, 86, 174, 1),#f6ab2f);
+  background: url(../img/btn-Share.svg) no-repeat center center, linear-gradient( 45deg, #f6ab2f, rgba(254, 86, 174, 1));
   opacity: 0.8;
 }
