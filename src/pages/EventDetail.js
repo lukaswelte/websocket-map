@@ -35,10 +35,9 @@ class EventDetail extends PureComponent {
           <div className="EventDetail-content">
             <h1>{event.title}</h1>
             <h2>{event.localisation}</h2>
-            <div onClick={directionsToLocation}>Take me there</div>
             {distanceToLocation ? <h3 style={{color: event.categoryColor}}>{distanceToLocation} km from you</h3> : null}
           </div>
-          <BringMeButton style={{bottom:'30px'}} />
+          <BringMeButton onClick={directionsToLocation} style={{bottom:'30px'}} />
           <ShareEventButton />
       </div>
     );
