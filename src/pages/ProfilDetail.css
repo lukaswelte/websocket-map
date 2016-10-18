@@ -34,7 +34,7 @@
 
 .ProfilDetail-title {
   font-size:1em;
-  font-weight: 200;
+  font-weight: 300;
 }
 
 .ProfilDetail-qrcode{
@@ -47,12 +47,12 @@
 .ProfilDetail-collect{
   margin-top: 40px;
   font-size:1em;
-  font-weight: 200;
+  font-weight: 300;
 }
 
 .ProfilDetail-nbr{
   font-size: 2em;
-  font-weight: 100;
+  font-weight: 200;
   width: 55vw;
   float:left;
   text-align: right;
