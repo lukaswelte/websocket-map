@@ -3,7 +3,7 @@ import { connect } from 'react-redux';
 import { goBack } from 'react-router-redux';
 import { distanceFromLocationToLocationInKm } from '../utilities/geoDistance';
 import BringMeButton from '../components/BringMeButton';
-import ShareEventButton from '../components/ShareEventButton';
+import ShareEventMenu from '../components/ShareEventMenu';
 import './EventDetail.css';
 
 class EventDetail extends PureComponent {
@@ -20,7 +20,7 @@ class EventDetail extends PureComponent {
       const appleMapsURL = `http://maps.apple.com/?daddr=${event.lat},${event.lon}`;
 
       const userAgent = navigator.userAgent;
-      if (userAgent.indexOf("Chrome") === -1 && userAgent.indexOf("Safari") != -1) {
+      if (userAgent.indexOf("Chrome") === -1 && userAgent.indexOf("Safari") !== -1) {
         // it is a safari browser so open Apple maps
         window.open(appleMapsURL, '_blank');
       } else {
@@ -38,7 +38,9 @@ class EventDetail extends PureComponent {
             {distanceToLocation ? <h3 style={{color: event.categoryColor}}>{distanceToLocation} km from you</h3> : null}
           </div>
           <BringMeButton onClick={directionsToLocation} style={{bottom:'30px'}} />
-          <ShareEventButton />
+          <div onClick={(e) => e.stopPropagation()}>
+            <ShareEventMenu />
+          </div>
       </div>
     );
   }
