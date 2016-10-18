@@ -2,6 +2,8 @@ import React, { PureComponent } from 'react';
 import { connect } from 'react-redux';
 import { goBack } from 'react-router-redux';
 import { distanceFromLocationToLocationInKm } from '../utilities/geoDistance';
+import BringMeButton from '../components/BringMeButton';
+import ShareEventButton from '../components/ShareEventButton';
 import './EventDetail.css';
 
 class EventDetail extends PureComponent {
@@ -36,6 +38,8 @@ class EventDetail extends PureComponent {
             <div onClick={directionsToLocation}>Take me there</div>
             {distanceToLocation ? <h3 style={{color: event.categoryColor}}>{distanceToLocation} km from you</h3> : null}
           </div>
+          <BringMeButton style={{bottom:'30px'}} />
+          <ShareEventButton />
       </div>
     );
   }
