@@ -1,0 +1,41 @@
+.ShareEventButton-btn {
+  cursor: pointer;
+  margin-left: -125px;
+  left: 0px;
+  opacity: 0.8;
+  border-radius: 50%;
+  background: linear-gradient( 45deg, #f6ab2f, rgba(254, 86, 174, 1));
+  display: flex;
+  justify-content: center;
+  align-items: center;
+ }
+
+ .ShareEventButton-btn-menu{
+   background: url(../img/btn-Share.svg) no-repeat center center;
+   width: 60px;
+   height: 60px;
+ }
+
+.ShareEventButton-btn-facebook{
+  background: url(../img/btn-Share-facebook.svg) no-repeat center center;
+  width: 60px;
+  height: 60px;
+}
+
+.ShareEventButton-btn-twitter{
+  background: url(../img/btn-Share-twitter.svg) no-repeat center center;
+  width: 60px;
+  height: 60px;
+}
+
+.ShareEventButton-btn-whatsapp{
+  background: url(../img/btn-Share-whatsapp.svg) no-repeat center center;
+  width: 60px;
+  height: 60px;
+}
+
+.ShareEventButton-btn-sms{
+  background: url(../img/btn-Share-sms.svg) no-repeat center center;
+  width: 60px;
+  height: 60px;
+}
