@@ -21,11 +21,11 @@ export default class ShareEventButton extends PureComponent {
     }
 
     const shareSMS = () => {
-      window.open(`sms:?body=${shareText}`);
+      window.open(`sms:?body=${shareText+currentURL}`);
     }
 
     const shareWhatsapp = () => {
-      window.open(`whatsapp://send?text=${shareText}`);
+      window.open(`whatsapp://send?text=${shareText+currentURL}`);
     }
 
     return (

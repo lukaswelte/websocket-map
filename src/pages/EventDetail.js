@@ -28,7 +28,7 @@ class EventDetail extends PureComponent {
       }
     }
 
-    const shareText = `I'm going to ${event.localisation}, do you want to join?`;
+    const shareText = `I'm going to ${event.localisation}, do you want to join? Join me at `;
 
     return (
       <div onClick={onClose} className="EventDetail-card">
