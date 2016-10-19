@@ -32,9 +32,12 @@ class EventDetail extends PureComponent {
     const shareText = `I'm going to ${event.localisation}, do you wanna join? Join me at `;
 
     return (
-      <div onClick={onClose} className="EventDetail-card">
+      <div
+        onClick={onClose}
+        className="EventDetail-card"
+        style={{backgroundImage:`url(${event.picture})`, backgroundSize:`cover`, backgroundPosition: 'center center'}}>
           <Helmet
-            title={`Event ${event.title}`} 
+            title={`Event ${event.title}`}
             meta={[
                 {"name": "title", "content": `Event at ${event.localisation}`},
                 {"name": "description", "content": event.title},
