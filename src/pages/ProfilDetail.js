@@ -5,7 +5,7 @@ import './ProfilDetail.css';
 
 class ProfilDetail extends PureComponent {
   render() {
-    const { event, onClose } = this.props;
+    const { onClose } = this.props;
 
     return (
       <div onClick={onClose} className="ProfilDetail-card">
