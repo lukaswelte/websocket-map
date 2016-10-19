@@ -28,6 +28,7 @@ class EventDetail extends PureComponent {
       }
     }
 
+    const shareText = `I'm going to ${event.localisation}, do you want to join?`;
 
     return (
       <div onClick={onClose} className="EventDetail-card">
@@ -39,7 +40,7 @@ class EventDetail extends PureComponent {
           </div>
           <BringMeButton onClick={directionsToLocation} style={{bottom:'30px'}} />
           <div onClick={(e) => e.stopPropagation()}>
-            <ShareEventMenu />
+            <ShareEventMenu shareText={shareText} />
           </div>
       </div>
     );
