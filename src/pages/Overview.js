@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import { bindActionCreators } from 'redux';
 import { connect } from 'react-redux';
 import Map from 'google-map-react';
+import Helmet from 'react-helmet';
 import { updateLocation } from '../actions/user';
 import { goToEvent, goToAddEvent, goToProfile } from '../actions/routing';
 import EventMapMarker from '../components/EventMapMarker';
@@ -82,6 +83,7 @@ class Overview extends Component {
 
     return (
       <div className="Overview-container">
+        <Helmet title="Map" />
         {children}
         <Map center={mapCenter} zoom={15} onChange={mapChanged} onChildClick={onMarkerClick} >
           {starredLocationMarkers}

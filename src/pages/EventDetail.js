@@ -1,6 +1,7 @@
 import React, { PureComponent } from 'react';
 import { connect } from 'react-redux';
 import { goBack } from 'react-router-redux';
+import Helmet from 'react-helmet';
 import { distanceFromLocationToLocationInKm } from '../utilities/geoDistance';
 import BringMeButton from '../components/BringMeButton';
 import ShareEventButton from '../components/ShareEventButton';
@@ -31,6 +32,14 @@ class EventDetail extends PureComponent {
 
     return (
       <div onClick={onClose} className="EventDetail-card">
+          <Helmet
+            title={`Event ${event.title}`} 
+            meta={[
+                {"name": "title", "content": `Event at ${event.localisation}`},
+                {"name": "description", "content": event.title},
+                {"property": "og:type", "content": "website"}
+            ]}
+          />
           <div className="EventDetail-close"/>
           <div className="EventDetail-content">
             <h1>{event.title}</h1>

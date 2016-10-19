@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { bindActionCreators } from 'redux';
 import { connect } from 'react-redux';
+import Helmet from 'react-helmet';
 import { goBack } from '../actions/routing';
 import { starLocation } from '../actions/starredLocations';
 import './AddEvent.css';
@@ -37,6 +38,7 @@ class AddEvent extends Component {
 
     return (
       <div className="AddEvent-card">
+          <Helmet title="Add Event" />
           <div onClick={onClose} className="AddEvent-close"/>
           <div className="AddEvent-msg-frame">
             <div className="AddEvent-msg">Mark that place?</div>
