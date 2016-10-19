@@ -35,7 +35,7 @@ class EventDetail extends PureComponent {
       <div
         onClick={onClose}
         className="EventDetail-card"
-        style={{background:event.picture}}>
+        style={{backgroundImage:`url(${event.picture})`, backgroundSize:`cover`, backgroundPosition: 'center center'}}>
           <Helmet
             title={`Event ${event.title}`}
             meta={[
