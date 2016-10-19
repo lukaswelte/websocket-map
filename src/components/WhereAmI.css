@@ -1,0 +1,25 @@
+.WhereAmI-btn {
+  flex: 0 1 auto;
+  align-self: center;
+  text-align: center;
+  padding: 8px 13px 6px 13px;
+  border-radius: 40px;
+  position: absolute;
+  color: white;
+  font-weight: 300;
+  font-size:1.4em;
+  bottom:45px;
+  background-color: #252525;
+}
+
+.WhereAmI-triangle {
+  width: 0px;
+  height: 0px;
+  left:50%;
+  margin-left:-8px;
+	border-left: 8px solid transparent;
+	border-right: 8px solid transparent;
+	border-top: 8px solid #252525;
+  position:absolute;
+  bottom:-7px;
+}

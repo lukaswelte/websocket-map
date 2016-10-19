@@ -4,6 +4,7 @@ export const goToMap = () => push('/map');
 export const goToEvent = (eventID) => push(`/event/${eventID}`);
 export const goToAddEvent = () => push('/add-event');
 export const goToProfile = () => push('/profile');
+export const goToStreet = () => push('/street');
 export const goToIntroduction = (step) => push(`/introduction/${step || 1}`);
 export const goToLogin = (step) => push(`/login/${step || 1}`);
 export const goBack = () => back();
