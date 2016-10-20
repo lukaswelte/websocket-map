@@ -29,7 +29,7 @@ class EventDetail extends PureComponent {
       }
     }
 
-    const shareText = `I'm going to ${event.localisation}, do you wanna join? Join me at `;
+    const shareText = `I'm going to ${event.localisation}, wanna join? @ `;
 
     return (
       <div
