@@ -21,7 +21,7 @@ class EventDetail extends PureComponent {
       const appleMapsURL = `http://maps.apple.com/?daddr=${event.lat},${event.lon}`;
 
       const userAgent = navigator.userAgent;
-      if (userAgent.indexOf("Chrome") === -1 (&& userAgent.indexOf("Safari") !== -1 || userAgent.indexOf("iPhone") !== -1)) {
+      if (userAgent.indexOf("Chrome") === -1 && (userAgent.indexOf("Safari") !== -1 || userAgent.indexOf("iPhone") !== -1)) {
         // it is a safari browser so open Apple maps
         if (navigator.standalone) {
           window.open(appleMapsURL);
