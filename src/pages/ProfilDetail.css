@@ -1,10 +1,13 @@
 .ProfilDetail-card{
-  height: 100vh;
-  width: 100vw;
   color:#FFFFFF;
   text-align: center;
-  padding: 15vh 0px 0px 0px;
   background: linear-gradient( 45deg, #f6ab2f, rgba(254, 86, 174, 1));
+}
+
+.ProfilDetail-detail {
+  height: 100vh;
+  width: 100vw;
+  padding: 15vh 0px 0px 0px;
 }
 
 .ProfilDetail-close {
@@ -79,4 +82,49 @@
     0 1px 5px rgba(252,104,136,0.6),
     inset 3px -3px 2px 0px rgba(255,255,255,0.3);
   text-align: left;
+}
+
+
+
+.ProfilDetail-Wishlist {
+  height: 100vh;
+  width: 100vw;
+}
+
+ul.ProfilDetail-CityTrips {
+  list-style-type: none;
+  position: relative;
+  float: left;
+  display: block;
+  left: 50%;
+  margin-left:-40px;
+}
+
+ul.ProfilDetail-CityTrips li {
+  margin:-5px 4px;
+  padding: 5px 12px 6px 12px;
+  background-color: rgba(0, 0, 0, .1);
+  border-radius: 70px;
+  position: relative;
+  float: left;
+  display: block;
+  right: 50%;
+}
+
+ul.ProfilDetail-TripsDetail {
+  list-style-type: none;
+  position: relative;
+  float: left;
+  margin-left:-40px;
+}
+
+ul.ProfilDetail-TripsDetail li {
+  width: 90vw;
+  font-size: 1.6em;
+  font-weight: 200;
+  height: 18vh;
+  padding: 8px 5vw;
+  margin-bottom: 8px;
+  background-size:cover;
+  background-position: center center;
 }
