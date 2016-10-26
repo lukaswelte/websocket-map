@@ -33,8 +33,9 @@ class ProfilDetail extends PureComponent {
         </div>
 
         <div className="ProfilDetail-Wishlist">
-            <div className="ProfilDetail-category">Trips</div>
+            <div className="ProfilDetail-category">Trips<sup>3</sup></div>
             <div className="ProfilDetail-shortLine" />
+            <div className="ProfilDetail-quote">The journey of a thousand miles<br/>begins with one step.</div>
             <ul className="ProfilDetail-TripsDetail">
               <li style={{backgroundImage:`url(http://www.dronestagr.am/wp-content/uploads/2015/05/DJI00792.jpg)`}}>
                 <div className="ProfilDetail-vignette">
