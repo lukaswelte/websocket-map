@@ -5,7 +5,7 @@
 }
 
 .ProfilDetail-detail {
-  height: 100vh;
+  height: 85vh;
   width: 100vw;
   padding: 15vh 0px 0px 0px;
 }
@@ -19,7 +19,7 @@
   top:0;
   justify-content: center;
   align-items: center;
-  position:absolute;
+  position:fixed;
   margin: 30px 30px 0 0;
   background: url(../img/btn-crossWhite.svg) no-repeat center center;
   opacity: .5;
@@ -84,11 +84,32 @@
   text-align: left;
 }
 
+.ProfilDetail-category {
+  font-size:3em;
+  font-weight: 600;
+  text-align: left;
+  margin-left:5vw;
+}
+
+.ProfilDetail-Line {
+  height: 1px;
+  width: 90vw;
+  margin: 3vh 5vw 3vh 5vw;
+  background-color: rgba(255,255,255,0.3);
+}
+
+.ProfilDetail-shortLine {
+  height: 1px;
+  width: 20vw;
+  margin: 3vh 5vw 3vh 5vw;
+  background-color: rgba(255,255,255,0.3);
+}
 
 
 .ProfilDetail-Wishlist {
-  height: 100vh;
+  height: 96vh;
   width: 100vw;
+  padding: 4vh 0px 0px 0px;
 }
 
 ul.ProfilDetail-CityTrips {
@@ -120,11 +141,23 @@ ul.ProfilDetail-TripsDetail {
 
 ul.ProfilDetail-TripsDetail li {
   width: 90vw;
-  font-size: 1.6em;
-  font-weight: 200;
-  height: 18vh;
-  padding: 8px 5vw;
-  margin-bottom: 8px;
+  font-size:1.3em;
+  height: 120px;
+  margin: 0px 5vw 10px 5vw;
+  display: block;
   background-size:cover;
   background-position: center center;
+}
+
+.ProfilDetail-vignette {
+    display:table-cell;
+    vertical-align:middle;
+    height: 120px;
+    width: 100vw;
+}
+
+.ProfilDetail-normal {
+    font-size: 0.8em;
+    font-weight: 300;
+    color: rgba(255, 255, 255, .7);
 }

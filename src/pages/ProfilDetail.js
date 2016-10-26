@@ -8,9 +8,9 @@ class ProfilDetail extends PureComponent {
     const { onClose } = this.props;
 
     return (
-      <div onClick={onClose} className="ProfilDetail-card">
+      <div className="ProfilDetail-card">
         <div className="ProfilDetail-detail">
-            <div className="ProfilDetail-close"/>
+            <div className="ProfilDetail-close" onClick={onClose}/>
             <div className="ProfilDetail-monogram"/>
             <div className="ProfilDetail-content">
               <div className="ProfilDetail-name">Annette</div>
@@ -25,19 +25,35 @@ class ProfilDetail extends PureComponent {
                   3 City s trips in preparation
                  </div>
                 <ul className="ProfilDetail-CityTrips">
-                  <li onClick={onClose}>Munich</li>
-                  <li onClick={onClose}>Paris</li>
-                  <li onClick={onClose}>Mexico</li>
+                  <li>Munich</li>
+                  <li>Paris</li>
+                  <li>Mexico</li>
                 </ul>
             </div>
         </div>
 
         <div className="ProfilDetail-Wishlist">
-            <div className="ProfilDetail-name">City's Trips</div>
+            <div className="ProfilDetail-category">Trips</div>
+            <div className="ProfilDetail-shortLine" />
             <ul className="ProfilDetail-TripsDetail">
-              <li onClick={onClose} style={{backgroundImage:`url(http://www.dronestagr.am/wp-content/uploads/2015/05/DJI00792.jpg)`}}>Munich</li>
-              <li onClick={onClose} style={{backgroundImage:`url(http://www.airport-orly.com/images/paris-tour-eiffel-at-night.jpg)`}}>Paris</li>
-              <li onClick={onClose} style={{backgroundImage:`url(http://resources.touropia.com/gfx/d/awesome-beaches-around-the-world/tulum.jpg)`}}>Mexico</li>
+              <li style={{backgroundImage:`url(http://www.dronestagr.am/wp-content/uploads/2015/05/DJI00792.jpg)`}}>
+                <div className="ProfilDetail-vignette">
+                Munich <sup>DE</sup><br/>
+                <div className="ProfilDetail-normal">10 inspirations</div>
+                </div>
+              </li>
+              <li style={{backgroundImage:`url(http://www.airport-orly.com/images/paris-tour-eiffel-at-night.jpg)`}}>
+                <div className="ProfilDetail-vignette">
+                Paris <sup>FR</sup><br/>
+                <div className="ProfilDetail-normal">54 inspirations</div>
+                </div>
+              </li>
+              <li style={{backgroundImage:`url(http://resources.touropia.com/gfx/d/awesome-beaches-around-the-world/tulum.jpg)`}}>
+                <div className="ProfilDetail-vignette">
+                Tulum <sup>MX</sup><br/>
+                <div className="ProfilDetail-normal">34 inspirations</div>
+                </div>
+              </li>
             </ul>
         </div>
       </div>
