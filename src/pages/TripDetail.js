@@ -10,7 +10,7 @@ class TripDetail extends PureComponent {
     return (
       <div onClick={onClose} className="TripDetail-card">
           <div className="TripDetail-close"/>
-          <div className="TripDetail-category">Munich<sup>DE</sup></div>
+          <div className="TripDetail-category">Munich <sup>DE</sup></div>
           <div className="TripDetail-shortLine" />
           <div className="TripDetail-quote">
             Hi / Hallo<br/>
@@ -48,8 +48,20 @@ class TripDetail extends PureComponent {
             <div className="TripDetail-Subcategory">Better Together</div>
             <div className="TripDetail-shortLine" />
             <ul className="TripDetail-together">
-              <li className="TripDetail-Friend" />
-              <li className="TripDetail-Friend" />
+              <li>
+                <div className="TripDetail-Friend"/>
+                  <div className="TripDetail-Status" />
+                  <div className="TripDetail-FriendName">Annette<br/>
+                    <div className="TripDetail-FriendStatusOk">Looking forward!</div>
+                </div>
+              </li>
+              <li>
+                <div className="TripDetail-Friend"/>
+                  <div className="TripDetail-Statuswait" />
+                <div className="TripDetail-FriendName">Lukas<br/>
+                  <div className="TripDetail-FriendStatus">Pending...</div>
+                </div>
+              </li>
               <li className="TripDetail-FriendAdd">+</li>
             </ul>
 

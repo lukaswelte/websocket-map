@@ -12,7 +12,6 @@
   width: 24px;
   height: 24px;
   cursor: pointer;
-  color: #FFFFFF;
   right: 0;
   top:0;
   justify-content: center;
@@ -76,7 +75,9 @@ ul.TripDetail-inspirations li {
   width: 41vw;
   padding: 0 2vw;
   margin: 0 .5vw 1vw .5vw;
-  height: 120px;
+  height: 35px;
+  padding-top: 85px;
+  line-height: 0.9;
   background-size:cover;
   float: left;
   background-position: center center;
@@ -86,12 +87,6 @@ ul.TripDetail-inspirations li {
     font-size: 0.8em;
     font-weight: 300;
     color: rgba(255, 255, 255, .7);
-}
-
-.TripDetail-Addinspi {
-    background: linear-gradient(45deg, rgba(251, 117, 127, .6), rgba(254, 86, 174, .6));
-    border: 1vw dotted rgba(251, 117, 127, 1);
-    line-height: 45px;
 }
 
 .TripDetail-map {
@@ -113,31 +108,68 @@ ul.TripDetail-together {
   float: left;
   top: -18px;
   margin-bottom: 30px;
-  padding-left: 4.5vw;
+  padding-left: 5vw;
 }
 
 ul.TripDetail-together li {
-  width: 12vw;
-  height: 12vw;
-  border-radius: 10vw;
-  margin-right: 8px;
-  text-align: center;
+  margin-bottom: -22px;
   float: left;
 }
 
 .TripDetail-Friend {
-  background: url(../img/monogramWhite.svg) no-repeat center center,linear-gradient( 45deg, rgba(246, 171, 47, 1), rgba(254, 86, 174, 1));
-  background-size: 8vw 8vw;
-  font-size: 0.8em;
-  font-weight: 400;
-  line-height: 30vw;
-  color: #252525;
+  width: 90vw;
+  height: 40px;
+  text-align: left;
+  background: url(../img/monogramBlack.svg) no-repeat 10px center;
+  float:left;
+}
+
+.TripDetail-FriendName {
+  color:#252525;
+  position: absolute;
+  text-align: left;
+  float: left;
+  margin-left: 40px;
+}
+.TripDetail-FriendStatusOk {
+  color:#38c4f7;
+  font-weight: 300;
+}
+.TripDetail-FriendStatus {
+  color:rgba(251, 117, 127, 1);
+  font-weight: 300;
+}
+
+.TripDetail-Status {
+  height:40px;
+  width:40px;
+  background: url(../img/Status-ready.svg) no-repeat center center;
+  position: relative;
+  float: right;
+  top: -40px;
+  right: 5vw;
+}
+
+.TripDetail-Statuswait {
+  height:40px;
+  width:40px;
+  background: url(../img/Status-wait.svg) no-repeat center center;
+  position: relative;
+  float: right;
+  top: -40px;
+  right: 5vw;
+  opacity: 0.6;
 }
 
 .TripDetail-FriendAdd {
-  line-height: 12vw;
+  width: 40px;
+  height: 40px;
+  line-height: 40px;
+  text-align: center;
+  border-radius: 20px;
   background: linear-gradient( 45deg, rgba(246, 171, 47, .6), rgba(254, 86, 174, .6));
   font-size: 2em;
   font-weight: 200;
   color: white;
+  margin-left: 40vw;
 }
