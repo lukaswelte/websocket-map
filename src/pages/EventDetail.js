@@ -4,6 +4,7 @@ import { goBack } from 'react-router-redux';
 import Helmet from 'react-helmet';
 import { distanceFromLocationToLocationInKm } from '../utilities/geoDistance';
 import BringMeButton from '../components/BringMeButton';
+import SaveItButton from '../components/SaveItButton';
 import ShareEventMenu from '../components/ShareEventMenu';
 import './EventDetail.css';
 
@@ -58,6 +59,7 @@ class EventDetail extends PureComponent {
           <div onClick={(e) => e.stopPropagation()}>
             <ShareEventMenu shareText={shareText} />
           </div>
+          <SaveItButton />
       </div>
     );
   }
