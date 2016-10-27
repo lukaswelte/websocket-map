@@ -7,7 +7,6 @@
   padding: 4vh 0px 0px 0px;
 }
 
-
 .TripDetail-close {
   width: 24px;
   height: 24px;
@@ -72,15 +71,36 @@ ul.TripDetail-inspirations {
 
 ul.TripDetail-inspirations li {
   font-size:1em;
-  width: 41vw;
-  padding: 0 2vw;
-  margin: 0 .5vw 1vw .5vw;
-  height: 35px;
-  padding-top: 85px;
-  line-height: 0.9;
+  width: 45vw;
+  margin: 0 1vw 1vw 0vw;
+  height: 120px;
+  display: table;
   background-size:cover;
   float: left;
   background-position: center center;
+}
+
+.TripDetail-todo {
+  background: rgba(255, 255, 255, .2);
+  position: relative;
+  display: table-cell;
+  vertical-align: middle;
+  width: 100%;
+  height:100%;
+}
+
+.TripDetail-done {
+  background: rgba(251, 117, 127, .8);
+  position: relative;
+  display: table-cell;
+  color:white;
+  font-size: 3em;
+  font-weight: 300;
+  vertical-align: middle;
+  width: 100%;
+  height:100%;
+  background-image: url(../img/btn-check-dark.png) no-repeat center center;
+  background-size: 40px 40px;
 }
 
 .TripDetail-normal {
@@ -132,7 +152,7 @@ ul.TripDetail-together li {
   margin-left: 40px;
 }
 .TripDetail-FriendStatusOk {
-  color:#38c4f7;
+  color:#38f4d0;
   font-weight: 300;
 }
 .TripDetail-FriendStatus {

@@ -22,22 +22,22 @@ class TripDetail extends PureComponent {
 
             <ul className="TripDetail-inspirations">
               <li className="TripDetail-vignette" style={{backgroundImage:`url(http://polpix.sueddeutsche.com/polopoly_fs/1.3036241.1466008494!/httpImage/image.jpg_gen/derivatives/900x600/image.jpg)`}}>
-                Corleone
+                <div className="TripDetail-todo">Corleone</div>
               </li>
               <li className="TripDetail-vignette" style={{backgroundImage:`url(http://www.mux.de/images/1500x1200z/object/56/1154643156/bergwolf-2.JPG)`}}>
-                Bergwolf and the other stuff
+                <div className="TripDetail-todo">Bergwolf and the other stuff</div>
               </li>
-              <li className="TripDetail-vignette" style={{width:"87vw",backgroundImage:`url(http://www.cotidiano.de/content/neu_09.jpg)`}}>
-                Cotidiano
+              <li className="TripDetail-vignette" style={{width:"91vw",backgroundImage:`url(http://www.cotidiano.de/content/neu_09.jpg)`}}>
+                <div className="TripDetail-todo">Cotidiano</div>
               </li>
               <li className="TripDetail-vignette" style={{backgroundImage:`url(http://www.merkur.de/bilder/2014/04/29/3517737/1738912804-003_platz_bodmer_20140429-165845-1yNG.jpg)`}}>
-                Gartnerplatz
+                <div className="TripDetail-done">✌</div>
               </li>
               <li className="TripDetail-vignette" style={{backgroundImage:`url(http://mntns.urspcl.com/wp-content/uploads/2015/12/DSC_2377-Edit.jpg)`}}>
-                Hofgarten Grass
+                <div className="TripDetail-todo">Hofgarten Grass</div>
               </li>
-              <li className="TripDetail-vignette" style={{width:"87vw",backgroundImage:`url(http://iloveleo.ch/cms/wp-content/uploads/2013/03/MG_5853.jpg)`}}>
-                I Love Leo
+              <li className="TripDetail-vignette" style={{width:"91vw",backgroundImage:`url(http://iloveleo.ch/cms/wp-content/uploads/2013/03/MG_5853.jpg)`}}>
+                <div className="TripDetail-todo">I Love Leo</div>
               </li>
             </ul>
 
