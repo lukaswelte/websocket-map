@@ -8,6 +8,7 @@ import Introduction from './pages/Introduction';
 import EventDetail from './pages/EventDetail';
 import AddEvent from './pages/AddEvent';
 import Profile from './pages/ProfilDetail';
+import Trip from './pages/TripDetail';
 import { Router, Route, Redirect, IndexRedirect, IndexRoute, browserHistory } from 'react-router';
 import { syncHistoryWithStore, routerMiddleware } from 'react-router-redux';
 import { createStore, applyMiddleware, compose } from 'redux';
@@ -39,6 +40,7 @@ ReactDOM.render(
             <IndexRoute component={AddEvent} />
           </Route>
           <Route path="profile" component={Profile} />
+          <Route path="trip" component={Trip} />
           <Route path="*" component={NotFound} />
         </Route>
       </Router>
