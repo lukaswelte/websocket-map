@@ -4,11 +4,12 @@ import { connect } from 'react-redux';
 import Map from 'google-map-react';
 import Helmet from 'react-helmet';
 import { updateLocation } from '../actions/user';
-import { goToEvent, goToAddEvent, goToProfile } from '../actions/routing';
+import { goToEvent, goToAddEvent, goToProfile, goToStreet } from '../actions/routing';
 import EventMapMarker from '../components/EventMapMarker';
 import UserMapMarker from '../components/UserMapMarker';
 import LoginMapButton from '../components/LoginMapButton';
 import AddEventButton from '../components/AddEventButton';
+import WhereAmI from '../components/WhereAmI';
 import StarredLocationMarker from '../components/StarredLocationMarker';
 import './Overview.css';
 
@@ -47,6 +48,7 @@ class Overview extends Component {
       usersLocations,
       children,
       showEventDetail,
+      showWhereAmI,
       showAddEvent,
       showProfile,
       starredLocations
@@ -63,6 +65,12 @@ class Overview extends Component {
     const onMarkerClick = (key) => {
       if (key.startsWith('EventMapMarker')) {
         showEventDetail(key.replace('EventMapMarker', ''));
+      }
+    }
+
+    const onUserClick = (key) => {
+      if (key.startsWith('WhereAmI')) {
+        showWhereAmI(key.replace('WhereAmI', ''));
       }
     }
 
@@ -89,7 +97,7 @@ class Overview extends Component {
           {starredLocationMarkers}
           {mapMarkers}
           {otherUsersMarkers}
-          {user.location ? (<UserMapMarker lat={user.location.lat} lng={user.location.lng} />) : null}
+          {user.location ? (<UserMapMarker lat={user.location.lat} lng={user.location.lng} onClick={onUserClick}/>) : null}
         </Map>
         {children ? null: <AddEventButton style={{bottom:'30px'}} onClick={showAddEvent} />}
         {children ? null: <LoginMapButton onClick={showProfile} />}
@@ -109,6 +117,7 @@ const OverviewContainer = connect(
     updateUserLocation: bindActionCreators(updateLocation, dispatch),
     showAddEvent: bindActionCreators(goToAddEvent, dispatch),
     showProfile: bindActionCreators(goToProfile, dispatch),
+    showWhereAmI: bindActionCreators(goToStreet, dispatch),
     showEventDetail: bindActionCreators(goToEvent, dispatch)
   })
 )(Overview);
