@@ -1,13 +1,13 @@
 .ProfilDetail-card{
   color:#FFFFFF;
   text-align: center;
-  background: linear-gradient( 45deg, #f6ab2f, rgba(254, 86, 174, 1));
 }
 
 .ProfilDetail-detail {
   height: 85vh;
   width: 100vw;
   padding: 15vh 0px 0px 0px;
+  background: linear-gradient( 45deg, #f6ab2f, rgba(254, 86, 174, 1));
 }
 
 .ProfilDetail-close {
@@ -168,6 +168,7 @@ ul.ProfilDetail-TripsDetail li {
     vertical-align:middle;
     height: 120px;
     width: 100vw;
+    background: linear-gradient( 45deg, rgba(246, 171, 47, .3), rgba(254, 86, 174, .3));
 }
 
 .ProfilDetail-normal {
