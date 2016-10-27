@@ -27,9 +27,9 @@ class ProfilDetail extends PureComponent {
                   3 City s trips in preparation
                  </div>
                 <ul className="ProfilDetail-CityTrips">
-                  <li>Munich</li>
-                  <li>Paris</li>
-                  <li>Mexico</li>
+                  <li onClick={showTrip}>Munich</li>
+                  <li onClick={showTrip}>Paris</li>
+                  <li onClick={showTrip}>Mexico</li>
                 </ul>
             </div>
         </div>
