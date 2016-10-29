@@ -4,10 +4,11 @@ import { connect } from 'react-redux';
 import Map from 'google-map-react';
 import Helmet from 'react-helmet';
 import { updateLocation } from '../actions/user';
-import { goToEvent, goToAddEvent, goToProfile } from '../actions/routing';
+import { goToEvent, goToAddEvent, goToProfile, goToFilter } from '../actions/routing';
 import EventMapMarker from '../components/EventMapMarker';
 import UserMapMarker from '../components/UserMapMarker';
 import LoginMapButton from '../components/LoginMapButton';
+import FilterButton from '../components/FilterButton';
 import AddEventButton from '../components/AddEventButton';
 import StarredLocationMarker from '../components/StarredLocationMarker';
 import './Overview.css';
@@ -49,6 +50,7 @@ class Overview extends Component {
       showEventDetail,
       showAddEvent,
       showProfile,
+      showFilter,
       starredLocations
     } = this.props;
 
@@ -93,6 +95,7 @@ class Overview extends Component {
         </Map>
         {children ? null: <AddEventButton style={{bottom:'30px'}} onClick={showAddEvent} />}
         {children ? null: <LoginMapButton onClick={showProfile} />}
+        {children ? null: <FilterButton onClick={showFilter} />}
       </div>
     );
   }
@@ -109,6 +112,7 @@ const OverviewContainer = connect(
     updateUserLocation: bindActionCreators(updateLocation, dispatch),
     showAddEvent: bindActionCreators(goToAddEvent, dispatch),
     showProfile: bindActionCreators(goToProfile, dispatch),
+    showFilter: bindActionCreators(goToFilter, dispatch),
     showEventDetail: bindActionCreators(goToEvent, dispatch)
   })
 )(Overview);
