@@ -7,6 +7,7 @@ import Login from './pages/Login';
 import Introduction from './pages/Introduction';
 import EventDetail from './pages/EventDetail';
 import AddEvent from './pages/AddEvent';
+import FilterMenu from './pages/FilterMenu';
 import Profile from './pages/ProfilDetail';
 import Trip from './pages/TripDetail';
 import { Router, Route, Redirect, IndexRedirect, IndexRoute, browserHistory } from 'react-router';
@@ -35,6 +36,9 @@ ReactDOM.render(
           <Route path="map" component={Overview} />
           <Route path="event/:id" component={Overview} >
             <IndexRoute component={EventDetail} />
+          </Route>
+          <Route path="filter" component={Overview} >
+            <IndexRoute component={FilterMenu} />
           </Route>
           <Route path="add-event" component={Overview} >
             <IndexRoute component={AddEvent} />

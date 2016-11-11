@@ -1,0 +1,76 @@
+.FilterMenu-container {
+  height:100vh;
+  width:100vw;
+  z-index: 1;
+  position: fixed;
+}
+
+.FilterMenu-close {
+  width: 24px;
+  height: 24px;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  float: left;
+  z-index: 999;
+  margin: 30px 30px 0 30px;
+  background: url(../img/btn-crossBlack.svg) no-repeat center center;
+  opacity: 1;
+}
+
+.FilterMenu-menu {
+  z-index: 2;
+  width: 60vw;
+  background: white;
+  position: absolute;
+  right: 0;
+
+}
+
+.FilterMenu-title {
+  font-size:1.6em;
+  font-weight: 300;
+  text-align: left;
+  margin-left:5vw;
+  margin-top: 25px;
+  line-height: 1.2em;
+  background: -webkit-linear-gradient(45deg, rgba(251, 117, 127, 1), rgba(254, 86, 174, 1));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.FilterMenu-shortLine {
+  height: 1px;
+  width: 20vw;
+  margin: 3vh 5vw 3vh 5vw;
+  background-color: rgba(251, 117, 127, 0.3);
+}
+
+ul.FilterMenu-categories {
+  padding: 0;
+  list-style-type: none;
+  margin-left: 5vw;
+}
+
+ul.FilterMenu-categories li {
+  height:12vw;
+  width: 40vw;
+    color: #d3d3d3;
+    margin-bottom: 5vw;
+  list-style-type: none;
+  vertical-align: middle;
+  display: table;
+  font-size: 1.1em;
+  font-weight: 300;
+}
+
+.FilterMenu-subcategory {
+  display: table-cell;
+  vertical-align: middle;
+}
+
+.FilterMenu-subcategory-selected {
+  display: table-cell;
+  vertical-align: middle;
+  color:rgba(251, 117, 127, 1);
+}
