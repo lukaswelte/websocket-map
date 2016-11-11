@@ -15,12 +15,15 @@ class ProfilDetail extends PureComponent {
             <div className="ProfilDetail-content">
               <div className="ProfilDetail-name">Annette</div>
               <div className="ProfilDetail-title">You are an enjoyer!</div>
-                <div className="ProfilDetail-collect">
-                  You collected
-                </div>
-                <div className="ProfilDetail-nbr">200</div>
-                <div className="ProfilDetail-graph"><div className="ProfilDetail-rock"/></div>
-                    <br /><br />
+
+              <div className="ProfilDetail-collect">
+                You collected
+              </div>
+              <div className="ProfilDetail-nbr">200</div>
+              <div className="ProfilDetail-graph"><div className="ProfilDetail-rock"/></div>
+                  <br /><br />
+
+                  <br /><br />
                 <div className="ProfilDetail-collect">
                   3 City s trips in preparation
                  </div>
