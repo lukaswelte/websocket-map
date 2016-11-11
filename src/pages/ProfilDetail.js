@@ -1,11 +1,13 @@
 import React, { PureComponent } from 'react';
 import { connect } from 'react-redux';
+import { bindActionCreators } from 'redux';
 import { goBack } from 'react-router-redux';
+import { goToTrip } from '../actions/routing';
 import './ProfilDetail.css';
 
 class ProfilDetail extends PureComponent {
   render() {
-    const { onClose } = this.props;
+    const { onClose, showTrip } = this.props;
 
     return (
       <div className="ProfilDetail-card">
@@ -25,9 +27,9 @@ class ProfilDetail extends PureComponent {
                   3 City s trips in preparation
                  </div>
                 <ul className="ProfilDetail-CityTrips">
-                  <li>Munich</li>
-                  <li>Paris</li>
-                  <li>Mexico</li>
+                  <li onClick={showTrip}>Munich</li>
+                  <li onClick={showTrip}>Paris</li>
+                  <li onClick={showTrip}>Mexico</li>
                 </ul>
             </div>
         </div>
@@ -37,19 +39,19 @@ class ProfilDetail extends PureComponent {
             <div className="ProfilDetail-shortLine" />
             <div className="ProfilDetail-quote">The journey of a thousand miles<br/>begins with one step.</div>
             <ul className="ProfilDetail-TripsDetail">
-              <li style={{backgroundImage:`url(http://www.dronestagr.am/wp-content/uploads/2015/05/DJI00792.jpg)`}}>
+              <li onClick={showTrip} style={{backgroundImage:`url(http://www.dronestagr.am/wp-content/uploads/2015/05/DJI00792.jpg)`}}>
                 <div className="ProfilDetail-vignette">
                 Munich <sup>DE</sup><br/>
                 <div className="ProfilDetail-normal">10 inspirations</div>
                 </div>
               </li>
-              <li style={{backgroundImage:`url(http://www.airport-orly.com/images/paris-tour-eiffel-at-night.jpg)`}}>
+              <li onClick={showTrip} style={{backgroundImage:`url(http://www.airport-orly.com/images/paris-tour-eiffel-at-night.jpg)`}}>
                 <div className="ProfilDetail-vignette">
                 Paris <sup>FR</sup><br/>
                 <div className="ProfilDetail-normal">54 inspirations</div>
                 </div>
               </li>
-              <li style={{backgroundImage:`url(http://resources.touropia.com/gfx/d/awesome-beaches-around-the-world/tulum.jpg)`}}>
+              <li onClick={showTrip} style={{backgroundImage:`url(http://resources.touropia.com/gfx/d/awesome-beaches-around-the-world/tulum.jpg)`}}>
                 <div className="ProfilDetail-vignette">
                 Tulum <sup>MX</sup><br/>
                 <div className="ProfilDetail-normal">34 inspirations</div>
@@ -65,6 +67,7 @@ class ProfilDetail extends PureComponent {
 const ProfilDetailContainer = connect(
   (state, ownProps) => ({}),
   (dispatch) => ({
+    showTrip: bindActionCreators(goToTrip, dispatch),
     onClose: () => dispatch(goBack())
   })
 )(ProfilDetail);

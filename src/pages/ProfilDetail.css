@@ -22,7 +22,6 @@
   position:fixed;
   margin: 30px 30px 0 0;
   background: url(../img/btn-crossBlack.svg) no-repeat center center;
-  opacity: .5;
 }
 
 .ProfilDetail-monogram{
@@ -137,7 +136,7 @@ ul.ProfilDetail-CityTrips {
 ul.ProfilDetail-CityTrips li {
   margin:-5px 4px;
   padding: 5px 12px 6px 12px;
-  background-color: rgba(0, 0, 0, .1);
+  background-color: rgba(255, 255, 255, .1);
   border-radius: 70px;
   position: relative;
   float: left;
