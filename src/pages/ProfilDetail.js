@@ -2,17 +2,20 @@ import React, { PureComponent } from 'react';
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
 import { goBack } from 'react-router-redux';
-import { goToTrip } from '../actions/routing';
+import { goToTrip, goToImprint } from '../actions/routing';
 import './ProfilDetail.css';
 
 class ProfilDetail extends PureComponent {
   render() {
-    const { onClose, showTrip } = this.props;
+    const { onClose, showTrip, showImprint } = this.props;
 
     return (
       <div className="ProfilDetail-card">
         <div className="ProfilDetail-detail">
             <div className="ProfilDetail-close" onClick={onClose}/>
+            <div className="ProfileDetail-imprint" onClick={showImprint}>
+              About
+            </div>
             <div className="ProfilDetail-monogram"/>
             <div className="ProfilDetail-content">
               <div className="ProfilDetail-name">Annette</div>
@@ -68,6 +71,7 @@ const ProfilDetailContainer = connect(
   (state, ownProps) => ({}),
   (dispatch) => ({
     showTrip: bindActionCreators(goToTrip, dispatch),
+    ShowImprint: bindActionCreators(goToImprint, dispatch),
     onClose: () => dispatch(goBack())
   })
 )(ProfilDetail);

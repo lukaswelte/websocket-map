@@ -1,4 +1,4 @@
-.TripDetail-card{
+.ImprintDetail-card{
   color:#FFFFFF;
   height: 100vh;
   text-align: center;
@@ -7,7 +7,7 @@
   padding: 4vh 0px 0px 0px;
 }
 
-.TripDetail-close {
+.ImprintDetail-close {
   width: 24px;
   height: 24px;
   z-index: 999;
@@ -21,7 +21,7 @@
   background: url(../img/btn-crossBlack.svg) no-repeat center center;
 }
 
-.TripDetail-category {
+.ImprintDetail-category {
   font-size:2.5em;
   font-weight: 300;
   line-height: 1em;
@@ -32,7 +32,7 @@
   -webkit-text-fill-color: transparent;
 }
 
-.TripDetail-Subcategory {
+.ImprintDetail-Subcategory {
   font-size:1.6em;
   font-weight: 300;
   text-align: left;
@@ -43,17 +43,43 @@
   -webkit-text-fill-color: transparent;
 }
 
-.TripDetail-quote {
+.ImprintDetail-quote {
   text-align: left;
   background: -webkit-linear-gradient(45deg, rgba(251, 117, 127, 1), rgba(254, 86, 174, 1));
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   font-weight: 300;
   font-size: 1em;
+  line-height: 1.4em;
+  padding: 0 5vw;
+}
+.pink {
+  color:rgba(251, 117, 127, 1);
+}
+
+.Imprint-box {
+  background-color: rgba(37, 37, 37, .1);
+  padding: 4% 5%;
+  margin-top:4%;
+  width: 90%;
+}
+
+p {
+  text-align: left;
+  color: #252525;
+  line-height: 1.5em;
+  font-weight: 300;
+  font-size: 1em;
   padding: 0 5vw;
 }
 
-.TripDetail-shortLine {
+.ImprintDetail-shortLineSecond {
+  height: 1px;
+  width: 20vw;
+  margin: 3vh 5vw 3vh 0vw;
+  background-color: rgba(251, 117, 127, 0.3);
+}
+.ImprintDetail-shortLine {
   height: 1px;
   width: 20vw;
   margin: 3vh 5vw 3vh 5vw;
@@ -61,7 +87,7 @@
 }
 
 
-ul.TripDetail-inspirations {
+ul.ImprintDetail-inspirations {
   list-style-type: none;
   position: relative;
   float: left;
@@ -70,7 +96,7 @@ ul.TripDetail-inspirations {
   padding-left: 4.5vw;
 }
 
-ul.TripDetail-inspirations li {
+ul.ImprintDetail-inspirations li {
   font-size:1em;
   width: 45vw;
   margin: 0 1vw 1vw 0vw;
@@ -81,7 +107,7 @@ ul.TripDetail-inspirations li {
   background-position: center center;
 }
 
-.TripDetail-todo {
+.ImprintDetail-todo {
   background: rgba(255, 255, 255, .2);
   position: relative;
   display: table-cell;
@@ -90,7 +116,7 @@ ul.TripDetail-inspirations li {
   height:100%;
 }
 
-.TripDetail-done {
+.ImprintDetail-done {
   background: rgba(251, 117, 127, .8);
   position: relative;
   display: table-cell;
@@ -104,13 +130,13 @@ ul.TripDetail-inspirations li {
   background-size: 40px 40px;
 }
 
-.TripDetail-normal {
+.ImprintDetail-normal {
     font-size: 0.8em;
     font-weight: 300;
     color: rgba(255, 255, 255, .7);
 }
 
-.TripDetail-map {
+.ImprintDetail-map {
   font-size:1em;
   width: 90vw;
   margin: 0 5vw 0 5vw;
@@ -122,7 +148,7 @@ ul.TripDetail-inspirations li {
   background: url(../img/TripMapSelection.png) no-repeat center center;
 }
 
-ul.TripDetail-together {
+ul.ImprintDetail-together {
   list-style-type: none;
   text-decoration: none;
   position: relative;
@@ -132,12 +158,12 @@ ul.TripDetail-together {
   padding-left: 5vw;
 }
 
-ul.TripDetail-together li {
+ul.ImprintDetail-together li {
   margin-bottom: -22px;
   float: left;
 }
 
-.TripDetail-Friend {
+.ImprintDetail-Friend {
   width: 90vw;
   height: 40px;
   text-align: left;
@@ -145,23 +171,23 @@ ul.TripDetail-together li {
   float:left;
 }
 
-.TripDetail-FriendName {
+.ImprintDetail-FriendName {
   color:#252525;
   position: absolute;
   text-align: left;
   float: left;
   margin-left: 40px;
 }
-.TripDetail-FriendStatusOk {
+.ImprintDetail-FriendStatusOk {
   color:#38f4d0;
   font-weight: 300;
 }
-.TripDetail-FriendStatus {
+.ImprintDetail-FriendStatus {
   color:rgba(251, 117, 127, 1);
   font-weight: 300;
 }
 
-.TripDetail-Status {
+.ImprintDetail-Status {
   height:40px;
   width:40px;
   background: url(../img/Status-ready.svg) no-repeat center center;
@@ -171,7 +197,7 @@ ul.TripDetail-together li {
   right: 5vw;
 }
 
-.TripDetail-Statuswait {
+.ImprintDetail-Statuswait {
   height:40px;
   width:40px;
   background: url(../img/Status-wait.svg) no-repeat center center;
@@ -182,7 +208,7 @@ ul.TripDetail-together li {
   opacity: 0.6;
 }
 
-.TripDetail-FriendAdd {
+.ImprintDetail-FriendAdd {
   width: 40px;
   height: 40px;
   line-height: 40px;

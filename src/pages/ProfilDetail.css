@@ -5,7 +5,7 @@
 
 .ProfilDetail-detail {
   height: 85vh;
-  width: 100vw;
+  width: 100%;
   padding: 15vh 0px 0px 0px;
   background: linear-gradient( 45deg, #f6ab2f, rgba(254, 86, 174, 1));
 }
@@ -22,6 +22,19 @@
   position:fixed;
   margin: 30px 30px 0 0;
   background: url(../img/btn-crossBlack.svg) no-repeat center center;
+}
+
+.ProfileDetail-imprint {
+  color: #FFFFFF;
+  left: 0;
+  bottom:0;
+  text-align: left;
+  font-weight: 300;
+  position: absolute;
+  margin: 30px 30px;
+  opacity: 0.4;
+  cursor: pointer;
+  z-index: 999;
 }
 
 .ProfilDetail-monogram{
@@ -93,6 +106,8 @@
 .ProfilDetail-category {
   font-size:2.5em;
   font-weight: 300;
+
+  line-height: 1em;
   text-align: left;
   margin-left:5vw;
   background: -webkit-linear-gradient(45deg, rgba(251, 117, 127, 1), rgba(254, 86, 174, 1));
