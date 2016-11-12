@@ -7,5 +7,5 @@ export const goToAddEvent = () => push('/add-event');
 export const goToProfile = () => push('/profile');
 export const goToTrip = () => push('/trip');
 export const goToIntroduction = (step) => push(`/introduction/${step || 1}`);
-export const goToLogin = (step) => push(`/login/${step || 1}`);
+export const goToLogin = (step) => push({pathname: `/login/${step || 1}`, search: window.location.search});
 export const goBack = () => back();
