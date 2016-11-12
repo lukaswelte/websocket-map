@@ -74,7 +74,7 @@ const ProfilDetailContainer = connect(
   (state, ownProps) => ({}),
   (dispatch) => ({
     showTrip: bindActionCreators(goToTrip, dispatch),
-    ShowImprint: bindActionCreators(goToImprint, dispatch),
+    showImprint: bindActionCreators(goToImprint, dispatch),
     onClose: () => dispatch(goBack())
   })
 )(ProfilDetail);
