@@ -15,14 +15,18 @@ import { UserAuthWrapper } from 'redux-auth-wrapper';
 import { syncHistoryWithStore, routerMiddleware, push } from 'react-router-redux';
 import { createStore, applyMiddleware, compose } from 'redux';
 import { Provider } from 'react-redux';
+import thunk from 'redux-thunk';
 import reducer from './reducers';
 import WSInstance from './utilities/LivePeopleWebsocket.js';
+import API from './utilities/api';
 import './index.css';
 
 const middleware = routerMiddleware(browserHistory);
 const composeEnhancers = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose;
-const store = createStore(reducer, composeEnhancers(applyMiddleware(middleware)));
+const store = createStore(reducer, composeEnhancers(applyMiddleware(middleware, thunk)));
 const history = syncHistoryWithStore(browserHistory, store);
+
+API.init(store);
 
 // Redirects to /login by default
 const UserIsAuthenticated = UserAuthWrapper({
