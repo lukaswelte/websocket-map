@@ -8,22 +8,27 @@ class FilterMenu extends PureComponent {
     const { onClose } = this.props;
 
     return (
-      <div className="FilterMenu-container" onClick={onClose}>
-        <div className="FilterMenu-close" onClick={onClose}/>
+      <div className="FilterMenu-container">
         <div className="FilterMenu-menu">
-          <div className="FilterMenu-title">Looking for<br/>Something<br/>Special?</div>
-          <div className="FilterMenu-shortLine" />
+          <div className="FilterMenu-header">
+          <div className="FilterMenu-close" onClick={onClose}/>
+            <div className="FilterMenu-title">Sharp it</div>
+            <div className="FilterMenu-shortLine" />
 
-          <ul className="FilterMenu-categories">
-            <li><div className="FilterMenu-subcategory-selected">I want them all</div></li>
-            <li><div className="FilterMenu-subcategory">I'm Dating</div></li>
-            <li><div className="FilterMenu-subcategory">I'm too Sober</div></li>
-            <li><div className="FilterMenu-subcategory">I'm Starving</div></li>
-            <li><div className="FilterMenu-subcategory">I've Guest</div></li>
-            <li><div className="FilterMenu-subcategory">I've Kids</div></li>
-            <li><div className="FilterMenu-subcategory">I'm a Refugee</div></li>
-            <li><div className="FilterMenu-subcategory">Give me something!</div></li>
-            <li><div className="FilterMenu-subcategory">Give me something!</div></li>
+            <form className="FilterMenu-form">
+              <input type="text" className="FilterMenu-input" placeholder="#SearchSomething?" />
+              <input type="submit" className="FilterMenu-valid" defaultValue=""/>
+            </form>
+          </div>
+
+          <ul className="FilterMenu-trendy">
+            <li className="FilterMenu-trendy-title">Trendy in Munich</li>
+            <li><a href="#" target="_self">#MarientplatzStrike</a></li>
+            <li><a href="#" target="_self">#CounterPegida</a></li>
+            <li><a href="#" target="_self">#BestBurger</a></li>
+            <li><a href="#" target="_self">#Sendligator</a></li>
+            <li><a href="#" target="_self">#TDUbar</a></li>
+            <li><a href="#" target="_self">#RooftopParty</a></li>
           </ul>
 
         </div>
