@@ -14,7 +14,7 @@ class ProfilDetail extends PureComponent {
         <div className="ProfilDetail-detail">
             <div className="ProfilDetail-close" onClick={onClose}/>
             <div className="ProfileDetail-imprint" onClick={showImprint}>
-              About
+              Our Legal <br />Stuffs
             </div>
             <div className="ProfilDetail-monogram"/>
             <div className="ProfilDetail-content">
