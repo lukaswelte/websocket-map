@@ -8,14 +8,14 @@ import './Introduction.css';
 
 class Introduction extends Component {
   render() {
-    const { params, goToStep, goToMap, showImprint } = this.props;
+    const { params, goToStep, goToMap, showImprint, color } = this.props;
 
     switch (params.id) {
       case "1":
         return (
           <div className="Intro-background">
             <div className="Intro-content">
-            <LegalButton onClick={showImprint} style={{color:'#A5A5A5'}}/>
+            <LegalButton onClick={showImprint} color={'#252525'}/>
             <ul className="Intro-steps">
               <li style={{backgroundColor:'#A5A5A5'}}/>
               <li/>
