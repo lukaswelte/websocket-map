@@ -25,6 +25,11 @@ class Login extends Component {
       showMap();
     }
 
+    if (params.step !== "1" && loginForm.name.length < 1) {
+      //user tried to start at position larger than 1
+      goToStep(1);
+    }
+
     const submitName = (e) => {
       e.preventDefault();
       goToStep(2);
