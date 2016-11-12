@@ -27,6 +27,19 @@ h3 {
   color:rgba(37,37,37,.8);
 }
 
+h5 {
+  font-size:2.5em;
+  font-weight: 300;
+  text-align: left;
+  margin: 0 auto;
+  margin-left:5vw;
+  padding: 0;
+  background: -webkit-linear-gradient(45deg, rgba(251, 117, 127, 1), rgba(254, 86, 174, 1));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+
 sup {
 font-size: .5em;
 line-height: .8em;
