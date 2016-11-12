@@ -22,19 +22,3 @@ export const fetchUser = () => {
     });
   };
 }
-
-export const verify = (email, code) => {
-  return (dispatch) => {
-    API.request('/user/verify', API.methods.POST, {
-      email: email,
-      verificationCode: code
-    }).then(res => {
-      dispatch({
-        type: types.UPDATE_USER_TOKEN,
-        token: res.token
-      });
-
-      dispatch(fetchUser());
-    });
-  };
-}
