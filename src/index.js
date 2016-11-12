@@ -11,7 +11,8 @@ import FilterMenu from './pages/FilterMenu';
 import Profile from './pages/ProfilDetail';
 import Trip from './pages/TripDetail';
 import { Router, Route, Redirect, IndexRedirect, IndexRoute, browserHistory } from 'react-router';
-import { syncHistoryWithStore, routerMiddleware } from 'react-router-redux';
+import { UserAuthWrapper } from 'redux-auth-wrapper';
+import { syncHistoryWithStore, routerMiddleware, push } from 'react-router-redux';
 import { createStore, applyMiddleware, compose } from 'redux';
 import { Provider } from 'react-redux';
 import reducer from './reducers';
@@ -22,6 +23,14 @@ const middleware = routerMiddleware(browserHistory);
 const composeEnhancers = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose;
 const store = createStore(reducer, composeEnhancers(applyMiddleware(middleware)));
 const history = syncHistoryWithStore(browserHistory, store);
+
+// Redirects to /login by default
+const UserIsAuthenticated = UserAuthWrapper({
+  authSelector: (state) => state.auth, // how to get the user state
+  predicate: (auth) => auth.token,
+  redirectAction: push, // the redux action to dispatch for redirect
+  wrapperDisplayName: 'UserIsAuthenticated' // a nice name for this auth check
+});
 
 ReactDOM.render(
   (
@@ -40,10 +49,10 @@ ReactDOM.render(
           <Route path="filter" component={Overview} >
             <IndexRoute component={FilterMenu} />
           </Route>
-          <Route path="add-event" component={Overview} >
+          <Route path="add-event" component={UserIsAuthenticated(Overview)} >
             <IndexRoute component={AddEvent} />
           </Route>
-          <Route path="profile" component={Profile} />
+          <Route path="profile" component={UserIsAuthenticated(Profile)} />
           <Route path="trip" component={Trip} />
           <Route path="*" component={NotFound} />
         </Route>
