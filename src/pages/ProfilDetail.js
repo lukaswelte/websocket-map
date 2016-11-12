@@ -3,6 +3,7 @@ import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
 import { goBack } from 'react-router-redux';
 import { goToTrip, goToImprint } from '../actions/routing';
+import LegalButton from '../components/LegalButton';
 import './ProfilDetail.css';
 
 class ProfilDetail extends PureComponent {
@@ -13,9 +14,8 @@ class ProfilDetail extends PureComponent {
       <div className="ProfilDetail-card">
         <div className="ProfilDetail-detail">
             <div className="ProfilDetail-close" onClick={onClose}/>
-            <div className="ProfileDetail-imprint" onClick={showImprint}>
-              Our Legal <br />Stuffs
-            </div>
+
+            <LegalButton onClick={showImprint} />
             <div className="ProfilDetail-monogram"/>
             <div className="ProfilDetail-content">
               <div className="ProfilDetail-name">Annette</div>

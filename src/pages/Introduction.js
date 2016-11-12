@@ -1,19 +1,21 @@
 import React, { Component } from 'react';
 import { bindActionCreators } from 'redux';
 import { connect } from 'react-redux';
-import { goToIntroduction, goToMap } from '../actions/routing';
+import { goToIntroduction, goToMap, goToImprint } from '../actions/routing';
 import AddEventButton from '../components/AddEventButton';
+import LegalButton from '../components/LegalButton';
 import './Introduction.css';
 
 class Introduction extends Component {
   render() {
-    const { params, goToStep, goToMap } = this.props;
+    const { params, goToStep, goToMap, showImprint } = this.props;
 
     switch (params.id) {
       case "1":
         return (
           <div className="Intro-background">
             <div className="Intro-content">
+            <LegalButton onClick={showImprint} style={{color:'#A5A5A5'}}/>
             <ul className="Intro-steps">
               <li style={{backgroundColor:'#A5A5A5'}}/>
               <li/>
@@ -33,6 +35,7 @@ class Introduction extends Component {
           <div className="Intro-background">
             <div className="Intro-background-dots">
             <div className="Intro-content">
+            <LegalButton onClick={showImprint} />
             <ul className="Intro-steps">
               <li/>
               <li style={{backgroundColor:'#A5A5A5'}}/>
@@ -53,6 +56,7 @@ class Introduction extends Component {
           <div className="Intro-background">
             <div className="Intro-background-dots">
                 <div className="Intro-content">
+                <LegalButton onClick={showImprint} />
                 <ul className="Intro-steps">
                   <li/>
                   <li/>
@@ -74,6 +78,7 @@ class Introduction extends Component {
             <div onClick={goToMap} className="Intro-background">
               <div className="Intro-background-dots">
                   <div className="Intro-content">
+                  <LegalButton onClick={showImprint} />
                   <ul className="Intro-steps">
                     <li/>
                     <li/>
@@ -102,7 +107,8 @@ const IntroductionContainer = connect(
   }),
   (dispatch) => ({
     goToStep: bindActionCreators(goToIntroduction, dispatch),
-    goToMap: bindActionCreators(goToMap, dispatch)
+    goToMap: bindActionCreators(goToMap, dispatch),
+    showImprint: bindActionCreators(goToImprint, dispatch),
   })
 )(Introduction);
 
