@@ -1,13 +1,14 @@
 import React, { Component } from 'react';
 import { bindActionCreators } from 'redux';
 import { connect } from 'react-redux';
-import { goToLogin, goToMap, goBack as back } from '../actions/routing';
+import { goToLogin, goToMap, goToImprint, goBack as back } from '../actions/routing';
+import LegalButton from '../components/LegalButton';
 import './Login.css';
 
 class Login extends Component {
   render() {
 
-    const { params, goToStep, showMap, goBack } = this.props;
+    const { params, goToStep, showMap, goBack, showImprint } = this.props;
 
     const showStep = (e, step) => {
       e.preventDefault();
@@ -20,6 +21,7 @@ class Login extends Component {
           <div className="Login-background">
             <div onClick={goBack} className="login-shift">Maybe later</div>
             <div className="Login-content">
+            <LegalButton onClick={showImprint} />
               <div className="monogramWhite"/>
               <div className="Login-baseline">Experience, Save & Share<br />Munich s Life</div>
               <form onSubmit={(e) => showStep(e, 2)} className="Login-form">
@@ -34,6 +36,7 @@ class Login extends Component {
         return (
           <div className="Login-background">
             <div className="Login-content">
+            <LegalButton onClick={showImprint} />
               <div className="monogramWhite"/>
               <div className="Login-baseline">Experience, Save & Share<br />Munich s Life</div>
               <form onSubmit={(e) => showStep(e, 3)} className="Login-form">
@@ -48,6 +51,7 @@ class Login extends Component {
         return (
           <div className="Login-background">
             <div className="Login-content">
+            <LegalButton onClick={showImprint} />
               <div className="monogramWhite"/>
               <div className="Login-baseline">Experience, Save & Share<br />Munich s Life</div>
               <form onSubmit={showMap} className="Login-form">
@@ -73,7 +77,8 @@ const LoginContainer = connect(
   (dispatch) => ({
     goToStep: bindActionCreators(goToLogin, dispatch),
     goBack: bindActionCreators(back, dispatch),
-    showMap: bindActionCreators(goToMap, dispatch)
+    showMap: bindActionCreators(goToMap, dispatch),
+    showImprint: bindActionCreators(goToImprint, dispatch),
   })
 )(Login);
 
