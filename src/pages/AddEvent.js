@@ -43,11 +43,11 @@ class AddEvent extends Component {
           <div onClick={onClose} className="AddEvent-close"/>
           <form onSubmit={handleSubmit} className="AddEvent-form">
             <div className="AddEvent-content">
+            <PictureButton />
 
                 <textarea type="text" onChange={handleDescriptionChange} className="AddEvent-input" rows="5" placeholder="What's happening here?" />
               </div>
             <button type="submit" className={enableSubmit ? "AddEvent-valid" : ""} />
-            <PictureButton />
           </form>
       </div>
     );
