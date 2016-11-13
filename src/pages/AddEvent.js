@@ -39,16 +39,17 @@ class AddEvent extends Component {
 
     return (
       <div className="AddEvent-card" style={{backgroundImage:``, backgroundSize:`cover`, backgroundPosition: 'center center'}}>
-          <Helmet title="Add Event" />
+          <Helmet title="Add Mark" />
           <div onClick={onClose} className="AddEvent-close"/>
           <form onSubmit={handleSubmit} className="AddEvent-form">
             <div className="AddEvent-content">
-            <PictureButton />
+              <PictureButton />
 
-                <textarea type="text" onChange={handleDescriptionChange} className="AddEvent-input" rows="1" placeholder="What's happening here?" />
-                <div className="AddEvent-leftover">200</div>
+              <textarea type="text" onChange={handleDescriptionChange} className="AddEvent-input" rows="1" placeholder="What's happening here?" />
+              <div className="AddEvent-leftover">200</div>
+              {enableSubmit && <button type="submit" className="AddEvent-sendButton" />}
             </div>
-            <button type="submit" className={enableSubmit ? "AddEvent-valid" : ""} />
+
           </form>
       </div>
     );
