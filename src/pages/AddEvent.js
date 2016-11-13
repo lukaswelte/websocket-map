@@ -45,7 +45,7 @@ class AddEvent extends Component {
             <div className="AddEvent-content">
             <PictureButton />
 
-                <textarea type="text" onChange={handleDescriptionChange} className="AddEvent-input" rows="5" placeholder="What's happening here?" />
+                <textarea type="text" onChange={handleDescriptionChange} className="AddEvent-input" rows="1" placeholder="What's happening here?" />
                 <div className="AddEvent-leftover">200</div>
             </div>
             <button type="submit" className={enableSubmit ? "AddEvent-valid" : ""} />

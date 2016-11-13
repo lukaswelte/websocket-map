@@ -15,7 +15,7 @@ textarea:focus, input:focus{
   position: fixed;
   bottom: 0;
   width:90vw;
-  padding: 5vh 5vw 13vh 5vw;
+  padding: 5vh 5vw 5vh 5vw;
     background: linear-gradient(45deg, rgba(251, 117, 127, 1), rgba(254, 86, 174, 1));
 }
 
@@ -75,4 +75,5 @@ background-size: 65% 65%;
   opacity: 0.4;
   cursor: pointer;
   z-index: 999;
+  display: none;
 }
