@@ -10,6 +10,7 @@ import AddEvent from './pages/AddEvent';
 import FilterMenu from './pages/FilterMenu';
 import Profile from './pages/ProfilDetail';
 import Trip from './pages/TripDetail';
+import Imprint from './pages/ImprintDetail';
 import { Router, Route, Redirect, IndexRedirect, IndexRoute, browserHistory } from 'react-router';
 import { UserAuthWrapper } from 'redux-auth-wrapper';
 import { syncHistoryWithStore, routerMiddleware, push } from 'react-router-redux';
@@ -58,6 +59,7 @@ ReactDOM.render(
           </Route>
           <Route path="profile" component={UserIsAuthenticated(Profile)} />
           <Route path="trip" component={Trip} />
+          <Route path="imprint" component={Imprint} />
           <Route path="*" component={NotFound} />
         </Route>
       </Router>

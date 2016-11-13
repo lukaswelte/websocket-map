@@ -1,8 +1,9 @@
 import React, { Component } from 'react';
 import { bindActionCreators } from 'redux';
 import { connect } from 'react-redux';
-import { goToLogin, goToMap, goBack as back } from '../actions/routing';
+import { goToLogin, goToMap, goBack as back, goToImprint } from '../actions/routing';
 import { updateEmail, updateName, updateVerificationCode, register, verify } from '../actions/loginForm';
+import LegalButton from '../components/LegalButton';
 import './Login.css';
 
 class Login extends Component {
@@ -12,6 +13,7 @@ class Login extends Component {
       goToStep,
       goBack,
       showMap,
+      showImprint,
       loginForm,
       setName,
       setEmail,
@@ -51,6 +53,7 @@ class Login extends Component {
           <div className="Login-background">
             <div onClick={goBack} className="login-shift">Maybe later</div>
             <div className="Login-content">
+            <LegalButton onClick={showImprint} />
               <div className="monogramWhite"/>
               <div className="Login-baseline">Experience, Save & Share<br />Munich s Life</div>
               <form onSubmit={submitName} className="Login-form">
@@ -65,6 +68,7 @@ class Login extends Component {
         return (
           <div className="Login-background">
             <div className="Login-content">
+            <LegalButton onClick={showImprint} />
               <div className="monogramWhite"/>
               <div className="Login-baseline">Experience, Save & Share<br />Munich s Life</div>
               <form onSubmit={sendRegister} className="Login-form">
@@ -79,6 +83,7 @@ class Login extends Component {
         return (
           <div className="Login-background">
             <div className="Login-content">
+            <LegalButton onClick={showImprint} />
               <div className="monogramWhite"/>
               <div className="Login-baseline">Experience, Save & Share<br />Munich s Life</div>
               <form onSubmit={sendVerify} className="Login-form">
@@ -106,6 +111,7 @@ const LoginContainer = connect(
     goToStep: bindActionCreators(goToLogin, dispatch),
     goBack: bindActionCreators(back, dispatch),
     showMap: bindActionCreators(goToMap, dispatch),
+    showImprint: bindActionCreators(goToImprint, dispatch),
     setEmail: bindActionCreators(updateEmail, dispatch),
     setName: bindActionCreators(updateName, dispatch),
     setVerificationCode: bindActionCreators(updateVerificationCode, dispatch),

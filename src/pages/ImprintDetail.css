@@ -1,0 +1,87 @@
+.ImprintDetail-card{
+  color:#FFFFFF;
+  height: 100vh;
+  text-align: center;
+  height: 96vh;
+  width: 100vw;
+  padding: 4vh 0px 0px 0px;
+}
+
+.ImprintDetail-close {
+  width: 24px;
+  height: 24px;
+  z-index: 999;
+  cursor: pointer;
+  right: 0;
+  top:0;
+  justify-content: center;
+  align-items: center;
+  position:fixed;
+  margin: 30px 30px 0 0;
+  background: url(../img/btn-crossBlack.svg) no-repeat center center;
+}
+
+.ImprintDetail-category {
+  font-size:2.5em;
+  font-weight: 300;
+  line-height: 1em;
+  text-align: left;
+  margin-left:5vw;
+  background: -webkit-linear-gradient(45deg, rgba(251, 117, 127, 1), rgba(254, 86, 174, 1));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.ImprintDetail-Subcategory {
+  font-size:1.6em;
+  font-weight: 300;
+  text-align: left;
+  margin-left:5vw;
+  margin-top: 13vw;
+  background: -webkit-linear-gradient(45deg, rgba(251, 117, 127, 1), rgba(254, 86, 174, 1));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.ImprintDetail-quote {
+  text-align: left;
+  background: -webkit-linear-gradient(45deg, rgba(251, 117, 127, 1), rgba(254, 86, 174, 1));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-weight: 300;
+  font-size: 1em;
+  line-height: 1.4em;
+  padding: 0 5vw;
+}
+.pink {
+  color:rgba(251, 117, 127, 1);
+}
+
+.Imprint-box {
+  background-color: rgba(37, 37, 37, .1);
+  padding: 4% 5%;
+  margin-top:4%;
+  width: 90%;
+}
+
+p {
+  text-align: left;
+  color: #252525;
+  line-height: 1.5em;
+  font-weight: 300;
+  font-size: 1em;
+  padding: 0 5vw;
+}
+
+.ImprintDetail-shortLineSecond {
+  height: 1px;
+  width: 20vw;
+  margin: 3vh 5vw 3vh 0vw;
+  background-color: rgba(251, 117, 127, 0.3);
+}
+.ImprintDetail-shortLine {
+  height: 1px;
+  width: 20vw;
+  margin: 3vh 5vw 3vh 5vw;
+  background-color: rgba(251, 117, 127, 0.3);
+}

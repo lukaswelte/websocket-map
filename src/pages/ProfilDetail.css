@@ -5,7 +5,7 @@
 
 .ProfilDetail-detail {
   height: 85vh;
-  width: 100vw;
+  width: 100%;
   padding: 15vh 0px 0px 0px;
   background: linear-gradient( 45deg, #f6ab2f, rgba(254, 86, 174, 1));
 }
@@ -94,6 +94,8 @@
 .ProfilDetail-category {
   font-size:2.5em;
   font-weight: 300;
+
+  line-height: 1em;
   text-align: left;
   margin-left:5vw;
   background: -webkit-linear-gradient(45deg, rgba(251, 117, 127, 1), rgba(254, 86, 174, 1));
