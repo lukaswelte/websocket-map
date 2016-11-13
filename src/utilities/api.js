@@ -24,12 +24,13 @@ const API = {
       method: method,
       body: body
     });
+
     return fetch(apiUrl+endpoint, {
       method: method,
       headers: {
         'Content-Type': 'application/json',
 				'Accept': 'application/json',
-        'Authentication': `Bearer ${store.getState().auth.token}`
+        'Authorization': `Bearer ${store.getState().auth.token}`
       },
       body: JSON.stringify(body)
     }).then(res => {

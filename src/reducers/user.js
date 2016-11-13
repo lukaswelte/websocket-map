@@ -1,4 +1,4 @@
-import { UPDATE_USER_LOCATION } from '../constants/ActionTypes';
+import { UPDATE_USER_LOCATION, UPDATE_USER } from '../constants/ActionTypes';
 
 const eventsReducer = (state = {}, action) => {
   switch (action.type) {
@@ -6,6 +6,12 @@ const eventsReducer = (state = {}, action) => {
       return {
         ...state,
         location: action.location
+      };
+
+    case UPDATE_USER:
+      return {
+        ...state,
+        ...action.user
       };
 
     case 'USER_ID_UPDATE':
