@@ -1,4 +1,5 @@
 import * as types from '../constants/ActionTypes';
+import API from '../utilities/api';
 
 export const updateLocation = (location) => {
   return {
@@ -9,3 +10,15 @@ export const updateLocation = (location) => {
     }
   };
 };
+
+export const fetchUser = () => {
+  return (dispatch) => {
+    API.request('/user').then(res => {
+      dispatch({
+        type: types.UPDATE_USER,
+        user: res.user
+      });
+
+    });
+  };
+}
