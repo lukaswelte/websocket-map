@@ -8,7 +8,7 @@ import './Introduction.css';
 
 class Introduction extends Component {
   render() {
-    const { params, goToStep, goToMap, showImprint, color } = this.props;
+    const { params, goToStep, goToMap, showImprint } = this.props;
 
     switch (params.id) {
       case "1":
