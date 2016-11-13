@@ -3,12 +3,17 @@ import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
 import { goBack } from 'react-router-redux';
 import { goToTrip, goToImprint } from '../actions/routing';
+import { fetchUser } from '../actions/user';
 import LegalButton from '../components/LegalButton';
 import './ProfilDetail.css';
 
 class ProfilDetail extends PureComponent {
+  componentWillMount() {
+    this.props.updateUser();
+  }
+
   render() {
-    const { onClose, showTrip, showImprint } = this.props;
+    const { onClose, showTrip, showImprint, user } = this.props;
 
     return (
       <div className="ProfilDetail-card">
@@ -18,7 +23,7 @@ class ProfilDetail extends PureComponent {
             <LegalButton onClick={showImprint} />
             <div className="ProfilDetail-monogram"/>
             <div className="ProfilDetail-content">
-              <div className="ProfilDetail-name">Annette</div>
+              <div className="ProfilDetail-name">{user.name}</div>
               <div className="ProfilDetail-title">You are an enjoyer!</div>
 
               <div className="ProfilDetail-collect">
@@ -71,10 +76,13 @@ class ProfilDetail extends PureComponent {
 }
 
 const ProfilDetailContainer = connect(
-  (state, ownProps) => ({}),
+  (state, ownProps) => ({
+    user: state.user
+  }),
   (dispatch) => ({
     showTrip: bindActionCreators(goToTrip, dispatch),
     showImprint: bindActionCreators(goToImprint, dispatch),
+    updateUser: bindActionCreators(fetchUser, dispatch),
     onClose: () => dispatch(goBack())
   })
 )(ProfilDetail);

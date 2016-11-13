@@ -13,12 +13,11 @@ export const updateLocation = (location) => {
 
 export const fetchUser = () => {
   return (dispatch) => {
-    API.request('/user').then(res => {
+    API.request('/user/me').then(res => {
       dispatch({
         type: types.UPDATE_USER,
-        user: res.user
+        user: res.data
       });
-
     });
   };
 }
