@@ -20,6 +20,7 @@ import thunk from 'redux-thunk';
 import reducer from './reducers';
 import WSInstance from './utilities/LivePeopleWebsocket.js';
 import API from './utilities/api';
+import { fetchMarks } from './actions/marks';
 import './index.css';
 
 const middleware = routerMiddleware(browserHistory);
@@ -28,6 +29,9 @@ const store = createStore(reducer, composeEnhancers(applyMiddleware(middleware, 
 const history = syncHistoryWithStore(browserHistory, store);
 
 API.init(store);
+
+// load initial data
+store.dispatch(fetchMarks());
 
 // Redirects to /login by default
 const UserIsAuthenticated = UserAuthWrapper({

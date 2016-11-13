@@ -4,6 +4,7 @@ import { connect } from 'react-redux';
 import Map from 'google-map-react';
 import Helmet from 'react-helmet';
 import { updateLocation } from '../actions/user';
+import { fetchMarks } from '../actions/marks';
 import { goToEvent, goToAddEvent, goToProfile, goToFilter } from '../actions/routing';
 import EventMapMarker from '../components/EventMapMarker';
 import UserMapMarker from '../components/UserMapMarker';
@@ -27,6 +28,10 @@ class Overview extends Component {
     };
   }
 
+  componentWillMount() {
+    this.props.updateMarks();
+  }
+
   componentWillReceiveProps(newProps) {
     const newUserLocation = newProps.user.location;
     const isUserPositionNew = newUserLocation && this.oldUserLocation && newUserLocation.lat.toFixed(3) !== this.oldUserLocation.lat.toFixed(3) && newUserLocation.lng.toFixed(3) !== this.oldUserLocation.lng.toFixed(3);
@@ -42,7 +47,7 @@ class Overview extends Component {
 
   render() {
     const {
-      events,
+      marks,
       user,
       updateUserLocation,
       usersLocations,
@@ -70,7 +75,7 @@ class Overview extends Component {
 
     const otherUsersMarkers = usersLocations.map((user, index) => <UserMapMarker key={'UserMapMarker'+index} lat={user.location.lat} lng={user.location.lng} />);
 
-    const mapMarkers = events.map((event, index) => <EventMapMarker key={'EventMapMarker'+index} lat={event.lat} lng={event.lon} />);
+    const mapMarkers = marks.map((mark) => <EventMapMarker key={'EventMapMarker'+mark.id} lat={mark.location.latitude} lng={mark.location.longitude} />);
 
     const starredLocationMarkers = starredLocations.map((location, index) => <StarredLocationMarker key={'StarredLocationMarker'+index} location={location} lat={location.location.lat} lng={location.location.lng} />);
 
@@ -103,7 +108,7 @@ class Overview extends Component {
 
 const OverviewContainer = connect(
   (state) => ({
-    events: state.events,
+    marks: state.marks,
     user: state.user,
     starredLocations: state.starredLocations,
     usersLocations: state.usersLocations.filter(n => n!==null)
@@ -113,7 +118,8 @@ const OverviewContainer = connect(
     showAddEvent: bindActionCreators(goToAddEvent, dispatch),
     showProfile: bindActionCreators(goToProfile, dispatch),
     showFilter: bindActionCreators(goToFilter, dispatch),
-    showEventDetail: bindActionCreators(goToEvent, dispatch)
+    showEventDetail: bindActionCreators(goToEvent, dispatch),
+    updateMarks: bindActionCreators(fetchMarks, dispatch)
   })
 )(Overview);
 

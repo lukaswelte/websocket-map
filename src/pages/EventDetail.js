@@ -10,16 +10,22 @@ import './EventDetail.css';
 
 class EventDetail extends PureComponent {
   render() {
-    const { event, userLocation, onClose } = this.props;
+    const { mark, userLocation, onClose } = this.props;
+
+    if (!mark) {
+      return (
+        <div>Loading...</div>
+      );
+    }
 
     var distanceToLocation = null;
     if (userLocation) {
-      distanceToLocation = distanceFromLocationToLocationInKm(userLocation.lat, userLocation.lng, event.lat, event.lon).toFixed(2);
+      distanceToLocation = distanceFromLocationToLocationInKm(userLocation.lat, userLocation.lng, mark.location.latitude, mark.location.longitude).toFixed(2);
     }
 
     const directionsToLocation = () => {
-      const googleMapURL = `https://www.google.com/maps/dir/Current+Location/${event.lat},${event.lon}`;
-      const appleMapsURL = `http://maps.apple.com/?daddr=${event.lat},${event.lon}`;
+      const googleMapURL = `https://www.google.com/maps/dir/Current+Location/${mark.location.latitude},${mark.location.longitude}`;
+      const appleMapsURL = `http://maps.apple.com/?daddr=${mark.location.latitude},${mark.location.longitude}`;
 
       const userAgent = navigator.userAgent;
       if (userAgent.indexOf("Chrome") === -1 && (userAgent.indexOf("Safari") !== -1 || userAgent.indexOf("iPhone") !== -1)) {
@@ -34,26 +40,26 @@ class EventDetail extends PureComponent {
       }
     }
 
-    const shareText = `I'm going to ${event.localisation}, wanna join? @ `;
+    const shareText = `I'm going to ${mark.locationTitle}, wanna join? @ `;
 
     return (
       <div
         onClick={onClose}
         className="EventDetail-card"
-        style={{backgroundImage:`url(${event.picture})`, backgroundSize:`cover`, backgroundPosition: 'center center'}}>
+        style={{backgroundImage:`url(${mark.picture})`, backgroundSize:`cover`, backgroundPosition: 'center center'}}>
           <Helmet
-            title={`Event ${event.title}`}
+            title={`Event ${mark.title}`}
             meta={[
-                {"name": "title", "content": `Event at ${event.localisation}`},
-                {"name": "description", "content": event.title},
+                {"name": "title", "content": `Event at ${mark.locationTitle}`},
+                {"name": "description", "content": mark.title},
                 {"property": "og:type", "content": "website"}
             ]}
           />
           <div className="EventDetail-close"/>
           <div className="EventDetail-content">
-            <h1>{event.title}</h1>
-            <h2>{event.localisation}</h2>
-            {distanceToLocation ? <h3 style={{color: event.categoryColor}}>{distanceToLocation}km from you</h3> : null}
+            <h1>{mark.title}</h1>
+            <h2>{mark.locationTitle}</h2>
+            {distanceToLocation ? <h3>{distanceToLocation}km from you</h3> : null}
           </div>
           <BringMeButton onClick={directionsToLocation} style={{bottom:'30px'}} />
           <div onClick={(e) => e.stopPropagation()}>
@@ -67,7 +73,7 @@ class EventDetail extends PureComponent {
 
 const EventDetailContainer = connect(
   (state, ownProps) => ({
-    event: state.events[ownProps.params.id],
+    mark: state.marks.find(mark => mark.id === ownProps.params.id),
     userLocation: state.user.location
   }),
   (dispatch) => ({
