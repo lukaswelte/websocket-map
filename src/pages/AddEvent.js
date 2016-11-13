@@ -4,6 +4,7 @@ import { connect } from 'react-redux';
 import Helmet from 'react-helmet';
 import { goBack } from '../actions/routing';
 import PictureButton from '../components/PictureButton';
+import AutoresizeTextarea from '../components/AutoresizeTextarea';
 import { starLocation } from '../actions/starredLocations';
 import './AddEvent.css';
 
@@ -46,7 +47,7 @@ class AddEvent extends Component {
             <div className="AddEvent-content">
               <PictureButton />
 
-              <textarea type="text" onChange={handleDescriptionChange} className="AddEvent-input" rows="1" placeholder="What's happening here?" />
+              <AutoresizeTextarea type="text" onChange={handleDescriptionChange} className="AddEvent-input" placeholder="What's happening here?" />
               <div className="AddEvent-leftover">200</div>
               {enableSubmit && <button type="submit" className="AddEvent-sendButton" />}
             </div>
