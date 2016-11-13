@@ -5,6 +5,9 @@ export const UPDATE_USER_TOKEN = 'UPDATE_USER_TOKEN';
 export const UPDATE_USER = 'UPDATE_USER';
 export const LOGOUT = 'LOGOUT';
 
+// Mark events
+export const UPDATE_MARK_LIST = 'UPDATE_MARK_LIST';
+
 // Login Form
 export const UPDATE_LOGIN_FORM_NAME = 'UPDATE_LOGIN_FORM_NAME';
 export const UPDATE_LOGIN_FORM_EMAIL = 'UPDATE_LOGIN_FORM_EMAIL';
