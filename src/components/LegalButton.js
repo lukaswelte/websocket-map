@@ -6,7 +6,7 @@ export default class LegalButton extends PureComponent {
     const { onClick, color } = this.props;
 
     return (
-      <div onClick={onClick} style={{color:{color}}} className="LegalButton-btn">
+      <div onClick={onClick} style={{color:color}} className="LegalButton-btn">
       Our Legal <br />Stuffs
       </div>
     );
