@@ -18,6 +18,7 @@ class FilterMenu extends PureComponent {
             <form className="FilterMenu-form">
               <input type="text" className="FilterMenu-input" placeholder="#SearchSomething?" />
               <input type="submit" className="FilterMenu-valid" defaultValue=""/>
+              <button type="submit" className="FilterMenu-valid" />
             </form>
           </div>
 
