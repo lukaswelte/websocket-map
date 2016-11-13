@@ -40,6 +40,7 @@ class AddEvent extends Component {
     return (
       <div className="AddEvent-card" style={{backgroundImage:``, backgroundSize:`cover`, backgroundPosition: 'center center'}}>
           <Helmet title="Add Event" />
+          <div className="AddEvent-icon" />
           <div onClick={onClose} className="AddEvent-close"/>
           <form onSubmit={handleSubmit} className="AddEvent-form">
             <div className="AddEvent-content">
