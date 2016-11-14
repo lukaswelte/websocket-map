@@ -1,4 +1,4 @@
-.EventDetail-close {
+.MarkDetail-close {
   width: 24px;
   height: 24px;
   cursor: pointer;
@@ -11,7 +11,7 @@
   opacity: 1;
 }
 
-.EventDetail-card {
+.MarkDetail-card {
   position: fixed;
   z-index:900;
   text-align: center;
@@ -19,7 +19,7 @@
   height:100vh;
 }
 
-.EventDetail-content {
+.MarkDetail-content {
   position: absolute;
   margin-bottom: 10vh;
   bottom: 0;

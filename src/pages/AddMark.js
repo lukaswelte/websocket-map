@@ -6,9 +6,9 @@ import { goBack } from '../actions/routing';
 import PictureButton from '../components/PictureButton';
 import AutoresizeTextarea from '../components/AutoresizeTextarea';
 import { starLocation } from '../actions/starredLocations';
-import './AddEvent.css';
+import './AddMark.css';
 
-class AddEvent extends Component {
+class AddMark extends Component {
 
   constructor(props) {
     super(props);
@@ -39,18 +39,18 @@ class AddEvent extends Component {
     }
 
     return (
-      <div className="AddEvent-card" style={{backgroundImage:``, backgroundSize:`cover`, backgroundPosition: 'center center'}}>
+      <div className="AddMark-card" style={{backgroundImage:``, backgroundSize:`cover`, backgroundPosition: 'center center'}}>
           <Helmet title="Add Mark" />
-          <div className="AddEvent-icon" />
-          <div onClick={onClose} className="AddEvent-close"/>
-          <form onSubmit={handleSubmit} className="AddEvent-form">
-            <div className="AddEvent-content">
+          <div className="AddMark-icon" />
+          <div onClick={onClose} className="AddMark-close"/>
+          <form onSubmit={handleSubmit} className="AddMark-form">
+            <div className="AddMark-content">
               <PictureButton />
 
-              <AutoresizeTextarea type="text" onChange={handleDescriptionChange} className="AddEvent-comment" placeholder="What's happening here?" />
-              <AutoresizeTextarea type="text" onChange={handleDescriptionChange} className="AddEvent-localisation-name" placeholder="Where are you?" />
-              <div className="AddEvent-leftover" onChange={handleDescriptionChange}>200</div>
-              {enableSubmit && <button type="submit" className="AddEvent-sendButton" />}
+              <AutoresizeTextarea type="text" onChange={handleDescriptionChange} className="AddMark-comment" placeholder="What's happening here?" />
+              <AutoresizeTextarea type="text" onChange={handleDescriptionChange} className="AddMark-localisation-name" placeholder="Where are you?" />
+              <div className="AddMark-leftover" onChange={handleDescriptionChange}>200</div>
+              {enableSubmit && <button type="submit" className="AddMark-sendButton" />}
             </div>
 
           </form>
@@ -59,7 +59,7 @@ class AddEvent extends Component {
   }
 }
 
-const AddEventContainer = connect(
+const AddMarkContainer = connect(
   (state, ownProps) => ({
     currentUserLocation: state.user.location
   }),
@@ -67,6 +67,6 @@ const AddEventContainer = connect(
     onClose: bindActionCreators(goBack, dispatch),
     addStarredLocation: bindActionCreators(starLocation, dispatch),
   })
-)(AddEvent);
+)(AddMark);
 
-export default AddEventContainer;
+export default AddMarkContainer;
