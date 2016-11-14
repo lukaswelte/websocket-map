@@ -1,0 +1,11 @@
+.LaterButton-btn {
+right: 0;
+  bottom:0;
+  text-align: right;
+  font-weight: 300;
+  position: absolute;
+  margin: 30px 30px;
+  opacity: 0.4;
+  cursor: pointer;
+  z-index: 999;
+}
