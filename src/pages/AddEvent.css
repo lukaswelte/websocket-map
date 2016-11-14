@@ -98,3 +98,8 @@ textarea:focus, input:focus{
   cursor: pointer;
   z-index: 999;
 }
+
+.AddEvent-map-view {
+  width: 100vw;
+  height: 100vh;
+}
