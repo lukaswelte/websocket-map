@@ -3,7 +3,7 @@ import './LogoutButton.css';
 
 export default class LogoutButton extends PureComponent {
   render() {
-    const { onClick, color } = this.props;
+    const { onClick } = this.props;
 
     return (
       <div onClick={onClick} className="LogoutButton-btn" />
