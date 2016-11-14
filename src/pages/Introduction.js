@@ -15,7 +15,7 @@ class Introduction extends Component {
       case "1":
         return (
           <div className="Intro-background">
-          <LaterButton color={'#252525'}/>
+            <LaterButton onClick={goToMap} color={'#252525'}/>
             <div className="Intro-content">
             <LegalButton onClick={showImprint} color={'#252525'}/>
             <ul className="Intro-steps">
@@ -35,7 +35,7 @@ class Introduction extends Component {
       case "2":
         return (
           <div className="Intro-background">
-            <LaterButton color={'#252525'}/>
+            <LaterButton onClick={goToMap} color={'#252525'}/>
             <div className="Intro-background-dots">
             <div className="Intro-content">
             <LegalButton onClick={showImprint} color={'#252525'}/>
@@ -57,7 +57,7 @@ class Introduction extends Component {
       case "3":
         return (
           <div className="Intro-background">
-            <LaterButton color={'#252525'}/>
+            <LaterButton onClick={goToMap} color={'#252525'}/>
             <div className="Intro-background-dots">
                 <div className="Intro-content">
                 <LegalButton onClick={showImprint} color={'#252525'}/>
@@ -80,7 +80,7 @@ class Introduction extends Component {
         case "4":
           return (
             <div onClick={goToMap} className="Intro-background">
-              <LaterButton color={'#252525'}/>
+              <LaterButton onClick={goToMap} color={'#252525'}/>
               <div className="Intro-background-dots">
                   <div className="Intro-content">
                   <LegalButton onClick={showImprint} color={'#252525'}/>
