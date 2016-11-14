@@ -56,6 +56,7 @@ class EventDetail extends PureComponent {
             ]}
           />
           <div className="EventDetail-close"/>
+          <div className="EventDetail-autor">@AutorName</div>
           <div className="EventDetail-content">
             <h1>{mark.title}</h1>
             <h2>{mark.locationTitle}</h2>
