@@ -47,8 +47,9 @@ class AddEvent extends Component {
             <div className="AddEvent-content">
               <PictureButton />
 
-              <AutoresizeTextarea type="text" onChange={handleDescriptionChange} className="AddEvent-input" placeholder="What's happening here?" />
-              <div className="AddEvent-leftover">200</div>
+              <AutoresizeTextarea type="text" onChange={handleDescriptionChange} className="AddEvent-comment" placeholder="What's happening here?" />
+              <AutoresizeTextarea type="text" onChange={handleDescriptionChange} className="AddEvent-localisation-name" placeholder="Where are you?" />
+              <div className="AddEvent-leftover" onChange={handleDescriptionChange}>200</div>
               {enableSubmit && <button type="submit" className="AddEvent-sendButton" />}
             </div>
 

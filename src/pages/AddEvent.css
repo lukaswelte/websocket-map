@@ -36,7 +36,7 @@ textarea:focus, input:focus{
   opacity: 1;
 }
 
-.AddEvent-input{
+.AddEvent-comment{
   font-size: 2em;
   font-weight: 200;
   text-align: center;
@@ -47,6 +47,19 @@ textarea:focus, input:focus{
   width: 100%;
   margin-bottom: 20px;
 }
+
+.AddEvent-localisation-name{
+  font-size: 1.5em;
+  font-weight: 200;
+  text-align: center;
+  color: rgba(37, 37, 37, 0.6);
+  border: 0;
+  background-color: rgba(255, 255, 255, 0);
+  resize: none;
+  width: 100%;
+  margin-bottom: 20px;
+}
+
 
 .AddEvent-sendButton {
   border: 0;
@@ -73,7 +86,8 @@ textarea:focus, input:focus{
 
 .AddEvent-leftover {
   width: 50vw;
-  margin-bottom: 60px;
+  font-size: 1.5em;
+  margin-bottom: 55px;
   color: white;
   left: 0;
   bottom:0;
@@ -83,5 +97,4 @@ textarea:focus, input:focus{
   opacity: 0.4;
   cursor: pointer;
   z-index: 999;
-  display: none;
 }
