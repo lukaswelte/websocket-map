@@ -54,10 +54,10 @@ class Login extends Component {
           <div className="Login-background">
             <div className="Login-content">
             <LegalButton onClick={showImprint} />
-            <LaterButton onClick={goToMap} color={'#252525'}/>
+            <LaterButton onClick={goToMap} />
 
             <ul className="Login-steps">
-              <li style={{backgroundColor:'#A5A5A5'}}/>
+              <li style={{backgroundColor:'rgba(255,255,255,.4)'}}/>
               <li/>
               <li/>
             </ul>
@@ -81,11 +81,11 @@ class Login extends Component {
           <div className="Login-background">
             <div className="Login-content">
             <LegalButton onClick={showImprint} />
-            <LaterButton onClick={goToMap} color={'#252525'}/>
+            <LaterButton onClick={goToMap} />
 
             <ul className="Login-steps">
               <li/>
-              <li style={{backgroundColor:'#A5A5A5'}}/>
+              <li style={{backgroundColor:'rgba(255,255,255,.4)'}}/>
               <li/>
             </ul>
 
@@ -109,12 +109,12 @@ class Login extends Component {
           <div className="Login-background">
             <div className="Login-content">
             <LegalButton onClick={showImprint} />
-            <LaterButton onClick={goToMap} color={'#252525'}/>
+            <LaterButton onClick={goToMap} />
 
             <ul className="Login-steps">
               <li/>
               <li/>
-              <li style={{backgroundColor:'#A5A5A5'}}/>
+              <li style={{backgroundColor:'rgba(255,255,255,.4)'}}/>
             </ul>
 
               <div className="monogramWhite"/>
