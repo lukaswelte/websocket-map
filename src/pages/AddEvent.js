@@ -3,6 +3,8 @@ import { bindActionCreators } from 'redux';
 import { connect } from 'react-redux';
 import Helmet from 'react-helmet';
 import { goBack } from '../actions/routing';
+import PictureButton from '../components/PictureButton';
+import AutoresizeTextarea from '../components/AutoresizeTextarea';
 import { starLocation } from '../actions/starredLocations';
 import './AddEvent.css';
 
@@ -37,18 +39,20 @@ class AddEvent extends Component {
     }
 
     return (
-      <div className="AddEvent-card">
-          <Helmet title="Add Event" />
+      <div className="AddEvent-card" style={{backgroundImage:``, backgroundSize:`cover`, backgroundPosition: 'center center'}}>
+          <Helmet title="Add Mark" />
+          <div className="AddEvent-icon" />
           <div onClick={onClose} className="AddEvent-close"/>
-          <div className="AddEvent-msg-frame">
-            <div className="AddEvent-msg">Mark that place?</div>
-          </div>
           <form onSubmit={handleSubmit} className="AddEvent-form">
             <div className="AddEvent-content">
+              <PictureButton />
 
-                <textarea type="text" onChange={handleDescriptionChange} className="AddEvent-input" rows="5" placeholder="What's happening here?" />
-              </div>
-            <button type="submit" className={enableSubmit ? "AddEvent-valid" : ""} />
+              <AutoresizeTextarea type="text" onChange={handleDescriptionChange} className="AddEvent-comment" placeholder="What's happening here?" />
+              <AutoresizeTextarea type="text" onChange={handleDescriptionChange} className="AddEvent-localisation-name" placeholder="Where are you?" />
+              <div className="AddEvent-leftover" onChange={handleDescriptionChange}>200</div>
+              {enableSubmit && <button type="submit" className="AddEvent-sendButton" />}
+            </div>
+
           </form>
       </div>
     );
