@@ -4,6 +4,7 @@ import { connect } from 'react-redux';
 import { goToIntroduction, goToMap, goToImprint } from '../actions/routing';
 import AddEventButton from '../components/AddEventButton';
 import LegalButton from '../components/LegalButton';
+import LaterButton from '../components/LaterButton';
 import './Introduction.css';
 
 class Introduction extends Component {
@@ -14,6 +15,7 @@ class Introduction extends Component {
       case "1":
         return (
           <div className="Intro-background">
+            <LaterButton onClick={goToMap} color={'#252525'}/>
             <div className="Intro-content">
             <LegalButton onClick={showImprint} color={'#252525'}/>
             <ul className="Intro-steps">
@@ -33,9 +35,10 @@ class Introduction extends Component {
       case "2":
         return (
           <div className="Intro-background">
+            <LaterButton onClick={goToMap} color={'#252525'}/>
             <div className="Intro-background-dots">
             <div className="Intro-content">
-            <LegalButton onClick={showImprint} />
+            <LegalButton onClick={showImprint} color={'#252525'}/>
             <ul className="Intro-steps">
               <li/>
               <li style={{backgroundColor:'#A5A5A5'}}/>
@@ -54,9 +57,10 @@ class Introduction extends Component {
       case "3":
         return (
           <div className="Intro-background">
+            <LaterButton onClick={goToMap} color={'#252525'}/>
             <div className="Intro-background-dots">
                 <div className="Intro-content">
-                <LegalButton onClick={showImprint} />
+                <LegalButton onClick={showImprint} color={'#252525'}/>
                 <ul className="Intro-steps">
                   <li/>
                   <li/>
@@ -76,9 +80,10 @@ class Introduction extends Component {
         case "4":
           return (
             <div onClick={goToMap} className="Intro-background">
+              <LaterButton onClick={goToMap} color={'#252525'}/>
               <div className="Intro-background-dots">
                   <div className="Intro-content">
-                  <LegalButton onClick={showImprint} />
+                  <LegalButton onClick={showImprint} color={'#252525'}/>
                   <ul className="Intro-steps">
                     <li/>
                     <li/>
