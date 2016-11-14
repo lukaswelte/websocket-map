@@ -92,7 +92,7 @@ class Overview extends Component {
       <div className="Overview-container">
         <Helmet title="Map" />
         {children}
-        <Map center={mapCenter} zoom={15} onChange={mapChanged} onChildClick={onMarkerClick} >
+        <Map center={mapCenter} zoom={19} onChange={mapChanged} onChildClick={onMarkerClick} >
           {starredLocationMarkers}
           {mapMarkers}
           {otherUsersMarkers}
