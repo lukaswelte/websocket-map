@@ -18,10 +18,10 @@ class ProfilDetail extends PureComponent {
 
     return (
       <div className="ProfilDetail-card">
+      <LogoutButton />
         <div className="ProfilDetail-detail">
             <div className="ProfilDetail-close" onClick={onClose}/>
 
-            <LogoutButton />
             <LegalButton onClick={showImprint} />
             <div className="ProfilDetail-monogram"/>
             <div className="ProfilDetail-content">

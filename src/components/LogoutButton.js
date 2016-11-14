@@ -6,9 +6,7 @@ export default class LogoutButton extends PureComponent {
     const { onClick, color } = this.props;
 
     return (
-      <div onClick={onClick} style={{color:color}} className="LogoutButton-btn">
-      Logout
-      </div>
+      <div onClick={onClick} className="LogoutButton-btn" />
     );
   }
 }
