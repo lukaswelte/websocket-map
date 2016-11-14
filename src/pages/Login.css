@@ -15,15 +15,6 @@ textarea:focus, input:focus{
   color: #FFFFFF
 }
 
-.login-shift {
-  position:absolute;
-  flex: 0;
-  top: 0;
-  margin-top: 5vh;
-  color: rgba(255, 255, 255, 0.3);
-  text-decoration: none;
-}
-
 .Login-content{
   height: 65vh;
   width: 100vw;
@@ -45,6 +36,7 @@ textarea:focus, input:focus{
   width: 100vw;
   margin-bottom: 15px;
   line-height: 1.5em;
+  font-size: 1em;
   order: 0;
   flex: 0 1 auto;
   align-self: center;
@@ -90,4 +82,22 @@ input[placeholder], [placeholder], *[placeholder] {
   order: 0;
   flex: 0 1 auto;
   align-self: center;
+}
+
+.Login-steps{
+  width:100vw;
+  padding: 0;
+  bottom:1vh;
+  position: absolute;
+  text-align: center;
+}
+
+.Login-steps li{
+  color:black;
+  width: 8px;
+  height:8px;
+  border-radius: 6px;
+  margin: 4px;
+  display: inline-block;
+  background-color: rgba(0, 0, 0, 0.1);
 }
