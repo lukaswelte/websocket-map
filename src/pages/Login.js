@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { bindActionCreators } from 'redux';
 import { connect } from 'react-redux';
-import { goToLogin, goToMap, goBack as back, goToImprint } from '../actions/routing';
+import { goToLogin, goToMap, goToImprint } from '../actions/routing';
 import { updateEmail, updateName, updateVerificationCode, register, verify } from '../actions/loginForm';
 import LegalButton from '../components/LegalButton';
 import LaterButton from '../components/LaterButton';
@@ -12,7 +12,6 @@ class Login extends Component {
     const {
       params,
       goToStep,
-      goBack,
       showMap,
       showImprint,
       loginForm,
@@ -54,7 +53,7 @@ class Login extends Component {
           <div className="Login-background">
             <div className="Login-content">
             <LegalButton onClick={showImprint} />
-            <LaterButton onClick={goToMap} />
+            <LaterButton onClick={showMap} />
 
             <ul className="Login-steps">
               <li style={{backgroundColor:'rgba(255,255,255,.4)'}}/>
@@ -81,7 +80,7 @@ class Login extends Component {
           <div className="Login-background">
             <div className="Login-content">
             <LegalButton onClick={showImprint} />
-            <LaterButton onClick={goToMap} />
+            <LaterButton onClick={showMap} />
 
             <ul className="Login-steps">
               <li/>
@@ -109,7 +108,7 @@ class Login extends Component {
           <div className="Login-background">
             <div className="Login-content">
             <LegalButton onClick={showImprint} />
-            <LaterButton onClick={goToMap} />
+            <LaterButton onClick={showMap} />
 
             <ul className="Login-steps">
               <li/>
@@ -145,7 +144,6 @@ const LoginContainer = connect(
   }),
   (dispatch) => ({
     goToStep: bindActionCreators(goToLogin, dispatch),
-    goBack: bindActionCreators(back, dispatch),
     showMap: bindActionCreators(goToMap, dispatch),
     showImprint: bindActionCreators(goToImprint, dispatch),
     setEmail: bindActionCreators(updateEmail, dispatch),
