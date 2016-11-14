@@ -5,6 +5,7 @@ import { goBack } from 'react-router-redux';
 import { goToTrip, goToImprint } from '../actions/routing';
 import { fetchUser } from '../actions/user';
 import LegalButton from '../components/LegalButton';
+import LogoutButton from '../components/LogoutButton';
 import './ProfilDetail.css';
 
 class ProfilDetail extends PureComponent {
@@ -20,6 +21,7 @@ class ProfilDetail extends PureComponent {
         <div className="ProfilDetail-detail">
             <div className="ProfilDetail-close" onClick={onClose}/>
 
+            <LogoutButton />
             <LegalButton onClick={showImprint} />
             <div className="ProfilDetail-monogram"/>
             <div className="ProfilDetail-content">
