@@ -12,28 +12,18 @@ textarea:focus, input:focus{
   justify-content: center;
   align-content: center;
   align-items: center;
-  color: #FFFFFF
-}
-
-.login-shift {
-  position:absolute;
-  flex: 0;
-  top: 0;
-  margin-top: 5vh;
-  color: rgba(255, 255, 255, 0.3);
-  text-decoration: none;
+  color: #FFFFFF;
 }
 
 .Login-content{
+  margin-top: 35vh;
   height: 65vh;
-  width: 100vw;
-  bottom:0;
-  position:absolute;
+  width: 100%;
 }
 
 .monogramWhite {
   height:50px;
-  width: 100vw;
+  width: 100%;
   background: url(../img/monogramWhite.png) no-repeat center center;
   order: 0;
   flex: 0 1 auto;
@@ -42,9 +32,11 @@ textarea:focus, input:focus{
 }
 
 .Login-baseline {
-  width: 100vw;
+  width: 100%;
   margin-bottom: 15px;
-  line-height: 1.5em;
+  line-height: 1.3em;
+  font-size: 1.3em;
+  font-weight: 300;
   order: 0;
   flex: 0 1 auto;
   align-self: center;
@@ -63,7 +55,7 @@ textarea:focus, input:focus{
 
 .Login-form input.Login-input{
   font-size: 2em;
-  font-weight: 200;
+  font-weight: 300;
   height: 20vh;
   flex: 0 1 auto;
   align-self: center;
@@ -75,6 +67,24 @@ textarea:focus, input:focus{
 
 input[placeholder], [placeholder], *[placeholder] {
    color: rgba(255, 255, 255, 0.5);
+   font-weight: 300;
+}
+
+::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+  color: rgba(255, 255, 255, 0.5);
+  font-weight: 300;
+}
+::-moz-placeholder { /* Firefox 19+ */
+  color: rgba(255, 255, 255, 0.5);
+  font-weight: 300;
+}
+:-ms-input-placeholder { /* IE 10+ */
+  color: rgba(255, 255, 255, 0.5);
+  font-weight: 300;
+}
+:-moz-placeholder { /* Firefox 18- */
+  color: rgba(255, 255, 255, 0.5);
+  font-weight: 300;
 }
 
 .Login-form input.Login-valid {
@@ -90,4 +100,22 @@ input[placeholder], [placeholder], *[placeholder] {
   order: 0;
   flex: 0 1 auto;
   align-self: center;
+}
+
+.Login-steps{
+  width:100%;
+  padding: 0;
+  bottom:1vh;
+  position: absolute;
+  text-align: center;
+}
+
+.Login-steps li{
+  color:black;
+  width: 8px;
+  height:8px;
+  border-radius: 6px;
+  margin: 4px;
+  display: inline-block;
+  background-color: rgba(255, 255, 255, 0.1);
 }
