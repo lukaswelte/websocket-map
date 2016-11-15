@@ -6,9 +6,9 @@ import { distanceFromLocationToLocationInKm } from '../utilities/geoDistance';
 import BringMeButton from '../components/BringMeButton';
 import SaveItButton from '../components/SaveItButton';
 import ShareEventMenu from '../components/ShareEventMenu';
-import './EventDetail.css';
+import './MarkDetail.css';
 
-class EventDetail extends PureComponent {
+class MarkDetail extends PureComponent {
   render() {
     const { mark, userLocation, onClose } = this.props;
 
@@ -45,7 +45,7 @@ class EventDetail extends PureComponent {
     return (
       <div
         onClick={onClose}
-        className="EventDetail-card"
+        className="MarkDetail-card"
         style={{backgroundImage:`url(${mark.picture})`, backgroundSize:`cover`, backgroundPosition: 'center center'}}>
           <Helmet
             title={`Event ${mark.title}`}
@@ -55,8 +55,8 @@ class EventDetail extends PureComponent {
                 {"property": "og:type", "content": "website"}
             ]}
           />
-          <div className="EventDetail-close"/>
-          <div className="EventDetail-content">
+          <div className="MarkDetail-close"/>
+          <div className="MarkDetail-content">
             <h1>{mark.title}</h1>
             <h2>{mark.locationTitle}</h2>
             {distanceToLocation ? <h3>{distanceToLocation}km from you</h3> : null}
@@ -71,7 +71,7 @@ class EventDetail extends PureComponent {
   }
 }
 
-const EventDetailContainer = connect(
+const MarkDetailContainer = connect(
   (state, ownProps) => ({
     mark: state.marks.find(mark => mark.id === ownProps.params.id),
     userLocation: state.user.location
@@ -79,6 +79,6 @@ const EventDetailContainer = connect(
   (dispatch) => ({
     onClose: () => dispatch(goBack())
   })
-)(EventDetail);
+)(MarkDetail);
 
-export default EventDetailContainer;
+export default MarkDetailContainer;
