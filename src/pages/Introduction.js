@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { bindActionCreators } from 'redux';
 import { connect } from 'react-redux';
 import { goToIntroduction, goToMap, goToImprint } from '../actions/routing';
-import AddEventButton from '../components/AddEventButton';
+import AddMarkButton from '../components/AddMarkButton';
 import LegalButton from '../components/LegalButton';
 import LaterButton from '../components/LaterButton';
 import './Introduction.css';
@@ -67,7 +67,7 @@ class Introduction extends Component {
                   <li style={{backgroundColor:'#A5A5A5'}}/>
                   <li/>
                 </ul>
-                  <AddEventButton/>
+                  <AddMarkButton/>
                   <div className="Intro-monogramNot"/>
                   <h1>Mark the favorite<br />spots you want<br />to remember</h1>
                   <h3>If we missed something<br />save it for yourself :)</h3>
