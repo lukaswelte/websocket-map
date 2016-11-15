@@ -42,7 +42,9 @@ class AddMark extends Component {
       <div className="AddMark-card" style={{backgroundImage:``, backgroundSize:`cover`, backgroundPosition: 'center center'}}>
           <Helmet title="Add Mark" />
           <div className="AddMark-icon" />
-          <div onClick={onClose} className="AddMark-close"/>
+          <div className="AddMark-map-view" onClick={onClose}>
+            <div className="AddMark-close"/>
+          </div>
           <form onSubmit={handleSubmit} className="AddMark-form">
             <div className="AddMark-content">
               <PictureButton />
