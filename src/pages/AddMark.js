@@ -43,7 +43,7 @@ class AddMark extends Component {
           <Helmet title="Add Mark" />
           <div className="AddMark-icon" />
           <div className="AddMark-map-view" onClick={onClose}>
-            <div className="AddEvent-close"/>
+            <div className="AddMark-close"/>
           </div>
           <form onSubmit={handleSubmit} className="AddMark-form">
             <div className="AddMark-content">
