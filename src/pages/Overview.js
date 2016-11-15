@@ -5,12 +5,12 @@ import Map from 'google-map-react';
 import Helmet from 'react-helmet';
 import { updateLocation } from '../actions/user';
 import { fetchMarks } from '../actions/marks';
-import { goToEvent, goToAddEvent, goToProfile, goToFilter } from '../actions/routing';
-import EventMapMarker from '../components/EventMapMarker';
+import { goToMark, goToAddMark, goToProfile, goToFilter } from '../actions/routing';
+import MarkMapMarker from '../components/MarkMapMarker';
 import UserMapMarker from '../components/UserMapMarker';
 import LoginMapButton from '../components/LoginMapButton';
 import FilterButton from '../components/FilterButton';
-import AddEventButton from '../components/AddEventButton';
+import AddMarkButton from '../components/AddMarkButton';
 import StarredLocationMarker from '../components/StarredLocationMarker';
 import './Overview.css';
 
@@ -52,8 +52,8 @@ class Overview extends Component {
       updateUserLocation,
       usersLocations,
       children,
-      showEventDetail,
-      showAddEvent,
+      showMarkDetail,
+      showAddMark,
       showProfile,
       showFilter,
       starredLocations
@@ -68,14 +68,14 @@ class Overview extends Component {
     }
 
     const onMarkerClick = (key) => {
-      if (key.startsWith('EventMapMarker')) {
-        showEventDetail(key.replace('EventMapMarker', ''));
+      if (key.startsWith('MarkMapMarker')) {
+        showMarkDetail(key.replace('MarkMapMarker', ''));
       }
     }
 
     const otherUsersMarkers = usersLocations.map((user, index) => <UserMapMarker key={'UserMapMarker'+index} lat={user.location.lat} lng={user.location.lng} />);
 
-    const mapMarkers = marks.map((mark) => <EventMapMarker key={'EventMapMarker'+mark.id} lat={mark.location.latitude} lng={mark.location.longitude} />);
+    const mapMarkers = marks.map((mark) => <MarkMapMarker key={'MarkMapMarker'+mark.id} lat={mark.location.latitude} lng={mark.location.longitude} />);
 
     const starredLocationMarkers = starredLocations.map((location, index) => <StarredLocationMarker key={'StarredLocationMarker'+index} location={location} lat={location.location.lat} lng={location.location.lng} />);
 
@@ -98,7 +98,7 @@ class Overview extends Component {
           {otherUsersMarkers}
           {user.location ? (<UserMapMarker lat={user.location.lat} lng={user.location.lng} />) : null}
         </Map>
-        {children ? null: <AddEventButton style={{bottom:'30px'}} onClick={showAddEvent} />}
+        {children ? null: <AddMarkButton style={{bottom:'30px'}} onClick={showAddMark} />}
         {children ? null: <LoginMapButton onClick={showProfile} />}
         {children ? null: <FilterButton onClick={showFilter} />}
       </div>
@@ -115,10 +115,10 @@ const OverviewContainer = connect(
   }),
   (dispatch) => ({
     updateUserLocation: bindActionCreators(updateLocation, dispatch),
-    showAddEvent: bindActionCreators(goToAddEvent, dispatch),
+    showAddMark: bindActionCreators(goToAddMark, dispatch),
     showProfile: bindActionCreators(goToProfile, dispatch),
     showFilter: bindActionCreators(goToFilter, dispatch),
-    showEventDetail: bindActionCreators(goToEvent, dispatch),
+    showMarkDetail: bindActionCreators(goToMark, dispatch),
     updateMarks: bindActionCreators(fetchMarks, dispatch)
   })
 )(Overview);

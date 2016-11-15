@@ -5,8 +5,8 @@ import Overview from './pages/Overview';
 import NotFound from './pages/NotFound';
 import Login from './pages/Login';
 import Introduction from './pages/Introduction';
-import EventDetail from './pages/EventDetail';
-import AddEvent from './pages/AddEvent';
+import MarkDetail from './pages/MarkDetail';
+import AddMark from './pages/AddMark';
 import FilterMenu from './pages/FilterMenu';
 import Profile from './pages/ProfilDetail';
 import Trip from './pages/TripDetail';
@@ -52,14 +52,14 @@ ReactDOM.render(
           <Route path="login/:step" component={Login} />
           <Redirect from="login" to="/login/1" />
           <Route path="map" component={Overview} />
-          <Route path="event/:id" component={Overview} >
-            <IndexRoute component={EventDetail} />
+          <Route path="mark/:id" component={Overview} >
+            <IndexRoute component={MarkDetail} />
           </Route>
           <Route path="filter" component={Overview} >
             <IndexRoute component={FilterMenu} />
           </Route>
-          <Route path="add-event" component={UserIsAuthenticated(Overview)} >
-            <IndexRoute component={AddEvent} />
+          <Route path="add-mark" component={UserIsAuthenticated(Overview)} >
+            <IndexRoute component={AddMark} />
           </Route>
           <Route path="profile" component={UserIsAuthenticated(Profile)} />
           <Route path="trip" component={Trip} />
@@ -77,19 +77,19 @@ const sock = {
   URL: 'blackwall-map-backend.herokuapp.com',
   wsDipatcher: (msg) => {
     console.log('wsdispatcher', msg);
-    const event = JSON.parse(msg);
+    const mark = JSON.parse(msg);
     const state = store.getState();
-    switch (event.type) {
+    switch (mark.type) {
       case 'UPDATE_LOCATION_REQUEST':
         sock.ws.postMessage({type: 'USER_LOCATION', location: state.user.location, userID: state.user.userID});
         break;
 
       case 'USER_ID_UPDATE':
-        store.dispatch({type: 'USER_ID_UPDATE', userID: event.userID});
+        store.dispatch({type: 'USER_ID_UPDATE', userID: mark.userID});
         break;
 
       case 'ALL_USERS':
-        store.dispatch({type: 'UPDATE_ALL_USERS_LOCATIONS', users: event.users});
+        store.dispatch({type: 'UPDATE_ALL_USERS_LOCATIONS', users: mark.users});
         break;
 
       default:
