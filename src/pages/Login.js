@@ -1,9 +1,10 @@
 import React, { Component } from 'react';
 import { bindActionCreators } from 'redux';
 import { connect } from 'react-redux';
-import { goToLogin, goToMap, goBack as back, goToImprint } from '../actions/routing';
+import { goToLogin, goToMap, goToImprint } from '../actions/routing';
 import { updateEmail, updateName, updateVerificationCode, register, verify } from '../actions/loginForm';
 import LegalButton from '../components/LegalButton';
+import LaterButton from '../components/LaterButton';
 import './Login.css';
 
 class Login extends Component {
@@ -11,7 +12,6 @@ class Login extends Component {
     const {
       params,
       goToStep,
-      goBack,
       showMap,
       showImprint,
       loginForm,
@@ -51,11 +51,22 @@ class Login extends Component {
       case "1":
         return (
           <div className="Login-background">
-            <div onClick={goBack} className="login-shift">Maybe later</div>
             <div className="Login-content">
             <LegalButton onClick={showImprint} />
+            <LaterButton onClick={showMap} />
+
+            <ul className="Login-steps">
+              <li style={{backgroundColor:'rgba(255,255,255,.4)'}}/>
+              <li/>
+              <li/>
+            </ul>
+
               <div className="monogramWhite"/>
-              <div className="Login-baseline">Experience, Save & Share<br />Munich s Life</div>
+              <div className="Login-baseline">
+              For the full experience,<br />
+              we need your name Stranger.
+              </div>
+
               <form onSubmit={submitName} className="Login-form">
                 <input type="text" value={loginForm.name} className="Login-input" placeholder="I'm Dark Vador?" onChange={e => setName(e.target.value)} />
                 <input type="submit" className="Login-valid" defaultValue=""/>
@@ -69,10 +80,23 @@ class Login extends Component {
           <div className="Login-background">
             <div className="Login-content">
             <LegalButton onClick={showImprint} />
+            <LaterButton onClick={showMap} />
+
+            <ul className="Login-steps">
+              <li/>
+              <li style={{backgroundColor:'rgba(255,255,255,.4)'}}/>
+              <li/>
+            </ul>
+
               <div className="monogramWhite"/>
-              <div className="Login-baseline">Experience, Save & Share<br />Munich s Life</div>
+
+              <div className="Login-baseline">
+              We will also<br />
+              need your email.
+              </div>
+
               <form onSubmit={sendRegister} className="Login-form">
-                <input type="text" value={loginForm.email} onChange={e => setEmail(e.target.value)} className="Login-input" placeholder="We need your @" />
+                <input type="text" value={loginForm.email} onChange={e => setEmail(e.target.value)} className="Login-input" placeholder="Write your @ here!" />
                 <input type="submit" className="Login-valid" defaultValue=""/>
               </form>
             </div>
@@ -84,10 +108,21 @@ class Login extends Component {
           <div className="Login-background">
             <div className="Login-content">
             <LegalButton onClick={showImprint} />
+            <LaterButton onClick={showMap} />
+
+            <ul className="Login-steps">
+              <li/>
+              <li/>
+              <li style={{backgroundColor:'rgba(255,255,255,.4)'}}/>
+            </ul>
+
               <div className="monogramWhite"/>
-              <div className="Login-baseline">Experience, Save & Share<br />Munich s Life</div>
+              <div className="Login-baseline">
+              To finalize,<br />
+              we sent you a special code.
+              </div>
               <form onSubmit={sendVerify} className="Login-form">
-                <input type="text" value={loginForm.verificationCode} onChange={e => setVerificationCode(e.target.value)} className="Login-input" placeholder="Received a code?" />
+                <input type="text" value={loginForm.verificationCode} onChange={e => setVerificationCode(e.target.value)} className="Login-input" placeholder="☻ ☻ ☻ ☻" />
                 <input type="submit" className="Login-valid" defaultValue=""/>
               </form>
             </div>
@@ -109,7 +144,6 @@ const LoginContainer = connect(
   }),
   (dispatch) => ({
     goToStep: bindActionCreators(goToLogin, dispatch),
-    goBack: bindActionCreators(back, dispatch),
     showMap: bindActionCreators(goToMap, dispatch),
     showImprint: bindActionCreators(goToImprint, dispatch),
     setEmail: bindActionCreators(updateEmail, dispatch),

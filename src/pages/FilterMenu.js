@@ -11,14 +11,14 @@ class FilterMenu extends PureComponent {
       <div className="FilterMenu-container">
         <div className="FilterMenu-menu">
           <div className="FilterMenu-header">
-          <div className="FilterMenu-close" onClick={onClose}/>
-            <div className="FilterMenu-title">Sharp it</div>
-            <div className="FilterMenu-shortLine" />
+              <div className="FilterMenu-close" onClick={onClose}/>
+              <div className="FilterMenu-title">Sharp it</div>
+              <div className="FilterMenu-shortLine" />
 
-            <form className="FilterMenu-form">
-              <input type="text" className="FilterMenu-input" placeholder="#SearchSomething?" />
-              <input type="submit" className="FilterMenu-valid" defaultValue=""/>
-            </form>
+              <form className="FilterMenu-form">
+                <input type="text" className="FilterMenu-input" placeholder="#SearchSomething?" />
+                <button type="submit" className="FilterMenu-checkButton" defaultValue="" />
+              </form>
           </div>
 
           <ul className="FilterMenu-trendy">

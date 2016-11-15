@@ -80,7 +80,8 @@
 }
 
 .Intro-steps{
-  width:80vw;
+  width:100vw;
+  padding: 0;
   bottom:1vh;
   position: absolute;
   text-align: center;

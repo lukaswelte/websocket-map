@@ -1,4 +1,4 @@
-.EventDetail-close {
+.MarkDetail-close {
   width: 24px;
   height: 24px;
   cursor: pointer;
@@ -11,7 +11,7 @@
   opacity: 1;
 }
 
-.EventDetail-card {
+.MarkDetail-card {
   position: fixed;
   z-index:900;
   text-align: center;
@@ -19,7 +19,7 @@
   height:100vh;
 }
 
-.EventDetail-content {
+.MarkDetail-content {
   position: absolute;
   margin-bottom: 10vh;
   bottom: 0;
@@ -28,7 +28,7 @@
   background-image: radial-gradient(ellipse farthest-corner at center, rgba(255,255,255,0.88) 20%, rgba(255,255,255,0) 75%);
 }
 
-.EventDetail-autor {
+.MarkDetail-autor {
   position: absolute;
   width: 100%;
   text-align: center;

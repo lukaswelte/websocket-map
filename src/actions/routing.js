@@ -1,9 +1,9 @@
 import { goBack as back, push } from 'react-router-redux';
 
 export const goToMap = () => push('/map');
-export const goToEvent = (eventID) => push(`/event/${eventID}`);
+export const goToMark = (eventID) => push(`/mark/${eventID}`);
 export const goToFilter = () => push(`/filter`);
-export const goToAddEvent = () => push('/add-event');
+export const goToAddMark = () => push('/add-mark');
 export const goToProfile = () => push('/profile');
 export const goToTrip = () => push('/trip');
 export const goToImprint = () => push('/imprint');

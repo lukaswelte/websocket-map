@@ -1,0 +1,100 @@
+textarea:focus, input:focus{
+    outline: none;
+}
+.AddMark-card {
+  position: fixed;
+  z-index:900;
+  text-align: center;
+  width:100vw;
+  height:100vh;
+  background-color: rgba(255, 255, 255, 0);
+  box-shadow: 0px 1em 2em  rgba(0, 0, 0, 0.3);
+}
+
+.AddMark-content {
+  position: fixed;
+  bottom: 0;
+  width: 90%;
+  padding: 5vh 5vw 5vh 5vw;
+  background: linear-gradient(45deg, rgba(251, 117, 127, 1), rgba(254, 86, 174, 1));
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.AddMark-close {
+  width: 24px;
+  height: 24px;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  float: right;
+  margin: 30px 30px 0 0;
+  background: url(../img/btn-crossBlack.svg) no-repeat center center;
+  opacity: 1;
+}
+
+.AddMark-comment{
+  font-size: 2em;
+  font-weight: 200;
+  text-align: center;
+  color: rgba(255, 255, 255, 1);
+  border: 0;
+  background-color: rgba(255, 255, 255, 0);
+  resize: none;
+  width: 100%;
+  margin-bottom: 20px;
+}
+
+.AddMark-localisation-name{
+  font-size: 1.5em;
+  font-weight: 200;
+  text-align: center;
+  color: rgba(37, 37, 37, 0.6);
+  border: 0;
+  background-color: rgba(255, 255, 255, 0);
+  resize: none;
+  width: 100%;
+  margin-bottom: 20px;
+}
+
+
+.AddMark-sendButton {
+  border: 0;
+  width: 80px;
+  height: 80px;
+  border-radius: 40px;
+  cursor: pointer;
+  color: white;
+  overflow: hidden;
+  background: white url(../img/btn-check-color.svg) no-repeat center center;
+  background-size: 65% 65%;
+}
+
+.AddMark-icon {
+  width: 50px;
+  height: 50px;
+  position: absolute;
+  top: 50vh;
+  left: 50vw;
+  margin-top: -110px;
+  margin-left: 20px;
+  background: url(../img/icn-Marker.svg) no-repeat center center;
+}
+
+.AddMark-leftover {
+  width: 50vw;
+  font-size: 1.5em;
+  margin-bottom: 55px;
+  color: white;
+  left: 0;
+  bottom:0;
+  text-align: center;
+  font-weight: 300;
+  position: absolute;
+  opacity: 0.4;
+  cursor: pointer;
+  z-index: 999;
+}
