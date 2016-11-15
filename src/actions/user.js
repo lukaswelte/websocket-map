@@ -1,5 +1,6 @@
 import * as types from '../constants/ActionTypes';
 import API from '../utilities/api';
+import { goToMap } from './routing';
 
 export const updateLocation = (location) => {
   return {
@@ -20,4 +21,13 @@ export const fetchUser = () => {
       });
     });
   };
+}
+
+export const logout = () => {
+  return (dispatch) => {
+    dispatch(goToMap());
+    dispatch({
+      type: types.LOGOUT
+    });
+  }
 }
