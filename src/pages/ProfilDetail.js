@@ -1,10 +1,11 @@
 import React, { PureComponent } from 'react';
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
-import { goBack } from 'react-router-redux';
-import { goToTrip, goToImprint } from '../actions/routing';
+import { goToTrip, goToImprint, goToMap } from '../actions/routing';
+import { logout } from '../actions/user';
 import { fetchUser } from '../actions/user';
 import LegalButton from '../components/LegalButton';
+import LogoutButton from '../components/LogoutButton';
 import './ProfilDetail.css';
 
 class ProfilDetail extends PureComponent {
@@ -13,10 +14,11 @@ class ProfilDetail extends PureComponent {
   }
 
   render() {
-    const { onClose, showTrip, showImprint, user } = this.props;
+    const { onClose, showTrip, showImprint, user, logout } = this.props;
 
     return (
       <div className="ProfilDetail-card">
+        <LogoutButton onClick={logout} />
         <div className="ProfilDetail-detail">
             <div className="ProfilDetail-close" onClick={onClose}/>
 
@@ -83,7 +85,8 @@ const ProfilDetailContainer = connect(
     showTrip: bindActionCreators(goToTrip, dispatch),
     showImprint: bindActionCreators(goToImprint, dispatch),
     updateUser: bindActionCreators(fetchUser, dispatch),
-    onClose: () => dispatch(goBack())
+    logout: bindActionCreators(logout, dispatch),
+    onClose: bindActionCreators(goToMap, dispatch),
   })
 )(ProfilDetail);
 
