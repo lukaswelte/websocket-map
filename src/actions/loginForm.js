@@ -1,8 +1,7 @@
 import * as types from '../constants/ActionTypes';
-import { goToLogin } from './routing';
+import { goToLogin, goToMapOrRedirect } from './routing';
 import API from '../utilities/api';
 import { fetchUser } from './user';
-import { push } from 'react-router-redux';
 
 export const updateEmail = (email) => {
   return {
@@ -57,13 +56,7 @@ export const verify = (email, verificationCode) => {
 
         dispatch(fetchUser());
 
-        // Redirect to the location the user wanted to access
-        const state = getState();
-        var redirectLocation = '/map';
-        if (state.routing.locationBeforeTransitions.query.redirect) {
-          redirectLocation = state.routing.locationBeforeTransitions.query.redirect;
-        }
-        dispatch(push(redirectLocation));
+        dispatch(goToMapOrRedirect());
 
         dispatch({
           type: types.CLEAR_LOGIN_FORM
