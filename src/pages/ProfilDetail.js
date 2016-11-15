@@ -27,27 +27,42 @@ class ProfilDetail extends PureComponent {
             <div className="ProfilDetail-content">
               <div className="ProfilDetail-name">{user.name}</div>
               <div className="ProfilDetail-title">You are an enjoyer!</div>
-
-              <div className="ProfilDetail-collect">
-                You collected
-              </div>
-              <div className="ProfilDetail-nbr">200</div>
-              <div className="ProfilDetail-graph"><div className="ProfilDetail-rock"/></div>
-                  <br /><br />
-
-                  <br /><br />
-                <div className="ProfilDetail-collect">
-                  3 City s trips in preparation
-                 </div>
-                <ul className="ProfilDetail-CityTrips">
-                  <li onClick={showTrip}>Munich</li>
-                  <li onClick={showTrip}>Paris</li>
-                  <li onClick={showTrip}>Mexico</li>
-                </ul>
             </div>
         </div>
 
-        <div className="ProfilDetail-Wishlist">
+
+
+        <div className="ProfilDetail-onoffswitch">
+          <div className="ProfilDetail-onoffswitch-status">I'm on Map</div>
+        </div>
+
+        <div className="ProfilDetail-Subcategory">You<br />& Munich</div>
+        <div className="ProfilDetail-shortLine" />
+
+
+          <ul className="TripDetail-inspirations">
+            <li className="TripDetail-vignette" style={{backgroundImage:`url(http://polpix.sueddeutsche.com/polopoly_fs/1.3036241.1466008494!/httpImage/image.jpg_gen/derivatives/900x600/image.jpg)`}}>
+              <div className="TripDetail-todo">Corleone</div>
+            </li>
+            <li className="TripDetail-vignette" style={{backgroundImage:`url(http://www.mux.de/images/1500x1200z/object/56/1154643156/bergwolf-2.JPG)`}}>
+              <div className="TripDetail-todo">Bergwolf and the other stuff</div>
+            </li>
+            <li className="TripDetail-vignette" style={{width:"91vw",backgroundImage:`url(http://www.cotidiano.de/content/neu_09.jpg)`}}>
+              <div className="TripDetail-todo">Cotidiano</div>
+            </li>
+            <li className="TripDetail-vignette" style={{backgroundImage:`url(http://www.merkur.de/bilder/2014/04/29/3517737/1738912804-003_platz_bodmer_20140429-165845-1yNG.jpg)`}}>
+              <div className="TripDetail-done">✌</div>
+            </li>
+            <li className="TripDetail-vignette" style={{backgroundImage:`url(http://mntns.urspcl.com/wp-content/uploads/2015/12/DSC_2377-Edit.jpg)`}}>
+              <div className="TripDetail-todo">Hofgarten Grass</div>
+            </li>
+            <li className="TripDetail-vignette" style={{width:"91vw",backgroundImage:`url(http://iloveleo.ch/cms/wp-content/uploads/2013/03/MG_5853.jpg)`}}>
+              <div className="TripDetail-todo">I Love Leo</div>
+            </li>
+          </ul>
+
+
+
             <div className="ProfilDetail-category">Trips</div>
             <div className="ProfilDetail-shortLine" />
             <div className="ProfilDetail-quote">The journey of a thousand miles<br/>begins with one step.</div>
@@ -71,7 +86,6 @@ class ProfilDetail extends PureComponent {
                 </div>
               </li>
             </ul>
-        </div>
       </div>
     );
   }
