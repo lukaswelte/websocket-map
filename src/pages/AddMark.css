@@ -1,7 +1,7 @@
 textarea:focus, input:focus{
     outline: none;
 }
-.AddEvent-card {
+.AddMark-card {
   position: fixed;
   z-index:900;
   text-align: center;
@@ -11,7 +11,7 @@ textarea:focus, input:focus{
   box-shadow: 0px 1em 2em  rgba(0, 0, 0, 0.3);
 }
 
-.AddEvent-content {
+.AddMark-content {
   position: fixed;
   bottom: 0;
   width: 90%;
@@ -23,7 +23,7 @@ textarea:focus, input:focus{
   align-items: center;
 }
 
-.AddEvent-close {
+.AddMark-close {
   width: 24px;
   height: 24px;
   cursor: pointer;
@@ -36,7 +36,7 @@ textarea:focus, input:focus{
   opacity: 1;
 }
 
-.AddEvent-comment{
+.AddMark-comment{
   font-size: 2em;
   font-weight: 200;
   text-align: center;
@@ -48,7 +48,7 @@ textarea:focus, input:focus{
   margin-bottom: 20px;
 }
 
-.AddEvent-localisation-name{
+.AddMark-localisation-name{
   font-size: 1.5em;
   font-weight: 200;
   text-align: center;
@@ -61,7 +61,7 @@ textarea:focus, input:focus{
 }
 
 
-.AddEvent-sendButton {
+.AddMark-sendButton {
   border: 0;
   width: 80px;
   height: 80px;
@@ -73,7 +73,7 @@ textarea:focus, input:focus{
   background-size: 65% 65%;
 }
 
-.AddEvent-icon {
+.AddMark-icon {
   width: 50px;
   height: 50px;
   position: absolute;
@@ -84,7 +84,7 @@ textarea:focus, input:focus{
   background: url(../img/icn-Marker.svg) no-repeat center center;
 }
 
-.AddEvent-leftover {
+.AddMark-leftover {
   width: 50vw;
   font-size: 1.5em;
   margin-bottom: 55px;
