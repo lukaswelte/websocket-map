@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { bindActionCreators } from 'redux';
 import { connect } from 'react-redux';
-import { goToLogin, goToMap, goToImprint } from '../actions/routing';
+import { goToLogin, goToMapOrRedirect, goToImprint } from '../actions/routing';
 import { updateEmail, updateName, updateVerificationCode, register, verify } from '../actions/loginForm';
 import LegalButton from '../components/LegalButton';
 import LaterButton from '../components/LaterButton';
@@ -12,7 +12,7 @@ class Login extends Component {
     const {
       params,
       goToStep,
-      showMap,
+      goToMapOrRedirect,
       showImprint,
       loginForm,
       setName,
@@ -24,7 +24,8 @@ class Login extends Component {
     } = this.props;
 
     if (token) {
-      showMap();
+      console.log('redirect from login');
+      goToMapOrRedirect();
     }
 
     if (params.step !== "1" && loginForm.name.length < 1) {
@@ -44,6 +45,7 @@ class Login extends Component {
 
     const sendVerify = (e) => {
       e.preventDefault();
+      console.log('requested verify');
       requestVerify(loginForm.email, loginForm.verificationCode);
     }
 
@@ -53,7 +55,7 @@ class Login extends Component {
           <div className="Login-background">
             <div className="Login-content">
             <LegalButton onClick={showImprint} />
-            <LaterButton onClick={showMap} />
+            <LaterButton onClick={goToMapOrRedirect} />
 
             <ul className="Login-steps">
               <li style={{backgroundColor:'rgba(255,255,255,.4)'}}/>
@@ -80,7 +82,7 @@ class Login extends Component {
           <div className="Login-background">
             <div className="Login-content">
             <LegalButton onClick={showImprint} />
-            <LaterButton onClick={showMap} />
+            <LaterButton onClick={goToMapOrRedirect} />
 
             <ul className="Login-steps">
               <li/>
@@ -108,7 +110,7 @@ class Login extends Component {
           <div className="Login-background">
             <div className="Login-content">
             <LegalButton onClick={showImprint} />
-            <LaterButton onClick={showMap} />
+            <LaterButton onClick={goToMapOrRedirect} />
 
             <ul className="Login-steps">
               <li/>
@@ -144,7 +146,7 @@ const LoginContainer = connect(
   }),
   (dispatch) => ({
     goToStep: bindActionCreators(goToLogin, dispatch),
-    showMap: bindActionCreators(goToMap, dispatch),
+    goToMapOrRedirect: bindActionCreators(goToMapOrRedirect, dispatch),
     showImprint: bindActionCreators(goToImprint, dispatch),
     setEmail: bindActionCreators(updateEmail, dispatch),
     setName: bindActionCreators(updateName, dispatch),

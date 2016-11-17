@@ -1,5 +1,5 @@
 import * as types from '../constants/ActionTypes';
-import { goToLogin, goToMapOrRedirect } from './routing';
+import { goToLogin } from './routing';
 import API from '../utilities/api';
 import { fetchUser } from './user';
 
@@ -54,9 +54,9 @@ export const verify = (email, verificationCode) => {
           token: res.token
         });
 
-        dispatch(fetchUser());
+        // No need to redirect from here as login will already redirect
 
-        dispatch(goToMapOrRedirect());
+        dispatch(fetchUser());
 
         dispatch({
           type: types.CLEAR_LOGIN_FORM
