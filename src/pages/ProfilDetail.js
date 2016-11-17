@@ -22,7 +22,6 @@ class ProfilDetail extends PureComponent {
         <div className="ProfilDetail-detail">
             <div className="ProfilDetail-close" onClick={onClose}/>
 
-            <LegalButton onClick={showImprint} />
             <div className="ProfilDetail-monogram"/>
             <div className="ProfilDetail-content">
               <div className="ProfilDetail-name">{user.name}</div>
@@ -104,6 +103,14 @@ class ProfilDetail extends PureComponent {
                 </div>
               </li>
             </ul>
+
+                <ul className="ProfilDetail-footer-infos">
+                <div className="ProfilDetail-category-white">Trips</div>
+                <div className="ProfilDetail-shortLine" style={{backgroundColor:"rgba(255,255,255,0.3)"}}/>
+                  <li>Our Legal Stuffs</li>
+                  <li><a href="mailto:hey@blackwall.co">Contact Us</a></li>
+                  <li><a href="mailto:jumpin@blackwall.co">Colaborate with us</a></li>
+                </ul>
       </div>
     );
   }
