@@ -1,0 +1,35 @@
+.FavoriteMarkButton-favorite {
+  cursor: pointer;
+  position: absolute;
+  right:50vw;
+  margin-right:-125px;
+  bottom: 40px;
+  opacity: 0.8;
+  border-radius: 50%;
+  background: url(../img/btn-Save.svg) no-repeat center center, linear-gradient( 45deg, #f6ab2f, rgba(254, 86, 174, 1));
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  border-radius: 50%;
+  width: 60px;
+  height: 60px;
+}
+
+.FavoriteMarkButton-unFavorite {
+  cursor: pointer;
+  position: absolute;
+  right:50vw;
+  margin-right:-125px;
+  bottom: 40px;
+  opacity: 0.8;
+  border-radius: 50%;
+  background: url(../img/btn-unSave.svg) no-repeat center center, linear-gradient( 45deg, #f6ab2f, rgba(254, 86, 174, 1));
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  border-radius: 50%;
+  width: 60px;
+  height: 60px;
+}

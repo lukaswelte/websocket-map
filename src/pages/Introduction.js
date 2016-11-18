@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { bindActionCreators } from 'redux';
 import { connect } from 'react-redux';
-import { goToIntroduction, goToMap, goToImprint } from '../actions/routing';
+import { goToIntroduction, goToMapOrRedirect, goToImprint } from '../actions/routing';
 import AddMarkButton from '../components/AddMarkButton';
 import LegalButton from '../components/LegalButton';
 import LaterButton from '../components/LaterButton';
@@ -9,7 +9,11 @@ import './Introduction.css';
 
 class Introduction extends Component {
   render() {
-    const { params, goToStep, goToMap, showImprint } = this.props;
+    const { params, goToStep, goToMap, token, showImprint } = this.props;
+
+    if (token) {
+      goToMap();
+    }
 
     switch (params.id) {
       case "1":
@@ -109,10 +113,11 @@ class Introduction extends Component {
 
 const IntroductionContainer = connect(
   (state) => ({
+    token: state.auth.token
   }),
   (dispatch) => ({
     goToStep: bindActionCreators(goToIntroduction, dispatch),
-    goToMap: bindActionCreators(goToMap, dispatch),
+    goToMap: bindActionCreators(goToMapOrRedirect, dispatch),
     showImprint: bindActionCreators(goToImprint, dispatch),
   })
 )(Introduction);

@@ -8,7 +8,8 @@ import {
   API_RESPONSE
 } from '../constants/ActionTypes';
 
-const reducer = (state = {email: '', name: '', verificationCode: ''}, action) => {
+const initialState = {email: '', name: '', verificationCode: ''};
+const reducer = (state = initialState, action) => {
   switch (action.type) {
     case API_REQUEST:
       return {
@@ -47,7 +48,7 @@ const reducer = (state = {email: '', name: '', verificationCode: ''}, action) =>
       }
 
     case CLEAR_LOGIN_FORM:
-      return {};
+      return {...initialState};
 
     default:
       return state;
