@@ -1,10 +1,9 @@
 import React, { PureComponent } from 'react';
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
-import { goToTrip, goToImprint, goToMap } from '../actions/routing';
+import { goToTrip, goToImprint, goToContact, goToMap } from '../actions/routing';
 import { logout } from '../actions/user';
 import { fetchUser } from '../actions/user';
-import LegalButton from '../components/LegalButton';
 import LogoutButton from '../components/LogoutButton';
 import './ProfilDetail.css';
 
@@ -14,7 +13,7 @@ class ProfilDetail extends PureComponent {
   }
 
   render() {
-    const { onClose, showTrip, showImprint, user, logout } = this.props;
+    const { onClose, showTrip, showImprint, showContact, user, logout } = this.props;
 
     return (
       <div className="ProfilDetail-card">
@@ -32,8 +31,15 @@ class ProfilDetail extends PureComponent {
 
 
         <div className="ProfilDetail-onoffswitch">
-          <div className="ProfilDetail-onoffswitch-status">I'm Visible</div>
+          <div className="ProfilDetail-onoffswitch-status">I&#39;m Visible</div>
         </div>
+
+        <div className="ProfilDetail-Subcategory">Me, I<br />& Munich</div>
+        <div className="ProfilDetail-shortLine" />
+        <div className="ProfilDetail-quote">You actually did nothing yet in Munich, we invite you to start saving Marks in order to design your trip :).</div>
+
+
+
 
         <div className="ProfilDetail-Subcategory">Me, I<br />& Munich</div>
         <div className="ProfilDetail-shortLine" />
@@ -80,7 +86,7 @@ class ProfilDetail extends PureComponent {
           </ul>
 
 
-            <div className="ProfilDetail-category">Trips</div>
+            <div className="ProfilDetail-Subcategory">My other<br />Trips</div>
             <div className="ProfilDetail-shortLine" />
             <div className="ProfilDetail-quote">The journey of a thousand miles<br/>begins with one step.</div>
             <ul className="ProfilDetail-TripsDetail">
@@ -105,11 +111,11 @@ class ProfilDetail extends PureComponent {
             </ul>
 
                 <ul className="ProfilDetail-footer-infos">
-                <div className="ProfilDetail-category-white">Trips</div>
-                <div className="ProfilDetail-shortLine" style={{backgroundColor:"rgba(255,255,255,0.3)"}}/>
-                  <li>Our Legal Stuffs</li>
-                  <li><a href="mailto:hey@blackwall.co">Contact Us</a></li>
-                  <li><a href="mailto:jumpin@blackwall.co">Colaborate with us</a></li>
+                <div className="ProfilDetail-Subcategory">Our bottom<br />Stuffs</div>
+                <div className="ProfilDetail-shortLine" />
+                  <li></li>
+                  <li onClick={showImprint}>Legal Stuffs</li>
+                  <li onClick={showContact}>Contact Us</li>
                 </ul>
       </div>
     );
@@ -123,6 +129,7 @@ const ProfilDetailContainer = connect(
   (dispatch) => ({
     showTrip: bindActionCreators(goToTrip, dispatch),
     showImprint: bindActionCreators(goToImprint, dispatch),
+    showContact: bindActionCreators(goToContact, dispatch),
     updateUser: bindActionCreators(fetchUser, dispatch),
     logout: bindActionCreators(logout, dispatch),
     onClose: bindActionCreators(goToMap, dispatch),
