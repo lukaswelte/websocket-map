@@ -1,21 +1,33 @@
 import React, { PureComponent } from 'react';
 import { connect } from 'react-redux';
+import { bindActionCreators } from 'redux';
 import { goBack } from 'react-router-redux';
 import Helmet from 'react-helmet';
 import { distanceFromLocationToLocationInKm } from '../utilities/geoDistance';
+import { favoriteMark, unFavoriteMark } from '../actions/marks';
 import BringMeButton from '../components/BringMeButton';
-import SaveItButton from '../components/SaveItButton';
+import FavoriteMarkButton from '../components/FavoriteMarkButton';
 import ShareEventMenu from '../components/ShareEventMenu';
 import './MarkDetail.css';
 
 class MarkDetail extends PureComponent {
   render() {
-    const { mark, userLocation, onClose } = this.props;
+    const { mark, isFavorite, favoriteMark, unFavoriteMark, userLocation, onClose } = this.props;
 
     if (!mark) {
       return (
         <div>Loading...</div>
       );
+    }
+
+    const favButtonClicked = (e) => {
+      e.stopPropagation();
+
+      if (isFavorite) {
+        unFavoriteMark(mark.id);
+      } else {
+        favoriteMark(mark.id);
+      }
     }
 
     var distanceToLocation = null;
@@ -66,7 +78,7 @@ class MarkDetail extends PureComponent {
           <div onClick={(e) => e.stopPropagation()}>
             <ShareEventMenu shareText={shareText} />
           </div>
-          <SaveItButton />
+          <FavoriteMarkButton onClick={favButtonClicked} isFavorite={isFavorite} />
       </div>
     );
   }
@@ -75,10 +87,13 @@ class MarkDetail extends PureComponent {
 const MarkDetailContainer = connect(
   (state, ownProps) => ({
     mark: state.marks.find(mark => mark.id === ownProps.params.id),
-    userLocation: state.user.location
+    userLocation: state.user.location,
+    isFavorite: state.favoriteMarks.includes(ownProps.params.id)
   }),
   (dispatch) => ({
-    onClose: () => dispatch(goBack())
+    onClose: bindActionCreators(goBack, dispatch),
+    favoriteMark: bindActionCreators(favoriteMark, dispatch),
+    unFavoriteMark: bindActionCreators(unFavoriteMark, dispatch)
   })
 )(MarkDetail);
 
