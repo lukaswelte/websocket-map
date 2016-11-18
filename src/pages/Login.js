@@ -24,7 +24,6 @@ class Login extends Component {
     } = this.props;
 
     if (token) {
-      console.log('redirect from login');
       goToMapOrRedirect();
     }
 
@@ -45,7 +44,6 @@ class Login extends Component {
 
     const sendVerify = (e) => {
       e.preventDefault();
-      console.log('requested verify');
       requestVerify(loginForm.email, loginForm.verificationCode);
     }
 

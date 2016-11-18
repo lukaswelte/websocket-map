@@ -15,10 +15,8 @@ export const goToMapOrRedirect = () => {
     const state = getState();
     var redirectLocation = '/map';
     if (state.routing.locationBeforeTransitions.query.redirect) {
-      console.log('inside r if redirect');
       redirectLocation = state.routing.locationBeforeTransitions.query.redirect;
     }
-    console.log('redirect to: ', redirectLocation);
     dispatch(push(redirectLocation));
   }
 }
