@@ -1,0 +1,121 @@
+.ContactDetail-card{
+  color:#FFFFFF;
+  height: 100vh;
+  text-align: center;
+  height: 96vh;
+  width: 100vw;
+  padding: 4vh 0px 0px 0px;
+}
+
+.ContactDetail-close {
+  width: 24px;
+  height: 24px;
+  z-index: 999;
+  cursor: pointer;
+  right: 0;
+  top:0;
+  justify-content: center;
+  align-items: center;
+  position:fixed;
+  margin: 30px 30px 0 0;
+  background: url(../img/btn-crossBlack.svg) no-repeat center center;
+}
+
+.ContactDetail-category {
+  font-size:2.5em;
+  font-weight: 300;
+  line-height: 1em;
+  text-align: left;
+  margin-left:5vw;
+
+  color:rgba(251, 117, 127, 1);
+}
+
+.ContactDetail-Subcategory {
+  font-size:1.6em;
+  font-weight: 300;
+  text-align: left;
+  margin-left:5vw;
+  margin-top: 15vw;
+  color:rgba(251, 117, 127, 1);
+}
+
+.ContactDetail-quote {
+  text-align: left;
+  color:rgba(251, 117, 127, 1);
+  font-weight: 300;
+  font-size: 1em;
+  line-height: 1.4em;
+  padding: 0 5vw;
+}
+.pink {
+  color:rgba(251, 117, 127, 1);
+}
+
+.ContactDetail-shortLine {
+  height: 1px;
+  width: 20vw;
+  margin: 3vh 5vw 3vh 5vw;
+  background-color: rgba(251, 117, 127, 0.3);
+}
+
+.ContactDetail-email {
+    padding-top : 10vw;
+    width: 100%;
+    font-size: 1.3em;
+    text-align: center;
+    display: block;
+    color:rgba(251, 117, 127, 1);
+    text-decoration: none;
+}
+
+ul.ContactDetail-socialMedia {
+  list-style-type: none;
+  display:inline-block;
+  padding: 5vw 5vw;
+  color: #252525;
+}
+
+ul.ContactDetail-socialMedia li {
+  width: 20vw;
+  height: 20vw;
+  margin:0 5vw 15vw 5vw;
+  border-radius: 22vw;
+  float: left;
+  background-color: rgba(251, 117, 127, .7);
+  z-index: 9;
+}
+
+.ContactDetail-facebook {
+  background: url(../img/btn-Share-facebook.svg) no-repeat center center;
+  width: 60px;
+  height: 60px;
+}
+
+.ContactDetail-twitter {
+  background: url(../img/btn-Share-twitter.svg) no-repeat center center;
+  width: 60px;
+  height: 60px;
+}
+
+.ContactDetail-linkedin {
+  background: url(../img/btn-Share-linkedin.svg) no-repeat center center;
+  width: 60px;
+  height: 60px;
+}
+
+.ContactDetail-github {
+  background: url(../img/btn-Share-github.svg) no-repeat center center;
+  width: 60px;
+  height: 60px;
+}
+
+ul.ContactDetail-socialMedia li .ContactDetail-socialMedia-name {
+  margin-top: 21vw;
+  color: rgba(251, 117, 127, 1);
+}
+
+ul.ContactDetail-socialMedia li a {
+  color: white;
+  text-decoration: none;
+}
