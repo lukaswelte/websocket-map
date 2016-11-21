@@ -4,10 +4,10 @@
 }
 
 .ProfilDetail-detail {
-  height: 85vh;
+  height: 37vh;
   width: 100%;
-  padding: 15vh 0px 0px 0px;
-  background: linear-gradient( 45deg, #f6ab2f, rgba(254, 86, 174, 1));
+  padding: 12vh 0px 0px 0px;
+  background: linear-gradient( 45deg, rgba(251, 117, 127, 1), rgba(254, 86, 174, 1));
 }
 
 .ProfilDetail-close {
@@ -21,8 +21,9 @@
   align-items: center;
   position:fixed;
   margin: 30px 30px 0 0;
-  background: url(../img/btn-crossBlack.svg) no-repeat center center;
+  background: url(../img/btn-crossWhite.svg) no-repeat center center;
   opacity: 1;
+  z-index: 999;
 }
 
 .ProfilDetail-monogram{
@@ -53,51 +54,35 @@
   font-weight: 300;
 }
 
-.ProfilDetail-nbr{
-  font-size: 2em;
-  font-weight: 200;
-  width: 55vw;
-  float:left;
-  text-align: right;
-}
-
-.ProfilDetail-graph{
-  font-size: 2em;
-  font-weight: 100;
-  width: 40vw;
-  margin-left: 3vw;
-  margin-top:0.3em;
-  float:left;
-  text-align: left;
-}
-
-.ProfilDetail-rock {
-  width: 20px;
-  height: 20px;
-  border-radius: 30px;
-  cursor: pointer;
-  background: radial-gradient( farthest-side ellipse at 65% 35%, #fcb2c2, #ff0090);
-  background-clip: padding-box;
-  box-shadow:
-    0 1px 5px rgba(252,104,136,0.6),
-    inset 3px -3px 2px 0px rgba(255,255,255,0.3);
-  text-align: left;
-}
-
-.ProfilDetail-Wishlist {
-  height: 96vh;
-  width: 100vw;
-  padding: 4vh 0px 0px 0px;
-  background-color: white;
-}
-
 .ProfilDetail-category {
   font-size:2.5em;
   font-weight: 300;
-
   line-height: 1em;
+  position: relative;
   text-align: left;
   margin-left:5vw;
+  background: -webkit-linear-gradient(45deg, rgba(251, 117, 127, 1), rgba(254, 86, 174, 1));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.ProfilDetail-category-white {
+  font-size:2.5em;
+  font-weight: 300;
+  line-height: 1em;
+  position: relative;
+  text-align: left;
+  margin-left:5vw;
+  color:white;
+}
+
+.ProfilDetail-Subcategory {
+  font-size:1.6em;
+  line-height: 1em;
+  font-weight: 300;
+  text-align: left;
+  margin-left:5vw;
+  margin-top: 8vw;
   background: -webkit-linear-gradient(45deg, rgba(251, 117, 127, 1), rgba(254, 86, 174, 1));
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -110,7 +95,7 @@
   -webkit-text-fill-color: transparent;
   font-weight: 300;
   font-size: 1em;
-  padding: 0 5vw;
+  padding: 0 5vw 3vh 5vw ;
 }
 
 .ProfilDetail-Line {
@@ -127,32 +112,38 @@
   background-color: rgba(251, 117, 127, 0.3);
 }
 
-ul.ProfilDetail-CityTrips {
+ul.ProfilDetail-friends {
   list-style-type: none;
-  position: relative;
-  float: left;
-  display: block;
-  left: 50%;
-  margin-left:-40px;
+  display:inline-block;
+  padding: 0 5vw;color: #252525;
 }
 
-ul.ProfilDetail-CityTrips li {
-  margin:-5px 4px;
-  padding: 5px 12px 6px 12px;
-  background-color: rgba(255, 255, 255, .1);
-  border-radius: 70px;
-  position: relative;
+ul.ProfilDetail-friends li {
+  width: 20vw;
+  height: 20vw;
+  margin:0 5vw 15vw 5vw;
+  border-radius: 22vw;
   float: left;
-  display: block;
-  right: 50%;
+  background-color: rgba(251, 117, 127, 1);
+  background-size: cover;
+  background-position: center center;
+  z-index: 9;
+}
+
+ul.ProfilDetail-friends li .ProfilDetail-friends-name {
+  margin-top: 21vw;
+}
+
+.ProfilDetail-poked {
+  box-shadow: 0px 0px 0px 4px rgba(251, 117, 127, 0.8);
+  color: rgba(251, 117, 127, 1);
 }
 
 ul.ProfilDetail-TripsDetail {
   list-style-type: none;
   position: relative;
   float: left;
-  margin-left:-40px;
-  top: 8px;
+  padding: 0;
 }
 
 ul.ProfilDetail-TripsDetail li {
@@ -177,4 +168,52 @@ ul.ProfilDetail-TripsDetail li {
     font-size: 0.8em;
     font-weight: 300;
     color: rgba(255, 255, 255, .7);
+}
+
+.ProfilDetail-onoffswitch {
+position: absolute;
+width: 60px;
+height: 60px;
+left: 50vw;
+margin-left: -30px;
+margin-top: -30px;
+border-radius: 50%;
+background: white url(../img/btn-hide.svg) no-repeat center center;
+box-shadow: 0px 3px 8px rgba(37, 37, 37, 0.3);
+}
+
+.ProfilDetail-onoffswitch-status {
+color: rgba(255, 255, 255, .4);
+font-weight: 300;
+width:100px;
+margin-left: 65px;
+margin-top:5px;
+font-size: 1em;
+line-height: 1em;
+text-align: left;
+}
+
+ul.ProfilDetail-footer-infos {
+  list-style-type: none;
+  margin: 0 auto;
+  display:inline-block;
+  float: left;
+  padding: 0px 0px 28px 0px;
+  width: 100%;
+  color: rgba(251, 117, 127, 1);
+}
+
+ul.ProfilDetail-footer-infos li {
+  font-size:1.1em;
+  text-align: center;
+  width: 100%;
+  line-height: 2em;
+  font-weight: 300;
+  display: block;
+  opacity: 1;
+}
+
+ul.ProfilDetail-footer-infos li a {
+  color: white;
+  text-decoration: none;
 }
