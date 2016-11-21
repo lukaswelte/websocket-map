@@ -68,7 +68,7 @@ class Login extends Component {
               </div>
 
               <form onSubmit={submitName} className="Login-form">
-                <input type="text" value={loginForm.name} className="Login-input" placeholder="I'm Dark Vador?" onChange={e => setName(e.target.value)} />
+                <input type="text" value={loginForm.name} className="Login-input" placeholder="I'm Dark Vador?" onChange={e => setName(e.target.value)} autofocus/>
                 <input type="submit" className="Login-valid" defaultValue=""/>
               </form>
             </div>
@@ -96,7 +96,7 @@ class Login extends Component {
               </div>
 
               <form onSubmit={sendRegister} className="Login-form">
-                <input type="text" value={loginForm.email} onChange={e => setEmail(e.target.value)} className="Login-input" placeholder="Write your @ here!" />
+                <input type="text" value={loginForm.email} onChange={e => setEmail(e.target.value)} className="Login-input" placeholder="Write your @ here!" autofocus />
                 <input type="submit" className="Login-valid" defaultValue=""/>
               </form>
             </div>
@@ -122,7 +122,7 @@ class Login extends Component {
               we sent you a special code.
               </div>
               <form onSubmit={sendVerify} className="Login-form">
-                <input type="text" value={loginForm.verificationCode} onChange={e => setVerificationCode(e.target.value)} className="Login-input" placeholder="☻ ☻ ☻ ☻" />
+                <input type="text" value={loginForm.verificationCode} onChange={e => setVerificationCode(e.target.value)} className="Login-input" placeholder="☻ ☻ ☻ ☻" autofocus />
                 <input type="submit" className="Login-valid" defaultValue=""/>
               </form>
             </div>

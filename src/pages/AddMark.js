@@ -49,7 +49,7 @@ class AddMark extends Component {
             <div className="AddMark-content">
               <PictureButton />
 
-              <AutoresizeTextarea type="text" onChange={handleDescriptionChange} className="AddMark-comment" placeholder="What's happening here?" />
+              <AutoresizeTextarea type="text" onChange={handleDescriptionChange} className="AddMark-comment" placeholder="What's happening here?" autofocus />
               <AutoresizeTextarea type="text" onChange={handleDescriptionChange} className="AddMark-localisation-name" placeholder="Where are you?" />
               <div className="AddMark-leftover" onChange={handleDescriptionChange}>200</div>
               {enableSubmit && <button type="submit" className="AddMark-sendButton" />}
