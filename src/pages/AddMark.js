@@ -43,10 +43,10 @@ class AddMark extends Component {
           <Helmet title="Add Mark" />
           <div className="AddMark-icon" />
           <div className="AddMark-map-view" onClick={onClose}>
-            <div className="AddMark-close"/>
+            <div className="AddMark-close animated bounceIn"/>
           </div>
           <form onSubmit={handleSubmit} className="AddMark-form">
-            <div className="AddMark-content">
+            <div className="AddMark-content animated fadeInUp">
               <PictureButton />
 
               <AutoresizeTextarea type="text" onChange={handleDescriptionChange} className="AddMark-comment" placeholder="What's happening here?" autofocus />

@@ -21,6 +21,7 @@ textarea:focus, input:focus{
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  animation-duration: 1000ms;
 }
 
 .AddMark-close {

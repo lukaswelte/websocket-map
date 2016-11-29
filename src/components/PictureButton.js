@@ -6,7 +6,7 @@ export default class PictureButton extends PureComponent {
     const { onClick, style } = this.props;
 
     return (
-      <div onClick={onClick} style={style} className="PictureButton-btn"/>
+      <div onClick={onClick} style={style} className="PictureButton-btn animated wobble"/>
     );
   }
 }
