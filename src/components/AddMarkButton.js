@@ -6,7 +6,7 @@ export default class AddMarkButton extends PureComponent {
     const { onClick, style } = this.props;
 
     return (
-      <div onClick={onClick} style={style} className="AddMarkButton-btn"/>
+      <div onClick={onClick} style={style} className="AddMarkButton-btn animated bounceIn"/>
     );
   }
 }

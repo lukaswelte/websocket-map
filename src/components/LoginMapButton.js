@@ -6,7 +6,7 @@ export default class LoginMapButton extends PureComponent {
     const { onClick } = this.props;
 
     return (
-      <div onClick={onClick} className="LoginMapButton-btn"/>
+      <div onClick={onClick} className="LoginMapButton-btn animated bounceIn"/>
     );
   }
 }

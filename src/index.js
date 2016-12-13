@@ -24,6 +24,7 @@ import API from './utilities/api';
 import { fetchMarks, fetchFavoriteMarks } from './actions/marks';
 import { fetchUser } from './actions/user';
 import './index.css';
+import './animate.css';
 
 const middleware = routerMiddleware(browserHistory);
 const composeEnhancers = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose;

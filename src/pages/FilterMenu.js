@@ -9,19 +9,19 @@ class FilterMenu extends PureComponent {
 
     return (
       <div className="FilterMenu-container">
-        <div className="FilterMenu-menu">
-          <div className="FilterMenu-header">
-              <div className="FilterMenu-close" onClick={onClose}/>
+        <div className="FilterMenu-menu animated fadeIn">
+          <div className="FilterMenu-header animated fadeInDown">
+              <div className="FilterMenu-close animated bounceIn" onClick={onClose}/>
               <div className="FilterMenu-title">Sharp it</div>
               <div className="FilterMenu-shortLine" />
 
               <form className="FilterMenu-form">
                 <input type="text" className="FilterMenu-input" placeholder="#SearchSomething?" autofocus />
-                <button type="submit" className="FilterMenu-checkButton" defaultValue="" />
+                <button type="submit" className="FilterMenu-checkButton animated fadeIn" defaultValue="" />
               </form>
           </div>
 
-          <ul className="FilterMenu-trendy">
+          <ul className="FilterMenu-trendy animated fadeInUp">
             <li className="FilterMenu-trendy-title">Trendy in Munich</li>
             <li><a href="#" target="_self">#MarientplatzStrike</a></li>
             <li><a href="#" target="_self">#CounterPegida</a></li>

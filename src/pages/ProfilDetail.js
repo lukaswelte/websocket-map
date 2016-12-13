@@ -18,10 +18,10 @@ class ProfilDetail extends PureComponent {
     return (
       <div className="ProfilDetail-card">
         <LogoutButton onClick={logout} />
-        <div className="ProfilDetail-detail">
-            <div className="ProfilDetail-close" onClick={onClose}/>
+        <div className="ProfilDetail-detail animated fadeInDown">
+            <div className="ProfilDetail-close animated bounceIn" onClick={onClose}/>
 
-            <div className="ProfilDetail-monogram"/>
+            <div className="ProfilDetail-monogram animated bounce"/>
             <div className="ProfilDetail-content">
               <div className="ProfilDetail-name">{user.name}</div>
               <div className="ProfilDetail-title">You are an enjoyer!</div>
@@ -30,21 +30,23 @@ class ProfilDetail extends PureComponent {
 
 
 
-        <div className="ProfilDetail-onoffswitch">
+        <div className="ProfilDetail-onoffswitch animated fadeIn">
           <div className="ProfilDetail-onoffswitch-status">I&#39;m Visible</div>
         </div>
 
+<div className="animated fadeInUp">
         <div className="ProfilDetail-Subcategory">Me, I<br />& Munich</div>
         <div className="ProfilDetail-shortLine" />
         <div className="ProfilDetail-quote">You actually did nothing yet in Munich, we invite you to start saving Marks in order to design your trip :).</div>
+</div>
 
 
-
+<div className="animated fadeInUp">
 
         <div className="ProfilDetail-Subcategory">Me, I<br />& Munich</div>
         <div className="ProfilDetail-shortLine" />
         <div className="ProfilDetail-quote">The journey of a thousand miles<br/>begins with one step.</div>
-
+</div>
 
 
           <ul className="TripDetail-inspirations">

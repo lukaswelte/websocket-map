@@ -6,7 +6,7 @@ export default class FilterButton extends PureComponent {
     const { onClick } = this.props;
 
     return (
-      <div onClick={onClick} className="FilterButton-btn"/>
+      <div onClick={onClick} className="FilterButton-btn animated bounceIn"/>
     );
   }
 }
