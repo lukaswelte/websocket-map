@@ -17,6 +17,4 @@
   overflow: hidden;
   background: url(../img/map-star.svg) no-repeat center center, linear-gradient( 45deg, #f6ab2f, rgba(254, 86, 174, 1));
   opacity: 0.8;
-  animation-duration: 1000ms;
-  animation-delay: 500ms;
 }

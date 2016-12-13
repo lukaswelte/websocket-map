@@ -10,6 +10,5 @@
   background: rgba(255,255, 255, 1) url(../img/btn-menuColor.svg)no-repeat center center;
   background-size: 62% 62%;
   opacity: 0.8;
-  animation-duration: 1000ms;
-  animation-delay: 750ms;
+  animation-delay: 0ms;
 }

@@ -30,7 +30,7 @@ class ProfilDetail extends PureComponent {
 
 
 
-        <div className="ProfilDetail-onoffswitch animated bounceIn">
+        <div className="ProfilDetail-onoffswitch animated fadeIn">
           <div className="ProfilDetail-onoffswitch-status">I&#39;m Visible</div>
         </div>
 
